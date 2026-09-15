@@ -1,0 +1,16 @@
+# Fichiers système Windows et macOS
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Fichiers de conflit et temporaires OneDrive
+*.tmp
+*.tmp.*
+*.conflicted
+*.conflict
+* (Conflicted copy).*
+*.synchronization-conflict-*
+
+# Archives PDF conservées uniquement dans le dossier de travail
+/Exports PDF/
+/exports-pdf/

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>N°27 · IA encore des autodafés en 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<style>
+  .kick{display:block;font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:6px}
+  /* ---- graphique éditorial ---- */
+  figure.fig{margin-top:26px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0 18px}
+  figure.fig img{width:100%;height:auto;display:block;mix-blend-mode:multiply}
+  figcaption{margin-top:18px;padding-top:14px;border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr 1.25fr}
+  figcaption > div{padding:0 26px;font-size:.78rem;line-height:1.62;color:var(--muted)}
+  figcaption > div:first-child{padding-left:0}
+  figcaption > div:last-child{padding-right:0}
+  figcaption > div + div{border-left:1px solid var(--line)}
+  figcaption .lab{display:block;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:7px}
+  figcaption b{color:var(--ink);font-weight:600}
+  figcaption a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent)}
+  @media(max-width:800px){
+    figcaption{grid-template-columns:1fr}
+    figcaption > div{padding:0;border-left:none!important;margin-top:16px}
+    figcaption > div:first-child{margin-top:0}
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+  <a class="back" href="../index.html">← Toutes les éditions</a>
+  <h1>IA encore des autodafés en 2026</h1>
+  <div class="bar"><span class="ed">Édition N°27 · 17 août 2026</span><span>Par Nicolas Peytavin</span></div>
+
+  <div class="audio" id="audio" data-src="../audio/n27.mp3">
+    <button class="play" type="button" aria-label="Lire la version audio">
+      <svg class="ico-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5 L20 12 L7 19.5 Z"/></svg>
+      <svg class="ico-pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="4.5" width="4.2" height="15"/><rect x="13.8" y="4.5" width="4.2" height="15"/></svg>
+    </button>
+    <div class="body">
+      <div class="lab"><span><b>Écouter cette édition</b> · Version audio</span><span class="time" id="a-time">00:00 / 00:00</span></div>
+      <div class="track" id="a-track">
+        <div class="rail"></div>
+        <div class="fill" id="a-fill"></div>
+        <div class="knob" id="a-knob"></div>
+        <input type="range" id="a-range" min="0" max="1000" value="0" step="1" aria-label="Position dans la lecture">
+      </div>
+    </div>
+    <div class="rate" id="a-rate">
+      <button class="rate-btn" type="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Vitesse de lecture">1,2&times;</button>
+      <ul class="rate-menu" role="listbox" aria-label="Vitesse de lecture">
+        <li role="option" data-rate="1" aria-selected="false">1&times;</li>
+        <li role="option" data-rate="1.2" aria-selected="true">1,2&times;</li>
+        <li role="option" data-rate="1.5" aria-selected="false">1,5&times;</li>
+        <li role="option" data-rate="2" aria-selected="false">2&times;</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="cols c1">
+    <div class="col">
+      <div class="sect"><h2>À la une</h2><svg viewBox="0 0 24 24"><path d="M12 3.2 L14.5 9.1 L20.8 9.6 L16 13.8 L17.5 20 L12 16.7 L6.5 20 L8 13.8 L3.2 9.6 L9.5 9.1 Z"/></svg></div>
+      <a class="item" href="https://www.instagram.com/reel/DblJxIbyB05/?igsh=MXZ5dGxvbXZkY2lxOQ==" target="_blank" title="Instagram">
+        <div class="hero" style="padding-bottom:10px">Anthropic achète des livres pour les détruire</div>
+        <p style="max-width:66ch">Racheter des ouvrages par palettes, en découper la reliure, les scanner page à page, puis jeter le papier. La méthode a de quoi faire grincer, mais elle dit surtout à quel point le texte imprimé est devenu une matière première stratégique. Un autodafé industriel version 2026 : le livre disparaît, le corpus reste.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.6"/></svg></span></a>
+    </div>
+  </div>
+
+  <div class="cols c1">
+    <div class="col">
+      <a class="item" href="https://cursor.com/fr/cursorbench" target="_blank" title="Lecture">
+        <span class="kick">Le graphique</span>
+        <div class="h" style="font-size:1.15rem">CursorBench : ce que coûte vraiment une tâche accomplie</div>
+        <p style="max-width:78ch">Cursor évalue les agents sur des tâches réelles, ambiguës et multi-fichiers, puis rapporte le score obtenu au coût moyen par tâche. Le graphique se lit d'un coup d'œil : la courbe de Fable 5 doit grimper jusqu'aux 18 dollars la tâche pour atteindre les 70 %, là où Grok 4.6 y arrive pour quelques dollars à peine. Opus 5 tient une position intermédiaire confortable, et tout le peloton se tasse dans la partie droite, sous les 3 dollars, à quelques points seulement du sommet. Le vrai critère, quand on paie la note tous les mois, se lit à l'horizontale.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><path d="M12 5.5 C10 3.8 6 3.6 3.5 5 V19 C6 17.6 10 17.8 12 19.4 C14 17.8 18 17.6 20.5 19 V5 C18 3.6 14 3.8 12 5.5 Z"/><line x1="12" y1="5.5" x2="12" y2="19.4"/></svg></span></a>
+
+      <figure class="fig">
+        <img src="../img/n27-cursorbench.png" alt="Nuage de points CursorBench 3.2 : score de chaque famille de modeles en fonction du cout moyen par tache. Chaque courbe relie les differents niveaux de raisonnement d'un meme modele.">
+        <figcaption>
+          <div><span class="lab">Comment le lire</span><b>Chaque courbe relie les niveaux de raisonnement d'un même modèle.</b> Monter en puissance fait grimper le score, et le coût avec. La pente dit tout : plus elle est plate, plus les points gagnés se paient cher.</div>
+          <div><span class="lab">L'axe piège</span>L'horizontale se lit <b>à l'envers</b> : le plus cher à gauche, le gratuit tout à droite. Un modèle placé en haut à droite est donc la meilleure affaire, pas l'inverse.</div>
+          <div><span class="lab">Méthode et source</span>Coût calculé à partir des tarifs publics au million de jetons, appliqués aux jetons réellement consommés. Les écarts de quelques dixièmes de point ne sont pas nécessairement significatifs. <a href="https://cursor.com/fr/cursorbench" target="_blank">CursorBench 3.2, Cursor</a>, relevé du 17 août 2026.</div>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="cols c2">
+    <div class="col">
+      <a class="item" href="https://openai.com/index/testing-ads-in-chatgpt/" target="_blank" title="Lecture">
+        <span class="kick">OpenAI</span>
+        <div class="h">ChatGPT passe à la publicité</div>
+        <p>Reçu par mail cette semaine : des annonces arriveront sur les forfaits Free et Go d'ici la fin du mois. Pro, Enterprise, Business et Éducation restent sans publicité. Au départ, rien de personnalisé : le ciblage s'appuie sur le sujet de la conversation en cours, la localisation générale et le type d'appareil, sans puiser dans l'historique ni dans les souvenirs. La personnalisation, elle, se fera sur accord explicite et se gère dans les paramètres. OpenAI affirme que les annonceurs n'ont accès ni aux conversations ni aux informations personnelles, et que les publicités n'influencent pas les réponses. Reste à voir ce que ça donne à l'usage.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><path d="M12 5.5 C10 3.8 6 3.6 3.5 5 V19 C6 17.6 10 17.8 12 19.4 C14 17.8 18 17.6 20.5 19 V5 C18 3.6 14 3.8 12 5.5 Z"/><line x1="12" y1="5.5" x2="12" y2="19.4"/></svg></span></a>
+    </div>
+    <div class="col">
+      <a class="item" href="https://www.metabase.com/blog/security-update" target="_blank" title="Lecture">
+        <span class="kick">Sécurité</span>
+        <div class="h">Fuite de données chez Kilo Code, via Metabase</div>
+        <p>Le 6 août, Kilo Code est averti d'un incident de sécurité par Metabase, son fournisseur de veille stratégique. Des informations d'utilisateurs de Kilo figuraient dans la base exposée. L'enquête se poursuit : rien n'indique à ce jour que les données bancaires soient touchées, mais impossible de confirmer si le reste a été consulté ou utilisé. Un rappel que la chaîne de sous-traitance reste le maillon faible.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><path d="M12 5.5 C10 3.8 6 3.6 3.5 5 V19 C6 17.6 10 17.8 12 19.4 C14 17.8 18 17.6 20.5 19 V5 C18 3.6 14 3.8 12 5.5 Z"/><line x1="12" y1="5.5" x2="12" y2="19.4"/></svg></span></a>
+    </div>
+  </div>
+
+  <div class="cols c3">
+    <div class="col">
+      <div class="sect"><h2>Les News</h2><svg viewBox="0 0 24 24"><path d="M4 5 H17 V19 H4 Z"/><path d="M17 8 H20 V17.5 A1.5 1.5 0 0 1 18.5 19 H4"/><line x1="6.5" y1="8" x2="14.5" y2="8"/><rect x="6.5" y="10.8" width="3.4" height="3.4"/><line x1="12" y1="11.2" x2="14.5" y2="11.2"/><line x1="12" y1="13.6" x2="14.5" y2="13.6"/><line x1="6.5" y1="16.2" x2="14.5" y2="16.2"/></svg></div>
+      <a class="item" href="https://www.frandroid.com/marques/meta/3207895_meta-lance-muse-glimmer-son-modele-dia-agentique-en-open-source" target="_blank" title="Lecture">
+        <div class="h">Meta dévoile Muse Glimmer en open source</div>
+        <p>Un modèle dit « agentique », distribué librement. Un nom de plus dans la course aux agents, avec le pari maison de l'ouverture pour rattraper le retard face aux offres fermées.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><path d="M12 5.5 C10 3.8 6 3.6 3.5 5 V19 C6 17.6 10 17.8 12 19.4 C14 17.8 18 17.6 20.5 19 V5 C18 3.6 14 3.8 12 5.5 Z"/><line x1="12" y1="5.5" x2="12" y2="19.4"/></svg></span></a>
+    </div>
+    <div class="col">
+      <div class="spacer"></div>
+      <a class="item" href="https://www.instagram.com/reel/DblRnJtsbQV/?igsh=bm9wbzVmbTB6cjEz" target="_blank" title="Instagram">
+        <div class="h">Qwen 3.8 vient chatouiller Kimi K3</div>
+        <p>L'open source chinois continue de se serrer les coudes et les scores. Après l'onde de choc Kimi K3 de juillet, Alibaba revient à hauteur : la concurrence se joue désormais entre eux.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.6"/></svg></span></a>
+    </div>
+    <div class="col">
+      <div class="spacer"></div>
+      <a class="item" href="https://www.instagram.com/reel/DbbGdUQhKyS/?igsh=MTV3amtvanVkd2QxcQ==" target="_blank" title="Instagram">
+        <div class="h">Fish Audio lève 52 millions</div>
+        <p>La synthèse et le clonage de voix attirent toujours autant les capitaux. Un secteur discret, mais qui avance vite et dont on entend déjà les effets un peu partout.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.6"/></svg></span></a>
+    </div>
+  </div>
+
+  <div class="cols c3">
+    <div class="col">
+      <div class="sect"><h2>Bonus Insolite</h2><svg viewBox="0 0 24 24"><path d="M12 3.5 C12.6 8 14.5 10.4 20.5 12 C14.5 13.6 12.6 16 12 20.5 C11.4 16 9.5 13.6 3.5 12 C9.5 10.4 11.4 8 12 3.5 Z"/><path d="M18.8 3.6 C19 5.1 19.7 5.9 21.4 6.4 C19.7 6.9 19 7.7 18.8 9.2 C18.6 7.7 17.9 6.9 16.2 6.4 C17.9 5.9 18.6 5.1 18.8 3.6 Z"/></svg></div>
+      <a class="item" href="https://www.instagram.com/reel/DbftzezssqF/?igsh=bGJpaGV4bXFudW54" target="_blank" title="Instagram">
+        <div class="h">Une caméra qui se promène dans vos tableaux préférés</div>
+        <p>La toile devient un décor traversable : la caméra entre dans la peinture et se balade entre les personnages. Le genre d'usage qui fait oublier deux minutes les débats sur les benchmarks.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.6"/></svg></span></a>
+    </div>
+    <div class="col">
+      <div class="spacer"></div>
+      <a class="item" href="https://www.instagram.com/reel/Dbawaxuj2TV/?igsh=MXV4eXQzNTM4ZGExaA==" target="_blank" title="Instagram">
+        <div class="h">Il lit le texte de son IA « pour une version plus naturelle »</div>
+        <p>En plein discours, l'orateur récite le message rédigé par son assistant, au motif que ça sonnera plus humain. La phrase se suffit à elle-même.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.6"/></svg></span></a>
+    </div>
+    <div class="col">
+      <div class="spacer"></div>
+      <a class="item" href="https://www.instagram.com/reel/Db6E20JAsmZ/?igsh=MXVvNnZka2I0bGN4dg==" target="_blank" title="Instagram">
+        <div class="h">Un bar à IA ouvre en Chine</div>
+        <p>Commande, service et conversation confiés à la machine. L'expérience vaut surtout pour ce qu'elle révèle : le comptoir reste un endroit où l'on vient pour parler à quelqu'un.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.6"/></svg></span></a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="foot-row"><span>La Newsletter IA · Nicolas Peytavin</span><a href="../index.html">Toutes les éditions</a></div>
+    <div class="pn"><a href="n26.html">← N°26 · IA trois prétendants pour un seul trône</a><a href="n28.html">N°28 · IA de l'innovation dans la compression →</a></div>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var box = document.getElementById('audio');
+  if(!box) return;
+  var btn   = box.querySelector('.play');
+  var range = document.getElementById('a-range');
+  var fill  = document.getElementById('a-fill');
+  var knob  = document.getElementById('a-knob');
+  var out   = document.getElementById('a-time');
+  var audio = new Audio();
+  var ready = false, seeking = false;
+  var VITESSE_DEFAUT = 1.2, vitesseChoisie = false;
+  audio.playbackRate = VITESSE_DEFAUT;
+
+  function mmss(s){
+    if(!isFinite(s) || s < 0) s = 0;
+    var m = Math.floor(s / 60), r = Math.floor(s % 60);
+    return (m < 10 ? '0' : '') + m + ':' + (r < 10 ? '0' : '') + r;
+  }
+  function paint(pct){
+    fill.style.width = pct + '%';
+    knob.style.left  = pct + '%';
+  }
+  function refresh(){
+    if(seeking || !ready) return;
+    var d = audio.duration, pct = d ? (audio.currentTime / d) * 100 : 0;
+    paint(pct);
+    range.value = Math.round(pct * 10);
+    out.textContent = mmss(audio.currentTime) + ' / ' + mmss(d);
+  }
+  function offline(){
+    box.classList.remove('on');
+    box.querySelector('.body').innerHTML =
+      '<div class="lab"><span><b>Version audio</b></span></div><div class="na">Bientôt disponible pour cette édition.</div>';
+    btn.disabled = true;
+    btn.style.opacity = '.35';
+    btn.style.cursor = 'default';
+    rbtn.disabled = true;
+    rbtn.style.opacity = '.35';
+    rbtn.style.cursor = 'default';
+    closeRate();
+  }
+
+  audio.preload = 'metadata';
+  audio.addEventListener('loadedmetadata', function(){
+    ready = true;
+    if(!vitesseChoisie) audio.playbackRate = VITESSE_DEFAUT;
+    refresh();
+  });
+  audio.addEventListener('timeupdate', refresh);
+  audio.addEventListener('error', offline);
+  audio.addEventListener('ended', function(){
+    box.classList.remove('on');
+    btn.setAttribute('aria-label', 'Lire la version audio');
+    audio.currentTime = 0;
+    refresh();
+  });
+
+  btn.addEventListener('click', function(){
+    if(audio.paused){
+      audio.play().then(function(){
+        box.classList.add('on');
+        btn.setAttribute('aria-label', 'Mettre en pause');
+      }).catch(offline);
+    } else {
+      audio.pause();
+      box.classList.remove('on');
+      btn.setAttribute('aria-label', 'Lire la version audio');
+    }
+  });
+
+  range.addEventListener('pointerdown', function(){ seeking = true; });
+  range.addEventListener('input', function(){
+    var pct = range.value / 10;
+    paint(pct);
+    if(ready) out.textContent = mmss(audio.duration * pct / 100) + ' / ' + mmss(audio.duration);
+  });
+  range.addEventListener('change', function(){
+    if(ready) audio.currentTime = audio.duration * (range.value / 1000);
+    seeking = false;
+    refresh();
+  });
+
+  var rate = document.getElementById('a-rate');
+  var rbtn = rate.querySelector('.rate-btn');
+  var opts = rate.querySelectorAll('.rate-menu li');
+
+  function closeRate(){
+    rate.classList.remove('open');
+    rbtn.setAttribute('aria-expanded', 'false');
+  }
+  rbtn.addEventListener('click', function(e){
+    e.stopPropagation();
+    var open = rate.classList.toggle('open');
+    rbtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  Array.prototype.forEach.call(opts, function(li){
+    li.addEventListener('click', function(){
+      var v = parseFloat(li.dataset.rate);
+      audio.playbackRate = v;
+      vitesseChoisie = true;
+      rbtn.innerHTML = li.innerHTML;
+      Array.prototype.forEach.call(opts, function(o){
+        o.setAttribute('aria-selected', o === li ? 'true' : 'false');
+      });
+      closeRate();
+    });
+  });
+  document.addEventListener('click', closeRate);
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeRate(); });
+
+  audio.src = box.dataset.src;
+})();
+</script>
+</body>
+</html>

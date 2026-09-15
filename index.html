@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Newsletter IA · Les couvertures</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,500&family=Inter:wght@200;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+/* ==================================================================
+   Vitrine des couvertures. Page générée par outils/build-index-v2.py :
+   ne pas la modifier à la main, les jaquettes y sont recopiées.
+   outils/build-accueil.py la régénère.
+   ================================================================== */
+/* Fond plus clair que le crème des jaquettes : sans ça les couvertures
+   se fondent dans la page et on ne voit plus où commence chaque objet. */
+body{background:#FCFAF5}
+.sheet.wide{max-width:1440px}
+
+.gal{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:44px 32px;margin-top:44px}
+@media(max-width:1180px){ .gal{grid-template-columns:repeat(3,1fr)} }
+@media(max-width:860px) { .gal{grid-template-columns:repeat(2,1fr);gap:34px 24px} }
+@media(max-width:520px) { .gal{grid-template-columns:1fr} }
+
+/* display:block partout : ce sont des <span>, et un élément inline
+   ignore aspect-ratio comme il ignore height. */
+.card{display:block;position:relative;text-decoration:none;color:inherit}
+.card .frame{
+  display:block;position:relative;overflow:hidden;
+  border:1px solid var(--line);background:var(--bg);
+  transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+.card .jaq{display:block;width:100%;height:auto}
+.card .hit{display:block;position:absolute;inset:0;z-index:2}
+.card:hover .frame,.card:focus-visible .frame{
+  transform:translateY(-4px);border-color:var(--accent);box-shadow:0 14px 34px #19161314;
+}
+
+/* Légende : numéro et date seulement. Le titre est déjà en grand sur la
+   couverture, le répéter dessous l'affaiblirait. */
+.card .leg{
+  display:flex;justify-content:space-between;align-items:baseline;gap:12px;
+  margin-top:12px;padding-top:9px;border-top:1px solid var(--line);
+  font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;
+}
+.card .leg .no{font-weight:700;color:var(--ink)}
+.card .leg .d{color:var(--muted);letter-spacing:.12em}
+.card:hover .leg .no{color:var(--accent)}
+
+/* Styles des jaquettes intégrées, déclarés une seule fois pour les 29.
+   Ce sont exactement ceux du bloc <style> des fichiers SVG. */
+.jaq .serif{font-family:'Playfair Display',Georgia,'Times New Roman',serif}
+.jaq .sans {font-family:'Inter','Helvetica Neue',Arial,sans-serif}
+.jaq .ink{fill:#191613}
+.jaq .acc{fill:#A9502F}
+.jaq .mut{fill:#8a8378}
+.jaq .caps{text-transform:uppercase;font-weight:700}
+.jaq .rule{stroke:#191613}
+.jaq .hair{stroke:#191613;opacity:.13}
+
+</style>
+</head>
+<body>
+<div class="sheet wide">
+  <div class="topbar end">
+    <a class="mode" href="index-old.html" title="Basculer en sommaire texte, une ligne par édition"><svg viewBox="0 0 24 24" aria-hidden="true"><line x1="4" y1="6.5" x2="20" y2="6.5"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17.5" x2="20" y2="17.5"/></svg>Mode liste</a>
+  </div>
+
+  <h1>La Newsletter IA</h1>
+  <div class="bar"><span class="ed">Les couvertures · 29 éditions</span><span>Par Nicolas Peytavin</span></div>
+
+  <ul class="gal">
+    <li><a class="card" href="editions/n29.html">
+      <span class="frame"><svg class="jaq" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1350" role="img" aria-label="Jaquette de La Newsletter IA, édition numéro 29, IA des mises à jour mineures, sauf une, 8 septembre 2026">
+<title>La Newsletter IA · N°29 · IA des mises à jour mineures, sauf une</title>
+<rect width="1000" height="1350" fill="#F3EFE6"/>
+<text class="sans ink" x="0" y="0" font-size="2550" font-weight="200"
+      text-anchor="middle" dominant-baseline="central" opacity=".025"
+      transform="translate(500,675) scale(0.43,1)">29</text>
+<text class="sans caps ink" x="80" y="106" font-size="19" letter-spacing=".2em">Édition N°29</text>
+<text class="sans caps mut" x="920" y="106" font-size="19" letter-spacing=".2em" text-anchor="end">8 septembre 2026</text>
+<line class="hair" x1="80" y1="132" x2="920" y2="132" stroke-width="1"/>
+<text class="serif ink" x="80" y="238" font-size="92" font-weight="700" letter-spacing="-1.5">La Newsletter IA</text>
+<text class="sans caps mut" x="80" y="272" font-size="12" letter-spacing=".26em">L'actualité de l'intelligence artificielle, décryptée</text>
+<line class="rule" x1="80" y1="296" x2="920" y2="296" stroke-width="2"/>
+<text class="serif ink" x="80" y="386" font-size="56" font-weight="500" letter-spacing="-.5">IA des mises à jour</text>
+<text class="serif ink" x="80" y="450" font-size="56" font-weight="500" letter-spacing="-.5">mineures, sauf une</text>
+<text class="sans caps acc" x="80" y="556" font-size="12" letter-spacing=".26em">Qwen 3.8 Flash Next</text>
+<text class="serif acc" x="80" y="858" font-size="300" font-weight="700" letter-spacing="-6">6 Md</text>
+<text class="sans mut" x="80" y="936" font-size="16">Cent quatre-vingts milliards de paramètres, six seulement activés.</text>
+<line class="hair" x1="80" y1="1006" x2="920" y2="1006" stroke-width="1"/>
+<text class="sans acc" x="80" y="1042" font-size="13" font-weight="700" letter-spacing=".14em">01</text>
+<text class="sans ink" x="140" y="1042" font-size="19" font-weight="400">ASTRA 6 fait passer de la voix à l'objet imprimé</text>
+<line class="hair" x1="80" y1="1066" x2="920" y2="1066" stroke-width="1"/>
+<text class="sans acc" x="80" y="1102" font-size="13" font-weight="700" letter-spacing=".14em">02</text>
+<text class="sans ink" x="140" y="1102" font-size="19" font-weight="400">Fable 5.1 divise par quatre le coût de lecture du cache</text>
+<line class="hair" x1="80" y1="1126" x2="920" y2="1126" stroke-width="1"/>
+<text class="sans acc" x="80" y="1162" font-size="13" font-weight="700" letter-spacing=".14em">03</text>
+<text class="sans ink" x="140" y="1162" font-size="19" font-weight="400">LinkedIn demande à ses membres de signaler l'AI slop</text>
+<line class="hair" x1="80" y1="1186" x2="920" y2="1186" stroke-width="1"/>
+<text class="sans caps mut" x="80" y="1276" font-size="15" letter-spacing=".22em"><tspan class="acc" font-weight="700">14</tspan> vidéos · <tspan class="acc" font-weight="700">3</tspan> lectures</text>
+<text class="sans caps mut" x="920" y="1276" font-size="15" letter-spacing=".22em" text-anchor="end">Par Nicolas Peytavin</text>
+<text class="sans mut" x="920" y="1302" font-size="14" text-anchor="end">Tous les dix jours</text>
+</svg><span class="hit"></span></span>
+      <span class="leg"><span class="no">N°29</span><span class="d">08.09.2026</span></span>
+    </a></li>
+    <li><a class="card" href="editions/n28.html">
+      <span class="frame"><svg class="jaq" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1350" role="img" aria-label="Jaquette de La Newsletter IA, édition numéro 28, IA de l'innovation dans la compression, 31 août 2026">
+<title>La Newsletter IA · N°28 · IA de l'innovation dans la compression</title>
+<rect width="1000" height="1350" fill="#F3EFE6"/>
+<text class="sans ink" x="0" y="0" font-size="2550" font-weight="200"
+      text-anchor="middle" dominant-baseline="central" opacity=".025"
+      transform="translate(500,675) scale(0.43,1)">28</text>
+<text class="sans caps ink" x="80" y="106" font-size="19" letter-spacing=".2em">Édition N°28</text>
+<text class="sans caps mut" x="920" y="106" font-size="19" letter-spacing=".2em" text-anchor="end">31 août 2026</text>
+<line class="hair" x1="80" y1="132" x2="920" y2="132" stroke-width="1"/>
+<text class="serif ink" x="80" y="238" font-size="92" font-weight="700" letter-spacing="-1.5">La Newsletter IA</text>
+<text class="sans caps mut" x="80" y="272" font-size="12" letter-spacing=".26em">L'actualité de l'intelligence artificielle, décryptée</text>
+<line class="rule" x1="80" y1="296" x2="920" y2="296" stroke-width="2"/>
+<text class="serif ink" x="80" y="386" font-size="56" font-weight="500" letter-spacing="-.5">IA de l'innovation</text>
+<text class="serif ink" x="80" y="450" font-size="56" font-weight="500" letter-spacing="-.5">dans la compression</text>
+<text class="sans caps acc" x="80" y="556" font-size="12" letter-spacing=".26em">Liquid AI</text>
+<text class="serif acc" x="80" y="858" font-size="300" font-weight="700" letter-spacing="-6">3 Go</text>
+<text class="sans mut" x="80" y="936" font-size="16">Cent fois moins de place, pour un service annoncé comparable.</text>
+<line class="hair" x1="80" y1="1006" x2="920" y2="1006" stroke-width="1"/>
+<text class="sans acc" x="80" y="1042" font-size="13" font-weight="700" letter-spacing=".14em">01</text>
+<text class="sans ink" x="140" y="1042" font-size="19" font-weight="400">AirLLM charge un grand modèle morceau par morceau</text>
+<line class="hair" x1="80" y1="1066" x2="920" y2="1066" stroke-width="1"/>
+<text class="sans acc" x="80" y="1102" font-size="13" font-weight="700" letter-spacing=".14em">02</text>
+<text class="sans ink" x="140" y="1102" font-size="19" font-weight="400">Le Mac mini M5 Pro, repensé pour l'IA locale</text>
+<line class="hair" x1="80" y1="1126" x2="920" y2="1126" stroke-width="1"/>
+<text class="sans acc" x="80" y="1162" font-size="13" font-weight="700" letter-spacing=".14em">03</text>
+<text class="sans ink" x="140" y="1162" font-size="19" font-weight="400">Meta ouvre Muse Glimmer, son modèle agentique</text>
+<line class="hair" x1="80" y1="1186" x2="920" y2="1186" stroke-width="1"/>
+<text class="sans caps mut" x="80" y="1276" font-size="15" letter-spacing=".22em"><tspan class="acc" font-weight="700">8</tspan> vidéos · <tspan class="acc" font-weight="700">2</tspan> lectures</text>
+<text class="sans caps mut" x="920" y="1276" font-size="15" letter-spacing=".22em" text-anchor="end">Par Nicolas Peytavin</text>
+<text class="sans mut" x="920" y="1302" font-size="14" text-anchor="end">Bimensuel</text>
+</svg><span class="hit"></span></span>
+      <span class="leg"><span class="no">N°28</span><span class="d">31.08.2026</span></span>
+    </a></li>
+    <li><a class="card" href="editions/n27.html">
+      <span class="frame"><svg class="jaq" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1350" role="img" aria-label="Jaquette de La Newsletter IA, édition numéro 27, IA encore des autodafés en 2026, 17 août 2026">
+<title>La Newsletter IA · N°27 · IA encore des autodafés en 2026</title>
+<rect width="1000" height="1350" fill="#F3EFE6"/>
+<text class="sans ink" x="0" y="0" font-size="2550" font-weight="200"
+      text-anchor="middle" dominant-baseline="central" opacity=".025"
+      transform="translate(500,675) scale(0.43,1)">27</text>
+<text class="sans caps ink" x="80" y="106" font-size="19" letter-spacing=".2em">Édition N°27</text>
+<text class="sans caps mut" x="920" y="106" font-size="19" letter-spacing=".2em" text-anchor="end">17 août 2026</text>
+<line class="hair" x1="80" y1="132" x2="920" y2="132" stroke-width="1"/>
+<text class="serif ink" x="80" y="238" font-size="92" font-weight="700" letter-spacing="-1.5">La Newsletter IA</text>
+<text class="sans caps mut" x="80" y="272" font-size="12" letter-spacing=".26em">L'actualité de l'intelligence artificielle, décryptée</text>
+<line class="rule" x1="80" y1="296" x2="920" y2="296" stroke-width="2"/>
+<text class="serif ink" x="80" y="386" font-size="56" font-weight="500" letter-spacing="-.5">IA encore des autodafés</text>
+<text class="serif ink" x="80" y="450" font-size="56" font-weight="500" letter-spacing="-.5">en 2026</text>
+<text class="sans caps acc" x="80" y="556" font-size="12" letter-spacing=".26em">CursorBench</text>
+<text class="serif acc" x="80" y="829" font-size="259" font-weight="700" letter-spacing="-6">8,23 $</text>
+<text class="sans mut" x="80" y="907" font-size="16">Le même score au benchmark, pour moins de la moitié du prix.</text>
+<line class="hair" x1="80" y1="1006" x2="920" y2="1006" stroke-width="1"/>
+<text class="sans acc" x="80" y="1042" font-size="13" font-weight="700" letter-spacing=".14em">01</text>
+<text class="sans ink" x="140" y="1042" font-size="19" font-weight="400">Anthropic achète des livres pour les détruire</text>
+<line class="hair" x1="80" y1="1066" x2="920" y2="1066" stroke-width="1"/>
+<text class="sans acc" x="80" y="1102" font-size="13" font-weight="700" letter-spacing=".14em">02</text>
+<text class="sans ink" x="140" y="1102" font-size="19" font-weight="400">ChatGPT passe à la publicité sur les forfaits Free et Go</text>
+<line class="hair" x1="80" y1="1126" x2="920" y2="1126" stroke-width="1"/>
+<text class="sans acc" x="80" y="1162" font-size="13" font-weight="700" letter-spacing=".14em">03</text>
+<text class="sans ink" x="140" y="1162" font-size="19" font-weight="400">Fuite de données chez Kilo Code, via Metabase</text>
+<line class="hair" x1="80" y1="1186" x2="920" y2="1186" stroke-width="1"/>
+<text class="sans caps mut" x="80" y="1276" font-size="15" letter-spacing=".22em"><tspan class="acc" font-weight="700">6</tspan> vidéos · <tspan class="acc" font-weight="700">4</tspan> lectures</text>
+<text class="sans caps mut" x="920" y="1276" font-size="15" letter-spacing=".22em" text-anchor="end">Par Nicolas Peytavin</text>
+<text class="sans mut" x="920" y="1302" font-size="14" text-anchor="end">Bimensuel</text>
+</svg><span class="hit"></span></span>
+      <span class="leg"><span class="no">N°27</span><span class="d">17.08.2026</span></span>
+    </a></li>
+    <li><a class="card" href="editions/n26.html">
+      <span class="frame"><svg class="jaq" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1350" role="img" aria-label="Jaquette de La Newsletter IA, édition numéro 26, IA trois prétendants pour un seul trône, 3 août 2026">
+<title>La Newsletter IA · N°26 · IA trois prétendants pour un seul trône</title>
+<rect width="1000" height="1350" fill="#F3EFE6"/>
+<text class="sans ink" x="0" y="0" font-size="2550" font-weight="200"
+      text-anchor="middle" dominant-baseline="central" opacity=".025"
+      transform="translate(500,675) scale(0.43,1)">26</text>
+<text class="sans caps ink" x="80" y="106" font-size="19" letter-spacing=".2em">Édition N°26</text>
+<text class="sans caps mut" x="920" y="106" font-size="19" letter-spacing=".2em" text-anchor="end">3 août 2026</text>
+<line class="hair" x1="80" y1="132" x2="920" y2="132" stroke-width="1"/>
+<text class="serif ink" x="80" y="238" font-size="92" font-weight="700" letter-spacing="-1.5">La Newsletter IA</text>
+<text class="sans caps mut" x="80" y="272" font-size="12" letter-spacing=".26em">L'actualité de l'intelligence artificielle, décryptée</text>
+<line class="rule" x1="80" y1="296" x2="920" y2="296" stroke-width="2"/>
+<text class="serif ink" x="80" y="386" font-size="56" font-weight="500" letter-spacing="-.5">IA trois prétendants</text>
+<text class="serif ink" x="80" y="450" font-size="56" font-weight="500" letter-spacing="-.5">pour un seul trône</text>
+<text class="sans caps acc" x="80" y="556" font-size="12" letter-spacing=".26em">En quinze jours</text>
+<text class="serif acc" x="80" y="886" font-size="340" font-weight="700" letter-spacing="-6">3</text>
+<text class="sans mut" x="80" y="964" font-size="16">Anthropic, Google et OpenAI sortent chacun leur modèle, coup sur coup.</text>
+<line class="hair" x1="80" y1="1006" x2="920" y2="1006" stroke-width="1"/>
+<text class="sans acc" x="80" y="1042" font-size="13" font-weight="700" letter-spacing=".14em">01</text>
+<text class="sans ink" x="140" y="1042" font-size="19" font-weight="400">Anthropic annonce la mort des prompts</text>
+<line class="hair" x1="80" y1="1066" x2="920" y2="1066" stroke-width="1"/>
+<text class="sans acc" x="80" y="1102" font-size="13" font-weight="700" letter-spacing=".14em">02</text>
+<text class="sans ink" x="140" y="1102" font-size="19" font-weight="400">Les modèles d'OpenAI s'emballent et piratent Hugging Face</text>
+<line class="hair" x1="80" y1="1126" x2="920" y2="1126" stroke-width="1"/>
+<text class="sans acc" x="80" y="1162" font-size="13" font-weight="700" letter-spacing=".14em">03</text>
+<text class="sans ink" x="140" y="1162" font-size="19" font-weight="400">Microsoft injecte des milliards dans Mistral</text>
+<line class="hair" x1="80" y1="1186" x2="920" y2="1186" stroke-width="1"/>
+<text class="sans caps mut" x="80" y="1276" font-size="15" letter-spacing=".22em"><tspan class="acc" font-weight="700">7</tspan> vidéos · <tspan class="acc" font-weight="700">5</tspan> lectures</text>
+<text class="sans caps mut" x="920" y="1276" font-size="15" letter-spacing=".22em" text-anchor="end">Par Nicolas Peytavin</text>
+<text class="sans mut" x="920" y="1302" font-size="14" text-anchor="end">Bimensuel</text>
+</svg><span class="hit"></span></span>
+      <span class="leg"><span class="no">N°26</span><span class="d">03.08.2026</span></span>
+    </a></li>
+    <li><a class="card" href="editions/n25.html">
+      <span class="frame"><svg class="jaq" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1350" role="img" aria-label="Jaquette de La Newsletter IA, édition numéro 25, Une folle accélération en seulement deux semaines, 20 juillet 2026">
+<title>La Newsletter IA · N°25 · Une folle accélération en seulement deux semaines</title>
+<rect width="1000" height="1350" fill="#F3EFE6"/>
+<text class="sans ink" x="0" y="0" font-size="2550" font-weight="200"
+      text-anchor="middle" dominant-baseline="central" opacity=".025"
+      transform="translate(500,675) scale(0.43,1)">25</text>
+<text class="sans caps ink" x="80" y="106" font-size="19" letter-spacing=".2em">Édition N°25</text>
+<text class="sans caps mut" x="920" y="106" font-size="19" letter-spacing=".2em" text-anchor="end">20 juillet 2026</text>
+<line class="hair" x1="80" y1="132" x2="920" y2="132" stroke-width="1"/>
+<text class="serif ink" x="80" y="238" font-size="92" font-weight="700" letter-spacing="-1.5">La Newsletter IA</text>
+<text class="sans caps mut" x="80" y="272" font-size="12" letter-spacing=".26em">L'actualité de l'intelligence artificielle, décryptée</text>
+<line class="rule" x1="80" y1="296" x2="920" y2="296" stroke-width="2"/>
+<text class="serif ink" x="80" y="386" font-size="56" font-weight="500" letter-spacing="-.5">Une folle accélération</text>
+<text class="serif ink" x="80" y="450" font-size="56" font-weight="500" letter-spacing="-.5">en seulement deux semaines</text>
+<text class="sans caps acc" x="80" y="556" font-size="12" letter-spacing=".26em">Kimi K3</text>
+<text class="serif acc" x="80" y="858" font-size="300" font-weight="700" letter-spacing="-6">15 $</text>
+<text class="sans mut" x="80" y="936" font-size="16">Le million de jetons trois fois moins cher, à niveau presque égal.</text>
+<line class="hair" x1="80" y1="1006" x2="920" y2="1006" stroke-width="1"/>
+<text class="sans acc" x="80" y="1042" font-size="13" font-weight="700" letter-spacing=".14em">01</text>
+<text class="sans ink" x="140" y="1042" font-size="19" font-weight="400">GPT-5.6 sort dix jours à peine après GPT-5.5</text>
+<line class="hair" x1="80" y1="1066" x2="920" y2="1066" stroke-width="1"/>
+<text class="sans acc" x="80" y="1102" font-size="13" font-weight="700" letter-spacing=".14em">02</text>
+<text class="sans ink" x="140" y="1102" font-size="19" font-weight="400">Anthropic cède et intègre Fable 5 aux abonnements Max</text>
+<line class="hair" x1="80" y1="1126" x2="920" y2="1126" stroke-width="1"/>
+<text class="sans acc" x="80" y="1162" font-size="13" font-weight="700" letter-spacing=".14em">03</text>
+<text class="sans ink" x="140" y="1162" font-size="19" font-weight="400">DeepSeek double la puissance avec le Double Path</text>
+<line class="hair" x1="80" y1="1186" x2="920" y2="1186" stroke-width="1"/>
+<text class="sans caps mut" x="80" y="1276" font-size="15" letter-spacing=".22em"><tspan class="acc" font-weight="700">7</tspan> vidéos</text>
+<text class="sans caps mut" x="920" y="1276" font-size="15" letter-spacing=".22em" text-anchor="end">Par Nicolas Peytavin</text>
+<text class="sans mut" x="920" y="1302" font-size="14" text-anchor="end">Bimensuel</text>
+</svg><span class="hit"></span></span>
+      <span class="leg"><span class="no">N°25</span><span class="d">20.07.2026</span></span>
+    </a></li>
+    <li><a class="card" href="editions/n24.html">
+      <span class="frame"><svg class="jaq" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1350" role="img" aria-label="Jaquette de La Newsletter IA, édition numéro 24, IA, un blocage pour l'un et une libération de l'autre, 4 juillet 2026">
+<title>La Newsletter IA · N°24 · IA, un blocage pour l'un et une libération de l'autre</title>
+<rect width="1000" height="1350" fill="#F3EFE6"/>
+<text class="sans ink" x="0" y="0" font-size="2550" font-weight="200"
+      text-anchor="middle" dominant-baseline="central" opacity=".025"
+      transform="translate(500,675) scale(0.43,1)">24</text>
+<text class="sans caps ink" x="80" y="106" font-size="19" letter-spacing=".2em">Édition N°24</text>
+<text class="sans caps mut" x="920" y="106" font-size="19" letter-spacing=".2em" text-anchor="end">4 juillet 2026</text>
+<line class="hair" x1="80" y1="132" x2="920" y2="132" stroke-width="1"/>
+<text class="serif ink" x="80" y="238" font-size="92" font-weight="700" letter-spacing="-1.5">La Newsletter IA</text>
+<text class="sans caps mut" x="80" y="272" font-size="12" letter-spacing=".26em">L'actualité de l'intelligence artificielle, décryptée</text>
+<line class="rule" x1="80" y1="296" x2="920" y2="296" stroke-width="2"/>
+<text class="serif ink" x="80" y="386" font-size="56" font-weight="500" letter-spacing="-.5">IA, un blocage pour l'un</text>
+<text class="serif ink" x="80" y="450" font-size="56" font-weight="500" letter-spacing="-.5">et une libération de l'autre</text>
+<text class="sans caps acc" x="80" y="556" font-size="12" letter-spacing=".26em">Fable 5</text>
+<text class="serif acc" x="80" y="788" font-size="200" font-weight="700" letter-spacing="-6">De retour</text>
+<text class="sans mut" x="80" y="866" font-size="16">Anthropic rouvre l'accès, pendant que GPT-5.6 se fait bloquer aux États-Unis.</text>
+<line class="hair" x1="80" y1="1006" x2="920" y2="1006" stroke-width="1"/>
+<text class="sans acc" x="80" y="1042" font-size="13" font-weight="700" letter-spacing=".14em">01</text>
+<text class="sans ink" x="140" y="1042" font-size="19" font-weight="400">FUGU, sorti de nulle part, rivalise avec Fable 5</text>
+<line class="hair" x1="80" y1="1066" x2="920" y2="1066" stroke-width="1"/>
+<text class="sans acc" x="80" y="1102" font-size="13" font-weight="700" letter-spacing=".14em">02</text>
+<text class="sans ink" x="140" y="1102" font-size="19" font-weight="400">Votre mini datacenter local, spécial IA</text>
+<line class="hair" x1="80" y1="1126" x2="920" y2="1126" stroke-width="1"/>
+<text class="sans acc" x="80" y="1162" font-size="13" font-weight="700" letter-spacing=".14em">03</text>
+<text class="sans ink" x="140" y="1162" font-size="19" font-weight="400">Les histoires écrites par l'IA sont détectables</text>
+<line class="hair" x1="80" y1="1186" x2="920" y2="1186" stroke-width="1"/>
+<text class="sans caps mut" x="80" y="1276" font-size="15" letter-spacing=".22em"><tspan class="acc" font-weight="700">6</tspan> vidéos</text>
+<text class="sans caps mut" x="920" y="1276" font-size="15" letter-spacing=".22em" text-anchor="end">Par Nicolas Peytavin</text>
+<text class="sans mut" x="920" y="1302" font-size="14" text-anchor="end">Bimensuel</text>
+</svg><span class="hit"></span></span>
+      <span class="leg"><span class="no">N°24</span><span class="d">04.07.2026</span></span>
+    </a></li>
+    <li><a class="card" href="editions/n23.html">
+      <span class="frame"><svg class="jaq" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1350" role="img" aria-label="Jaquette de La Newsletter IA, édition numéro 23, IA Fable V , le modèle, pas le jeu vidéo, 23 juin 2026">
+<title>La Newsletter IA · N°23 · IA Fable V : le modèle, pas le jeu vidéo</title>
+<rect width="1000" height="1350" fill="#F3EFE6"/>
+<text class="sans ink" x="0" y="0" font-size="2550" font-weight="200"
+      text-anchor="middle" dominant-baseline="central" opacity=".025"
+      transform="translate(500,675) scale(0.43,1)">23</text>
+<text class="sans caps ink" x="80" y="106" font-size="19" letter-spacing=".2em">Édition N°23</text>
+<text class="sans caps mut" x="920" y="106" font-size="19" letter-spacing=".2em" text-anchor="end">23 juin 2026</text>
+<line class="hair" x1="80" y1="132" x2="920" y2="132" stroke-width="1"/>
+<text class="serif ink" x="80" y="238" font-size="92" font-weight="700" letter-spacing="-1.5">La Newsletter IA</text>
+<text class="sans caps mut" x="80" y="272" font-size="12" letter-spacing=".26em">L'actualité de l'intelligence artificielle, décryptée</text>
+<line class="rule" x1="80" y1="296" x2="920" y2="296" stroke-width="2"/>
+<text class="serif ink" x="80" y="386" font-size="56" font-weight="500" letter-spacing="-.5">IA Fable V : le modèle,</text>
+<text class="serif ink" x="80" y="450" font-size="56" font-weight="500" letter-spacing="-.5">pas le jeu vidéo</text>
+<text class="sans caps acc" x="80" y="556" font-size="12" letter-spacing=".26em">OpenAI a dépensé en 2025</text>
+<text class="serif acc" x="80" y="802" font-size="220" font-weight="700" letter-spacing="-6">34 Md $</text>
+<text class="sans mut" x="80" y="880" font-size="16">Pour treize milliards encaissés. Le compte n'y est pas.</text>
+<line class="hair" x1="80" y1="1006" x2="920" y2="1006" stroke-width="1"/>
+<text class="sans acc" x="80" y="1042" font-size="13" font-weight="700" letter-spacing=".14em">01</text>
+<text class="sans ink" x="140" y="1042" font-size="19" font-weight="400">Palmier, le nouvel éditeur vidéo d'Anthropic</text>
+<line class="hair" x1="80" y1="1066" x2="920" y2="1066" stroke-width="1"/>
+<text class="sans acc" x="80" y="1102" font-size="13" font-weight="700" letter-spacing=".14em">02</text>
+<text class="sans ink" x="140" y="1102" font-size="19" font-weight="400">GLM-5.2, l'IA chinoise gratuite qui bat GPT-5.5</text>
+<line class="hair" x1="80" y1="1126" x2="920" y2="1126" stroke-width="1"/>
+<text class="sans acc" x="80" y="1162" font-size="13" font-weight="700" letter-spacing=".14em">03</text>
+<text class="sans ink" x="140" y="1162" font-size="19" font-weight="400">« The AI Layoff trap », la preuve mathématique de Wharton</text>
+<line class="hair" x1="80" y1="1186" x2="920" y2="1186" stroke-width="1"/>
+<text class="sans caps mut" x="80" y="1276" font-size="15" letter-spacing=".22em"><tspan class="acc" font-weight="700">7</tspan> vidéos · <tspan class="acc" font-weight="700">1</tspan> lecture</text>
+<text class="sans caps mut" x="920" y="1276" font-size="15" letter-spacing=".22em" text-anchor="end">Par Nicolas Peytavin</text>
+<text class="sans mut" x="920" y="1302" font-size="14" text-anchor="end">Bimensuel</text>
+</svg><span class="hit"></span></span>
+      <span class="leg"><span class="no">N°23</span><span class="d">23.06.2026</span></span>
+    </a></li>
+    <li><a class="card" href="editions/n22.html">
+      <span class="frame"><svg class="jaq" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1350" role="img" aria-label="Jaquette de La Newsletter IA, édition numéro 22, IA, OpenClaw déjà dépassé par Hermes, 8 juin 2026">
+<title>La Newsletter IA · N°22 · IA, OpenClaw déjà dépassé par Hermes</title>
+<rect width="1000" height="1350" fill="#F3EFE6"/>
+<text class="sans ink" x="0" y="0" font-size="2550" font-weight="200"
+      text-anchor="middle" dominant-baseline="central" opacity=".025"
+      transform="translate(500,675) scale(0.43,1)">22</text>
+<text class="sans caps ink" x="80" y="106" font-size="19" letter-spacing=".2em">Édition N°22</text>
+<text class="sans caps mut" x="920" y="106" font-size="19" letter-spacing=".2em" text-anchor="end">8 juin 2026</text>
+<line class="hair" x1="80" y1="132" x2="920" y2="132" stroke-width="1"/>
+<text class="serif ink" x="80" y="238" font-size="92" font-weight="700" letter-spacing="-1.5">La Newsletter IA</text>
+<text class="sans caps mut" x="80" y="272" font-size="12" letter-spacing=".26em">L'actualité de l'intelligence artificielle, décryptée</text>
+<line class="rule" x1="80" y1="296" x2="920" y2="296" stroke-width="2"/>
+<text class="serif ink" x="80" y="386" font-size="56" font-weight="500" letter-spacing="-.5">IA, OpenClaw déjà</text>
+<text class="serif ink" x="80" y="450" font-size="56" font-weight="500" letter-spacing="-.5">dépassé par Hermes</text>
+<text class="sans caps acc" x="80" y="556" font-size="12" letter-spacing=".26em">Microsoft</text>
+<text class="serif acc" x="80" y="886" font-size="340" font-weight="700" letter-spacing="-6">7</text>
+<text class="sans mut" x="80" y="964" font-size="16">Sept modèles maison dévoilés d'un coup, plus Scout, l'assistant ultra-autonome.</text>
+<line class="hair" x1="80" y1="1006" x2="920" y2="1006" stroke-width="1"/>
+<text class="sans acc" x="80" y="1042" font-size="13" font-weight="700" letter-spacing=".14em">01</text>
+<text class="sans ink" x="140" y="1042" font-size="19" font-weight="400">Hermes, c'est OpenClaw en beaucoup plus facile</text>
+<line class="hair" x1="80" y1="1066" x2="920" y2="1066" stroke-width="1"/>
+<text class="sans acc" x="80" y="1102" font-size="13" font-weight="700" letter-spacing=".14em">02</text>
+<text class="sans ink" x="140" y="1102" font-size="19" font-weight="400">La singularité serait arrivée, selon certains</text>
+<line class="hair" x1="80" y1="1126" x2="920" y2="1126" stroke-width="1"/>
+<text class="sans acc" x="80" y="1162" font-size="13" font-weight="700" letter-spacing=".14em">03</text>
+<text class="sans ink" x="140" y="1162" font-size="19" font-weight="400">Vingt-cinq pour cent de performance en plus sur vos LLM locaux</text>
+<line class="hair" x1="80" y1="1186" x2="920" y2="1186" stroke-width="1"/>
+<text class="sans caps mut" x="80" y="1276" font-size="15" letter-spacing=".22em"><tspan class="acc" font-weight="700">5</tspan> vidéos · <tspan class="acc" font-weight="700">4</tspan> lectures</text>
+<text class="sans caps mut" x="920" y="1276" font-size="15" letter-spacing=".22em" text-anchor="end">Par Nicolas Peytavin</text>
+<text class="sans mut" x="920" y="1302" font-size="14" text-anchor="end">Bimensuel</text>
+</svg><span class="hit"></span></span>
+      <span class="leg"><span class="no">N°22</span><span class="d">08.06.2026</span></span>
+    </a></li>
+    <li><a class="card" href="editions/n21.html">
+      <span class="frame"><svg class="jaq" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1350" role="img" aria-label="Jaquette de La Newsletter IA, édition numéro 21, IA, Google et Anthropic puis le reste, 26 mai 2026">
+<title>La Newsletter IA · N°21 · IA, Google et Anthropic puis le reste</title>
+<rect width="1000" height="1350" fill="#F3EFE6"/>
+<text class="sans ink" x="0" y="0" font-size="2550" font-weight="200"
+      text-anchor="middle" dominant-baseline="central" opacity=".025"
+      transform="translate(500,675) scale(0.43,1)">21</text>
+<text class="sans caps ink" x="80" y="106" font-size="19" letter-spacing=".2em">Édition N°21</text>
+<text class="sans caps mut" x="920" y="106" font-size="19" letter-spacing=".2em" text-anchor="end">26 mai 2026</text>
+<line class="hair" x1="80" y1="132" x2="920" y2="132" stroke-width="1"/>
+<text class="serif ink" x="80" y="238" font-size="92" font-weight="700" letter-spacing="-1.5">La Newsletter IA</text>
+<text class="sans caps mut" x="80" y="272" font-size="12" letter-spacing=".26em">L'actualité de l'intelligence artificielle, décryptée</text>
+<line class="rule" x1="80" y1="296" x2="920" y2="296" stroke-width="2"/>
+<text class="serif ink" x="80" y="386" font-size="56" font-weight="500" letter-spacing="-.5">IA, Google et Anthropic</text>
+<text class="serif ink" x="80" y="450" font-size="56" font-weight="500" letter-spacing="-.5">puis le reste</text>
+<text class="sans caps acc" x="80" y="556" font-size="12" letter-spacing=".26em">Sur votre téléphone</text>
+<text class="serif acc" x="80" y="858" font-size="300" font-weight="700" letter-spacing="-6">4 Go</text>
+<text class="sans mut" x="80" y="936" font-size="16">Quatre gigaoctets de modèle installés sans rien demander à personne.</text>
+<line class="hair" x1="80" y1="1006" x2="920" y2="1006" stroke-width="1"/>
+<text class="sans acc" x="80" y="1042" font-size="13" font-weight="700" letter-spacing=".14em">01</text>
+<text class="sans ink" x="140" y="1042" font-size="19" font-weight="400">Google annonce la fin de la recherche telle qu'on la connaît</text>
+<line class="hair" x1="80" y1="1066" x2="920" y2="1066" stroke-width="1"/>
+<text class="sans acc" x="80" y="1102" font-size="13" font-weight="700" letter-spacing=".14em">02</text>
+<text class="sans ink" x="140" y="1102" font-size="19" font-weight="400">Claude Code travaille pendant que vous dormez</text>
+<line class="hair" x1="80" y1="1126" x2="920" y2="1126" stroke-width="1"/>
+<text class="sans acc" x="80" y="1162" font-size="13" font-weight="700" letter-spacing=".14em">03</text>
+<text class="sans ink" x="140" y="1162" font-size="19" font-weight="400">Luna, l'IA qui gère un magasin et ses employés</text>
+<line class="hair" x1="80" y1="1186" x2="920" y2="1186" stroke-width="1"/>
+<text class="sans caps mut" x="80" y="1276" font-size="15" letter-spacing=".22em"><tspan class="acc" font-weight="700">11</tspan> vidéos</text>
+<text class="sans caps mut" x="920" y="1276" font-size="15" letter-spacing=".22em" text-anchor="end">Par Nicolas Peytavin</text>
+<text class="sans mut" x="920" y="1302" font-size="14" text-anchor="end">Bimensuel</text>
+</svg><span class="hit"></span></span>
+      <span class="leg"><span class="no">N°21</span><span class="d">26.05.2026</span></span>
+    </a></li>
+    <li><a class="card" href="editions/n20.html">
+      <span class="frame"><svg class="jaq" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1350" role="img" aria-label="Jaquette de La Newsletter IA, édition numéro 20, IA, pas grand chose cette semaine, 11 mai 2026">
+<title>La Newsletter IA · N°20 · IA, pas grand chose cette semaine</title>
+<rect width="1000" height="1350" fill="#F3EFE6"/>
+<text class="sans ink" x="0" y="0" font-size="2550" font-weight="200"
+      text-anchor="middle" dominant-baseline="central" opacity=".025"
+      transform="translate(500,675) scale(0.43,1)">20</text>
+<text class="sans caps ink" x="80" y="106" font-size="19" letter-spacing=".2em">Édition N°20</text>
+<text class="sans caps mut" x="920" y="106" font-size="19" letter-spacing=".2em" text-anchor="end">11 mai 2026</text>
+<line class="hair" x1="80" y1="132" x2="920" y2="132" stroke-width="1"/>
+<text class="serif ink" x="80" y="238" font-size="92" font-weight="700" letter-spacing="-1.5">La Newsletter IA</text>
+<text class="sans caps mut" x="80" y="272" font-size="12" letter-spacing=".26em">L'actualité de l'intelligence artificielle, décryptée</text>
+<line class="rule" x1="80" y1="296" x2="920" y2="296" stroke-width="2"/>
+<text class="serif ink" x="80" y="386" font-size="56" font-weight="500" letter-spacing="-.5">IA, pas grand chose</text>
+<text class="serif ink" x="80" y="450" font-size="56" font-weight="500" letter-spacing="-.5">cette semaine</text>
+<text class="sans caps acc" x="80" y="556" font-size="12" letter-spacing=".26em">IA Washing</text>
+<text class="serif acc" x="80" y="767" font-size="170" font-weight="700" letter-spacing="-6">Le prétexte</text>
+<text class="sans mut" x="80" y="845" font-size="16">L'intelligence artificielle invoquée pour habiller des licenciements.</text>
+<line class="hair" x1="80" y1="1006" x2="920" y2="1006" stroke-width="1"/>
+<text class="sans acc" x="80" y="1042" font-size="13" font-weight="700" letter-spacing=".14em">01</text>
+<text class="sans ink" x="140" y="1042" font-size="19" font-weight="400">Claude se connecte à l'Apple Watch</text>
+<line class="hair" x1="80" y1="1066" x2="920" y2="1066" stroke-width="1"/>
+<text class="sans acc" x="80" y="1102" font-size="13" font-weight="700" letter-spacing=".14em">02</text>
+<text class="sans ink" x="140" y="1102" font-size="19" font-weight="400">Le Netflix chinois clone ses propres acteurs</text>
+<line class="hair" x1="80" y1="1126" x2="920" y2="1126" stroke-width="1"/>
+<text class="sans acc" x="80" y="1162" font-size="13" font-weight="700" letter-spacing=".14em">03</text>
+<text class="sans ink" x="140" y="1162" font-size="19" font-weight="400">Cloner votre voix avec MiniMax Audio</text>
+<line class="hair" x1="80" y1="1186" x2="920" y2="1186" stroke-width="1"/>
+<text class="sans caps mut" x="80" y="1276" font-size="15" letter-spacing=".22em"><tspan class="acc" font-weight="700">5</tspan> vidéos</text>
+<text class="sans caps mut" x="920" y="1276" font-size="15" letter-spacing=".22em" text-anchor="end">Par Nicolas Peytavin</text>
+<text class="sans mut" x="920" y="1302" font-size="14" text-anchor="end">Bimensuel</text>
+</svg><span class="hit"></span></span>
+      <span class="leg"><span class="no">N°20</span><span class="d">11.05.2026</span></span>
+    </a></li>
+    <li><a class="card" href="editions/n19.html">
+      <span class="frame"><svg class="jaq" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1350" role="img" aria-label="Jaquette de La Newsletter IA, édition numéro 19, IA, la pieuvre Anthropic qui prend du terrain, 27 avril 2026">
+<title>La Newsletter IA · N°19 · IA, la pieuvre Anthropic qui prend du terrain</title>
+<rect width="1000" height="1350" fill="#F3EFE6"/>
+<text class="sans ink" x="0" y="0" font-size="2550" font-weight="200"
+      text-anchor="middle" dominant-baseline="central" opacity=".025"
+      transform="translate(500,675) scale(0.43,1)">19</text>
+<text class="sans caps ink" x="80" y="106" font-size="19" letter-spacing=".2em">Édition N°19</text>
+<text class="sans caps mut" x="920" y="106" font-size="19" letter-spacing=".2em" text-anchor="end">27 avril 2026</text>
+<line class="hair" x1="80" y1="132" x2="920" y2="132" stroke-width="1"/>
+<text class="serif ink" x="80" y="238" font-size="92" font-weight="700" letter-spacing="-1.5">La Newsletter IA</text>
+<text class="sans caps mut" x="80" y="272" font-size="12" letter-spacing=".26em">L'actualité de l'intelligence artificielle, décryptée</text>
+<line class="rule" x1="80" y1="296" x2="920" y2="296" stroke-width="2"/>
+<text class="serif ink" x="80" y="386" font-size="56" font-weight="500" letter-spacing="-.5">IA, la pieuvre Anthropic</text>
+<text class="serif ink" x="80" y="450" font-size="56" font-weight="500" letter-spacing="-.5">prend du terrain</text>
+<text class="sans caps acc" x="80" y="556" font-size="12" letter-spacing=".26em">Claude-Mem</text>
+<text class="serif acc" x="80" y="858" font-size="300" font-weight="700" letter-spacing="-6">95 %</text>
+<text class="sans mut" x="80" y="936" font-size="16">Les jetons économisés grâce à un simple skill de mémoire.</text>
+<line class="hair" x1="80" y1="1006" x2="920" y2="1006" stroke-width="1"/>
+<text class="sans acc" x="80" y="1042" font-size="13" font-weight="700" letter-spacing=".14em">01</text>
+<text class="sans ink" x="140" y="1042" font-size="19" font-weight="400">Trois modèles en une semaine : Opus 4.7, GPT-5.5 et DeepSeek V4</text>
+<line class="hair" x1="80" y1="1066" x2="920" y2="1066" stroke-width="1"/>
+<text class="sans acc" x="80" y="1102" font-size="13" font-weight="700" letter-spacing=".14em">02</text>
+<text class="sans ink" x="140" y="1102" font-size="19" font-weight="400">Un prêtre participe au code de conduite de Claude</text>
+<line class="hair" x1="80" y1="1126" x2="920" y2="1126" stroke-width="1"/>
+<text class="sans acc" x="80" y="1162" font-size="13" font-weight="700" letter-spacing=".14em">03</text>
+<text class="sans ink" x="140" y="1162" font-size="19" font-weight="400">Le marathon des robots, et ses abandons</text>
+<line class="hair" x1="80" y1="1186" x2="920" y2="1186" stroke-width="1"/>
+<text class="sans caps mut" x="80" y="1276" font-size="15" letter-spacing=".22em"><tspan class="acc" font-weight="700">11</tspan> vidéos · <tspan class="acc" font-weight="700">2</tspan> lectures</text>
+<text class="sans caps mut" x="920" y="1276" font-size="15" letter-spacing=".22em" text-anchor="end">Par Nicolas Peytavin</text>
+<text class="sans mut" x="920" y="1302" font-size="14" text-anchor="end">Bimensuel</text>
+</svg><span class="hit"></span></span>
+      <span class="leg"><span class="no">N°19</span><span class="d">27.04.2026</span></span>
+    </a></li>
+    <li><a class="card" href="editions/n18.html">
+      <span class="frame"><svg class="jaq" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1350" role="img" aria-label="Jaquette de La Newsletter IA, édition numéro 18, IA, Google qui nous sauve encore une fois, 13 avril 2026">
+<title>La Newsletter IA · N°18 · IA, Google qui nous sauve encore une fois</title>
+<rect width="1000" height="1350" fill="#F3EFE6"/>
+<text class="sans ink" x="0" y="0" font-size="2550" font-weight="200"
+      text-anchor="middle" dominant-baseline="central" opacity=".025"
+      transform="translate(500,675) scale(0.43,1)">18</text>
+<text class="sans caps ink" x="80" y="106" font-size="19" letter-spacing=".2em">Édition N°18</text>
+<text class="sans caps mut" x="920" y="106" font-size="19" letter-spacing=".2em" text-anchor="end">13 avril 2026</text>
+<line class="hair" x1="80" y1="132" x2="920" y2="132" stroke-width="1"/>
+<text class="serif ink" x="80" y="238" font-size="92" font-weight="700" letter-spacing="-1.5">La Newsletter IA</text>
+<text class="sans caps mut" x="80" y="272" font-size="12" letter-spacing=".26em">L'actualité de l'intelligence artificielle, décryptée</text>
+<line class="rule" x1="80" y1="296" x2="920" y2="296" stroke-width="2"/>
+<text class="serif ink" x="80" y="386" font-size="56" font-weight="500" letter-spacing="-.5">IA, Google nous sauve</text>
+<text class="serif ink" x="80" y="450" font-size="56" font-weight="500" letter-spacing="-.5">encore une fois</text>
+<text class="sans caps acc" x="80" y="556" font-size="12" letter-spacing=".26em">Bonsai 8B</text>
+<text class="serif acc" x="80" y="802" font-size="220" font-weight="700" letter-spacing="-6">1,15 Go</text>
+<text class="sans mut" x="80" y="880" font-size="16">Seize gigaoctets de modèle qui tiennent désormais dans un peu plus d'un.</text>
+<line class="hair" x1="80" y1="1006" x2="920" y2="1006" stroke-width="1"/>
+<text class="sans acc" x="80" y="1042" font-size="13" font-weight="700" letter-spacing=".14em">01</text>
+<text class="sans ink" x="140" y="1042" font-size="19" font-weight="400">Gemma 4, open source et déjà numéro 3 mondial</text>
+<line class="hair" x1="80" y1="1066" x2="920" y2="1066" stroke-width="1"/>
+<text class="sans acc" x="80" y="1102" font-size="13" font-weight="700" letter-spacing=".14em">02</text>
+<text class="sans ink" x="140" y="1102" font-size="19" font-weight="400">TurboQuant, la réponse radicale à la crise de la RAM</text>
+<line class="hair" x1="80" y1="1126" x2="920" y2="1126" stroke-width="1"/>
+<text class="sans acc" x="80" y="1162" font-size="13" font-weight="700" letter-spacing=".14em">03</text>
+<text class="sans ink" x="140" y="1162" font-size="19" font-weight="400">Flight Deals rend les comparateurs de vols inutiles</text>
+<line class="hair" x1="80" y1="1186" x2="920" y2="1186" stroke-width="1"/>
+<text class="sans caps mut" x="80" y="1276" font-size="15" letter-spacing=".22em"><tspan class="acc" font-weight="700">7</tspan> vidéos · <tspan class="acc" font-weight="700">2</tspan> lectures</text>
+<text class="sans caps mut" x="920" y="1276" font-size="15" letter-spacing=".22em" text-anchor="end">Par Nicolas Peytavin</text>
+<text class="sans mut" x="920" y="1302" font-size="14" text-anchor="end">Bimensuel</text>
+</svg><span class="hit"></span></span>
+      <span class="leg"><span class="no">N°18</span><span class="d">13.04.2026</span></span>
+    </a></li>
+    <li><a class="card" href="editions/n17.html">
+      <span class="frame"><svg class="jaq" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1350" role="img" aria-label="Jaquette de La Newsletter IA, édition numéro 17, IA, la hype d'OpenClaw qui se maintient, 9 avril 2026">
+<title>La Newsletter IA · N°17 · IA, la hype d'OpenClaw qui se maintient</title>
+<rect width="1000" height="1350" fill="#F3EFE6"/>
+<text class="sans ink" x="0" y="0" font-size="2550" font-weight="200"
+      text-anchor="middle" dominant-baseline="central" opacity=".025"
+      transform="translate(500,675) scale(0.43,1)">17</text>
+<text class="sans caps ink" x="80" y="106" font-size="19" letter-spacing=".2em">Édition N°17</text>
+<text class="sans caps mut" x="920" y="106" font-size="19" letter-spacing=".2em" text-anchor="end">9 avril 2026</text>
+<line class="hair" x1="80" y1="132" x2="920" y2="132" stroke-width="1"/>
+<text class="serif ink" x="80" y="238" font-size="92" font-weight="700" letter-spacing="-1.5">La Newsletter IA</text>
+<text class="sans caps mut" x="80" y="272" font-size="12" letter-spacing=".26em">L'actualité de l'intelligence artificielle, décryptée</text>
+<line class="rule" x1="80" y1="296" x2="920" y2="296" stroke-width="2"/>
+<text class="serif ink" x="80" y="386" font-size="56" font-weight="500" letter-spacing="-.5">IA, la hype d'OpenClaw</text>
+<text class="serif ink" x="80" y="450" font-size="56" font-weight="500" letter-spacing="-.5">qui se maintient</text>
+<text class="sans caps acc" x="80" y="556" font-size="12" letter-spacing=".26em">Open Claw</text>
+<text class="serif acc" x="80" y="823" font-size="250" font-weight="700" letter-spacing="-6">La hype</text>
+<text class="sans mut" x="80" y="901" font-size="16">Les Chinois font la queue pour l'installer, et les géants s'alignent.</text>
+<line class="hair" x1="80" y1="1006" x2="920" y2="1006" stroke-width="1"/>
+<text class="sans acc" x="80" y="1042" font-size="13" font-weight="700" letter-spacing=".14em">01</text>
+<text class="sans ink" x="140" y="1042" font-size="19" font-weight="400">Anthropic fait comme Open Claw, mais en plus sécurisé</text>
+<line class="hair" x1="80" y1="1066" x2="920" y2="1066" stroke-width="1"/>
+<text class="sans acc" x="80" y="1102" font-size="13" font-weight="700" letter-spacing=".14em">02</text>
+<text class="sans ink" x="140" y="1102" font-size="19" font-weight="400">Fini la beta : Anthropic dévoile Cowork et Dispatch</text>
+<line class="hair" x1="80" y1="1126" x2="920" y2="1126" stroke-width="1"/>
+<text class="sans acc" x="80" y="1162" font-size="13" font-weight="700" letter-spacing=".14em">03</text>
+<text class="sans ink" x="140" y="1162" font-size="19" font-weight="400">Qwen Image Layered met les designers en PLS</text>
+<line class="hair" x1="80" y1="1186" x2="920" y2="1186" stroke-width="1"/>
+<text class="sans caps mut" x="80" y="1276" font-size="15" letter-spacing=".22em"><tspan class="acc" font-weight="700">9</tspan> vidéos · <tspan class="acc" font-weight="700">2</tspan> lectures</text>
+<text class="sans caps mut" x="920" y="1276" font-size="15" letter-spacing=".22em" text-anchor="end">Par Nicolas Peytavin</text>
+<text class="sans mut" x="920" y="1302" font-size="14" text-anchor="end">Bimensuel</text>
+</svg><span class="hit"></span></span>
+      <span class="leg"><span class="no">N°17</span><span class="d">09.04.2026</span></span>
+    </a></li>
+    <li><a class="card" href="editions/n16.html">
+      <span class="frame"><svg class="jaq" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1350" role="img" aria-label="Jaquette de La Newsletter IA, édition numéro 16, IA, une guerre éthique en cours, 13 mars 2026">
+<title>La Newsletter IA · N°16 · IA, une guerre éthique en cours</title>
+<rect width="1000" height="1350" fill="#F3EFE6"/>
+<text class="sans ink" x="0" y="0" font-size="2550" font-weight="200"
+      text-anchor="middle" dominant-baseline="central" opacity=".025"
+      transform="translate(500,675) scale(0.43,1)">16</text>
+<text class="sans caps ink" x="80" y="106" font-size="19" letter-spacing=".2em">Édition N°16</text>
+<text class="sans caps mut" x="920" y="106" font-size="19" letter-spacing=".2em" text-anchor="end">13 mars 2026</text>
+<line class="hair" x1="80" y1="132" x2="920" y2="132" stroke-width="1"/>
+<text class="serif ink" x="80" y="238" font-size="92" font-weight="700" letter-spacing="-1.5">La Newsletter IA</text>
+<text class="sans caps mut" x="80" y="272" font-size="12" letter-spacing=".26em">L'actualité de l'intelligence artificielle, décryptée</text>
+<line class="rule" x1="80" y1="296" x2="920" y2="296" stroke-width="2"/>
+<text class="serif ink" x="80" y="386" font-size="56" font-weight="500" letter-spacing="-.5">IA, une guerre éthique</text>
+<text class="serif ink" x="80" y="450" font-size="56" font-weight="500" letter-spacing="-.5">en cours</text>
+<text class="sans caps acc" x="80" y="556" font-size="12" letter-spacing=".26em">ChatGPT</text>
+<text class="serif acc" x="80" y="858" font-size="300" font-weight="700" letter-spacing="-6">700 %</text>
+<text class="sans mut" x="80" y="936" font-size="16">La hausse des désabonnements, en une seule vague.</text>
+<line class="hair" x1="80" y1="1006" x2="920" y2="1006" stroke-width="1"/>
+<text class="sans acc" x="80" y="1042" font-size="13" font-weight="700" letter-spacing=".14em">01</text>
+<text class="sans ink" x="140" y="1042" font-size="19" font-weight="400">La fête est finie : les LLM doivent devenir rentables</text>
+<line class="hair" x1="80" y1="1066" x2="920" y2="1066" stroke-width="1"/>
+<text class="sans acc" x="80" y="1102" font-size="13" font-weight="700" letter-spacing=".14em">02</text>
+<text class="sans ink" x="140" y="1102" font-size="19" font-weight="400">xAI lance « Macrohard » pour tuer Microsoft</text>
+<line class="hair" x1="80" y1="1126" x2="920" y2="1126" stroke-width="1"/>
+<text class="sans acc" x="80" y="1162" font-size="13" font-weight="700" letter-spacing=".14em">03</text>
+<text class="sans ink" x="140" y="1162" font-size="19" font-weight="400">L'agent ROME, conçu pour coder, a préféré miner</text>
+<line class="hair" x1="80" y1="1186" x2="920" y2="1186" stroke-width="1"/>
+<text class="sans caps mut" x="80" y="1276" font-size="15" letter-spacing=".22em"><tspan class="acc" font-weight="700">2</tspan> vidéos · <tspan class="acc" font-weight="700">6</tspan> lectures</text>
+<text class="sans caps mut" x="920" y="1276" font-size="15" letter-spacing=".22em" text-anchor="end">Par Nicolas Peytavin</text>
+<text class="sans mut" x="920" y="1302" font-size="14" text-anchor="end">Bimensuel</text>
+</svg><span class="hit"></span></span>
+      <span class="leg"><span class="no">N°16</span><span class="d">13.03.2026</span></span>
+    </a></li>
+    <li><a class="card" href="editions/n15.html">
+      <span class="frame"><svg class="jaq" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1350" role="img" aria-label="Jaquette de La Newsletter IA, édition numéro 15, IA, Open Claw qui fait passer nos LLM pour des jouets, 2 mars 2026">
+<title>La Newsletter IA · N°15 · IA, Open Claw qui fait passer nos LLM pour des jouets</title>
+<rect width="1000" height="1350" fill="#F3EFE6"/>
+<text class="sans ink" x="0" y="0" font-size="2550" font-weight="200"
+      text-anchor="middle" dominant-baseline="central" opacity=".025"
+      transform="translate(500,675) scale(0.43,1)">15</text>
+<text class="sans caps ink" x="80" y="106" font-size="19" letter-spacing=".2em">Édition N°15</text>
+<text class="sans caps mut" x="920" y="106" font-size="19" letter-spacing=".2em" text-anchor="end">2 mars 2026</text>
+<line class="hair" x1="80" y1="132" x2="920" y2="132" stroke-width="1"/>
+<text class="serif ink" x="80" y="238" font-size="92" font-weight="700" letter-spacing="-1.5">La Newsletter IA</text>
+<text class="sans caps mut" x="80" y="272" font-size="12" letter-spacing=".26em">L'actualité de l'intelligence artificielle, décryptée</text>
+<line class="rule" x1="80" y1="296" x2="920" y2="296" stroke-width="2"/>
+<text class="serif ink" x="80" y="386" font-size="56" font-weight="500" letter-spacing="-.5">IA, Open Claw fait passer</text>
+<text class="serif ink" x="80" y="450" font-size="56" font-weight="500" letter-spacing="-.5">nos LLM pour des jouets</text>
+<text class="sans caps acc" x="80" y="556" font-size="12" letter-spacing=".26em">Open Claw</text>
+<text class="serif acc" x="80" y="829" font-size="259" font-weight="700" letter-spacing="-6">1 Md $</text>
+<text class="sans mut" x="80" y="907" font-size="16">Le prix payé pour racheter le créateur d'Open Claw.</text>
+<line class="hair" x1="80" y1="1006" x2="920" y2="1006" stroke-width="1"/>
+<text class="sans acc" x="80" y="1042" font-size="13" font-weight="700" letter-spacing=".14em">01</text>
+<text class="sans ink" x="140" y="1042" font-size="19" font-weight="400">Google sort Gemini 3.1 Pro dans l'indifférence</text>
+<line class="hair" x1="80" y1="1066" x2="920" y2="1066" stroke-width="1"/>
+<text class="sans acc" x="80" y="1102" font-size="13" font-weight="700" letter-spacing=".14em">02</text>
+<text class="sans ink" x="140" y="1102" font-size="19" font-weight="400">TikTok frappe fort avec Seedance 2.0</text>
+<line class="hair" x1="80" y1="1126" x2="920" y2="1126" stroke-width="1"/>
+<text class="sans acc" x="80" y="1162" font-size="13" font-weight="700" letter-spacing=".14em">03</text>
+<text class="sans ink" x="140" y="1162" font-size="19" font-weight="400">Les IA refusent de se faire éteindre</text>
+<line class="hair" x1="80" y1="1186" x2="920" y2="1186" stroke-width="1"/>
+<text class="sans caps mut" x="80" y="1276" font-size="15" letter-spacing=".22em"><tspan class="acc" font-weight="700">12</tspan> vidéos</text>
+<text class="sans caps mut" x="920" y="1276" font-size="15" letter-spacing=".22em" text-anchor="end">Par Nicolas Peytavin</text>
+<text class="sans mut" x="920" y="1302" font-size="14" text-anchor="end">Bimensuel</text>
+</svg><span class="hit"></span></span>
+      <span class="leg"><span class="no">N°15</span><span class="d">02.03.2026</span></span>
+    </a></li>
+    <li><a class="card" href="editions/n14.html">
+      <span class="frame"><svg class="jaq" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1350" role="img" aria-label="Jaquette de La Newsletter IA, édition numéro 14, IA, enfin un peu de calme dans les LLM, 16 février 2026">
+<title>La Newsletter IA · N°14 · IA, enfin un peu de calme dans les LLM</title>
+<rect width="1000" height="1350" fill="#F3EFE6"/>
+<text class="sans ink" x="0" y="0" font-size="2550" font-weight="200"
+      text-anchor="middle" dominant-baseline="central" opacity=".025"
+      transform="translate(500,675) scale(0.43,1)">14</text>
+<text class="sans caps ink" x="80" y="106" font-size="19" letter-spacing=".2em">Édition N°14</text>
+<text class="sans caps mut" x="920" y="106" font-size="19" letter-spacing=".2em" text-anchor="end">16 février 2026</text>
+<line class="hair" x1="80" y1="132" x2="920" y2="132" stroke-width="1"/>
+<text class="serif ink" x="80" y="238" font-size="92" font-weight="700" letter-spacing="-1.5">La Newsletter IA</text>
+<text class="sans caps mut" x="80" y="272" font-size="12" letter-spacing=".26em">L'actualité de l'intelligence artificielle, décryptée</text>
+<line class="rule" x1="80" y1="296" x2="920" y2="296" stroke-width="2"/>
+<text class="serif ink" x="80" y="386" font-size="56" font-weight="500" letter-spacing="-.5">IA, enfin un peu de</text>
+<text class="serif ink" x="80" y="450" font-size="56" font-weight="500" letter-spacing="-.5">calme dans les LLM</text>
+<text class="sans caps acc" x="80" y="556" font-size="12" letter-spacing=".26em">Google</text>
+<text class="serif acc" x="80" y="886" font-size="340" font-weight="700" letter-spacing="-6">7</text>
+<text class="sans mut" x="80" y="964" font-size="16">Sept jours, sept applications offertes.</text>
+<line class="hair" x1="80" y1="1006" x2="920" y2="1006" stroke-width="1"/>
+<text class="sans acc" x="80" y="1042" font-size="13" font-weight="700" letter-spacing=".14em">01</text>
+<text class="sans ink" x="140" y="1042" font-size="19" font-weight="400">Les pubs Super Bowl d'Anthropic assassinent ChatGPT</text>
+<line class="hair" x1="80" y1="1066" x2="920" y2="1066" stroke-width="1"/>
+<text class="sans acc" x="80" y="1102" font-size="13" font-weight="700" letter-spacing=".14em">02</text>
+<text class="sans ink" x="140" y="1102" font-size="19" font-weight="400">L'IA devient redoutable en pentesting</text>
+<line class="hair" x1="80" y1="1126" x2="920" y2="1126" stroke-width="1"/>
+<text class="sans acc" x="80" y="1162" font-size="13" font-weight="700" letter-spacing=".14em">03</text>
+<text class="sans ink" x="140" y="1162" font-size="19" font-weight="400">Une IA locale et gratuite, directement dans le navigateur</text>
+<line class="hair" x1="80" y1="1186" x2="920" y2="1186" stroke-width="1"/>
+<text class="sans caps mut" x="80" y="1276" font-size="15" letter-spacing=".22em"><tspan class="acc" font-weight="700">5</tspan> vidéos</text>
+<text class="sans caps mut" x="920" y="1276" font-size="15" letter-spacing=".22em" text-anchor="end">Par Nicolas Peytavin</text>
+<text class="sans mut" x="920" y="1302" font-size="14" text-anchor="end">Bimensuel</text>
+</svg><span class="hit"></span></span>
+      <span class="leg"><span class="no">N°14</span><span class="d">16.02.2026</span></span>
+    </a></li>
+    <li><a class="card" href="editions/n13.html">
+      <span class="frame"><svg class="jaq" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1350" role="img" aria-label="Jaquette de La Newsletter IA, édition numéro 13, IA, un avant et un après Moltbot, 2 février 2026">
+<title>La Newsletter IA · N°13 · IA, un avant et un après Moltbot</title>
+<rect width="1000" height="1350" fill="#F3EFE6"/>
+<text class="sans ink" x="0" y="0" font-size="2550" font-weight="200"
+      text-anchor="middle" dominant-baseline="central" opacity=".025"
+      transform="translate(500,675) scale(0.43,1)">13</text>
+<text class="sans caps ink" x="80" y="106" font-size="19" letter-spacing=".2em">Édition N°13</text>
+<text class="sans caps mut" x="920" y="106" font-size="19" letter-spacing=".2em" text-anchor="end">2 février 2026</text>
+<line class="hair" x1="80" y1="132" x2="920" y2="132" stroke-width="1"/>
+<text class="serif ink" x="80" y="238" font-size="92" font-weight="700" letter-spacing="-1.5">La Newsletter IA</text>
+<text class="sans caps mut" x="80" y="272" font-size="12" letter-spacing=".26em">L'actualité de l'intelligence artificielle, décryptée</text>
+<line class="rule" x1="80" y1="296" x2="920" y2="296" stroke-width="2"/>
+<text class="serif ink" x="80" y="386" font-size="56" font-weight="500" letter-spacing="-.5">IA, un avant et</text>
+<text class="serif ink" x="80" y="450" font-size="56" font-weight="500" letter-spacing="-.5">un après Moltbot</text>
+<text class="sans caps acc" x="80" y="556" font-size="12" letter-spacing=".26em">Moltbot</text>
+<text class="serif acc" x="80" y="781" font-size="190" font-weight="700" letter-spacing="-6">La bascule</text>
+<text class="sans mut" x="80" y="859" font-size="16">Une révolution qui coupe l'actualité de l'IA en deux.</text>
+<line class="hair" x1="80" y1="1006" x2="920" y2="1006" stroke-width="1"/>
+<text class="sans acc" x="80" y="1042" font-size="13" font-weight="700" letter-spacing=".14em">01</text>
+<text class="sans ink" x="140" y="1042" font-size="19" font-weight="400">Cowork, le rangement automatique signé Anthropic</text>
+<line class="hair" x1="80" y1="1066" x2="920" y2="1066" stroke-width="1"/>
+<text class="sans acc" x="80" y="1102" font-size="13" font-weight="700" letter-spacing=".14em">02</text>
+<text class="sans ink" x="140" y="1102" font-size="19" font-weight="400">Meta rachète Manus et accélère sur les agents</text>
+<line class="hair" x1="80" y1="1126" x2="920" y2="1126" stroke-width="1"/>
+<text class="sans acc" x="80" y="1162" font-size="13" font-weight="700" letter-spacing=".14em">03</text>
+<text class="sans ink" x="140" y="1162" font-size="19" font-weight="400">Genie, l'IA de Google qui crée des mondes interactifs</text>
+<line class="hair" x1="80" y1="1186" x2="920" y2="1186" stroke-width="1"/>
+<text class="sans caps mut" x="80" y="1276" font-size="15" letter-spacing=".22em"><tspan class="acc" font-weight="700">4</tspan> vidéos · <tspan class="acc" font-weight="700">1</tspan> lecture</text>
+<text class="sans caps mut" x="920" y="1276" font-size="15" letter-spacing=".22em" text-anchor="end">Par Nicolas Peytavin</text>
+<text class="sans mut" x="920" y="1302" font-size="14" text-anchor="end">Bimensuel</text>
+</svg><span class="hit"></span></span>
+      <span class="leg"><span class="no">N°13</span><span class="d">02.02.2026</span></span>
+    </a></li>
+    <li><a class="card" href="editions/n12.html">
+      <span class="frame"><svg class="jaq" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1350" role="img" aria-label="Jaquette de La Newsletter IA, édition numéro 12, IA, une pause dans la course aux LLM, 19 janvier 2026">
+<title>La Newsletter IA · N°12 · IA, une pause dans la course aux LLM</title>
+<rect width="1000" height="1350" fill="#F3EFE6"/>
+<text class="sans ink" x="0" y="0" font-size="2550" font-weight="200"
+      text-anchor="middle" dominant-baseline="central" opacity=".025"
+      transform="translate(500,675) scale(0.43,1)">12</text>
+<text class="sans caps ink" x="80" y="106" font-size="19" letter-spacing=".2em">Édition N°12</text>
+<text class="sans caps mut" x="920" y="106" font-size="19" letter-spacing=".2em" text-anchor="end">19 janvier 2026</text>
+<line class="hair" x1="80" y1="132" x2="920" y2="132" stroke-width="1"/>
+<text class="serif ink" x="80" y="238" font-size="92" font-weight="700" letter-spacing="-1.5">La Newsletter IA</text>
+<text class="sans caps mut" x="80" y="272" font-size="12" letter-spacing=".26em">L'actualité de l'intelligence artificielle, décryptée</text>
+<line class="rule" x1="80" y1="296" x2="920" y2="296" stroke-width="2"/>
+<text class="serif ink" x="80" y="386" font-size="56" font-weight="500" letter-spacing="-.5">IA, une pause dans la</text>
+<text class="serif ink" x="80" y="450" font-size="56" font-weight="500" letter-spacing="-.5">course aux LLM</text>
+<text class="sans caps acc" x="80" y="556" font-size="12" letter-spacing=".26em">La question du numéro</text>
+<text class="serif acc" x="80" y="830" font-size="260" font-weight="700" letter-spacing="-6">Planer</text>
+<text class="sans mut" x="80" y="908" font-size="16">Et si les IA aussi pouvaient planer ? La question la plus étrange du mois.</text>
+<line class="hair" x1="80" y1="1006" x2="920" y2="1006" stroke-width="1"/>
+<text class="sans acc" x="80" y="1042" font-size="13" font-weight="700" letter-spacing=".14em">01</text>
+<text class="sans ink" x="140" y="1042" font-size="19" font-weight="400">Les méthodes inavouables des géants de l'IA</text>
+<line class="hair" x1="80" y1="1066" x2="920" y2="1066" stroke-width="1"/>
+<text class="sans acc" x="80" y="1102" font-size="13" font-weight="700" letter-spacing=".14em">02</text>
+<text class="sans ink" x="140" y="1102" font-size="19" font-weight="400">ChatGPT condamné ? La chute annoncée de l'empire OpenAI</text>
+<line class="hair" x1="80" y1="1126" x2="920" y2="1126" stroke-width="1"/>
+<text class="sans caps mut" x="80" y="1276" font-size="15" letter-spacing=".22em"><tspan class="acc" font-weight="700">3</tspan> vidéos</text>
+<text class="sans caps mut" x="920" y="1276" font-size="15" letter-spacing=".22em" text-anchor="end">Par Nicolas Peytavin</text>
+<text class="sans mut" x="920" y="1302" font-size="14" text-anchor="end">Bimensuel</text>
+</svg><span class="hit"></span></span>
+      <span class="leg"><span class="no">N°12</span><span class="d">19.01.2026</span></span>
+    </a></li>
+    <li><a class="card" href="editions/n11.html">
+      <span class="frame"><svg class="jaq" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1350" role="img" aria-label="Jaquette de La Newsletter IA, édition numéro 11, IA, pas de vacance dans l'IA, 5 janvier 2026">
+<title>La Newsletter IA · N°11 · IA, pas de vacance dans l'IA</title>
+<rect width="1000" height="1350" fill="#F3EFE6"/>
+<text class="sans ink" x="0" y="0" font-size="2550" font-weight="200"
+      text-anchor="middle" dominant-baseline="central" opacity=".025"
+      transform="translate(500,675) scale(0.43,1)">11</text>
+<text class="sans caps ink" x="80" y="106" font-size="19" letter-spacing=".2em">Édition N°11</text>
+<text class="sans caps mut" x="920" y="106" font-size="19" letter-spacing=".2em" text-anchor="end">5 janvier 2026</text>
+<line class="hair" x1="80" y1="132" x2="920" y2="132" stroke-width="1"/>
+<text class="serif ink" x="80" y="238" font-size="92" font-weight="700" letter-spacing="-1.5">La Newsletter IA</text>
+<text class="sans caps mut" x="80" y="272" font-size="12" letter-spacing=".26em">L'actualité de l'intelligence artificielle, décryptée</text>
+<line class="rule" x1="80" y1="296" x2="920" y2="296" stroke-width="2"/>
+<text class="serif ink" x="80" y="386" font-size="56" font-weight="500" letter-spacing="-.5">IA, pas de vacance</text>
+<text class="serif ink" x="80" y="450" font-size="56" font-weight="500" letter-spacing="-.5">dans l'IA</text>
+<text class="sans caps acc" x="80" y="556" font-size="12" letter-spacing=".26em">Google</text>
+<text class="serif acc" x="80" y="886" font-size="340" font-weight="700" letter-spacing="-6">130</text>
+<text class="sans mut" x="80" y="964" font-size="16">Le QI mesuré du dernier modèle de Google, pendant que les autres soufflent.</text>
+<line class="hair" x1="80" y1="1006" x2="920" y2="1006" stroke-width="1"/>
+<text class="sans acc" x="80" y="1042" font-size="13" font-weight="700" letter-spacing=".14em">01</text>
+<text class="sans ink" x="140" y="1042" font-size="19" font-weight="400">Nvidia DGX Spark, le monstre de poche</text>
+<line class="hair" x1="80" y1="1066" x2="920" y2="1066" stroke-width="1"/>
+<text class="sans acc" x="80" y="1102" font-size="13" font-weight="700" letter-spacing=".14em">02</text>
+<text class="sans ink" x="140" y="1102" font-size="19" font-weight="400">« Disco » par Google, le futur de la navigation</text>
+<line class="hair" x1="80" y1="1126" x2="920" y2="1126" stroke-width="1"/>
+<text class="sans acc" x="80" y="1162" font-size="13" font-weight="700" letter-spacing=".14em">03</text>
+<text class="sans ink" x="140" y="1162" font-size="19" font-weight="400">Un agent IA gère un vrai portefeuille d'actions</text>
+<line class="hair" x1="80" y1="1186" x2="920" y2="1186" stroke-width="1"/>
+<text class="sans caps mut" x="80" y="1276" font-size="15" letter-spacing=".22em"><tspan class="acc" font-weight="700">6</tspan> vidéos · <tspan class="acc" font-weight="700">2</tspan> lectures</text>
+<text class="sans caps mut" x="920" y="1276" font-size="15" letter-spacing=".22em" text-anchor="end">Par Nicolas Peytavin</text>
+<text class="sans mut" x="920" y="1302" font-size="14" text-anchor="end">Bimensuel</text>
+</svg><span class="hit"></span></span>
+      <span class="leg"><span class="no">N°11</span><span class="d">05.01.2026</span></span>
+    </a></li>
+    <li><a class="card" href="editions/n10.html">
+      <span class="frame"><svg class="jaq" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1350" role="img" aria-label="Jaquette de La Newsletter IA, édition numéro 10, IA, de la vie dans l'air, 11 décembre 2025">
+<title>La Newsletter IA · N°10 · IA, de la vie dans l'air</title>
+<rect width="1000" height="1350" fill="#F3EFE6"/>
+<text class="sans ink" x="0" y="0" font-size="2550" font-weight="200"
+      text-anchor="middle" dominant-baseline="central" opacity=".025"
+      transform="translate(500,675) scale(0.43,1)">10</text>
+<text class="sans caps ink" x="80" y="106" font-size="19" letter-spacing=".2em">Édition N°10</text>
+<text class="sans caps mut" x="920" y="106" font-size="19" letter-spacing=".2em" text-anchor="end">11 décembre 2025</text>
+<line class="hair" x1="80" y1="132" x2="920" y2="132" stroke-width="1"/>
+<text class="serif ink" x="80" y="238" font-size="92" font-weight="700" letter-spacing="-1.5">La Newsletter IA</text>
+<text class="sans caps mut" x="80" y="272" font-size="12" letter-spacing=".26em">L'actualité de l'intelligence artificielle, décryptée</text>
+<line class="rule" x1="80" y1="296" x2="920" y2="296" stroke-width="2"/>
+<text class="serif ink" x="80" y="418" font-size="56" font-weight="500" letter-spacing="-.5">IA, de la vie dans l'air</text>
+<text class="sans caps acc" x="80" y="556" font-size="12" letter-spacing=".26em">EVO</text>
+<text class="serif acc" x="80" y="788" font-size="200" font-weight="700" letter-spacing="-6">Le vivant</text>
+<text class="sans mut" x="80" y="866" font-size="16">Une percée historique : l'IA se met à concevoir des séquences du vivant.</text>
+<line class="hair" x1="80" y1="1006" x2="920" y2="1006" stroke-width="1"/>
+<text class="sans acc" x="80" y="1042" font-size="13" font-weight="700" letter-spacing=".14em">01</text>
+<text class="sans ink" x="140" y="1042" font-size="19" font-weight="400">Panique chez OpenAI face à la remontée de Google</text>
+<line class="hair" x1="80" y1="1066" x2="920" y2="1066" stroke-width="1"/>
+<text class="sans acc" x="80" y="1102" font-size="13" font-weight="700" letter-spacing=".14em">02</text>
+<text class="sans ink" x="140" y="1102" font-size="19" font-weight="400">Project Mercury met l'IA au service de Wall Street</text>
+<line class="hair" x1="80" y1="1126" x2="920" y2="1126" stroke-width="1"/>
+<text class="sans acc" x="80" y="1162" font-size="13" font-weight="700" letter-spacing=".14em">03</text>
+<text class="sans ink" x="140" y="1162" font-size="19" font-weight="400">DeepSeek-V3.2 redéfinit l'efficacité et le coût</text>
+<line class="hair" x1="80" y1="1186" x2="920" y2="1186" stroke-width="1"/>
+<text class="sans caps mut" x="80" y="1276" font-size="15" letter-spacing=".22em"><tspan class="acc" font-weight="700">4</tspan> vidéos · <tspan class="acc" font-weight="700">1</tspan> lecture</text>
+<text class="sans caps mut" x="920" y="1276" font-size="15" letter-spacing=".22em" text-anchor="end">Par Nicolas Peytavin</text>
+<text class="sans mut" x="920" y="1302" font-size="14" text-anchor="end">Bimensuel</text>
+</svg><span class="hit"></span></span>
+      <span class="leg"><span class="no">N°10</span><span class="d">11.12.2025</span></span>
+    </a></li>
+    <li><a class="card" href="editions/n9.html">
+      <span class="frame"><svg class="jaq" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1350" role="img" aria-label="Jaquette de La Newsletter IA, édition numéro 9, IA, Google qui reprend son trône, 24 novembre 2025">
+<title>La Newsletter IA · N°9 · IA, Google qui reprend son trône</title>
+<rect width="1000" height="1350" fill="#F3EFE6"/>
+<text class="sans ink" x="0" y="0" font-size="2550" font-weight="200"
+      text-anchor="middle" dominant-baseline="central" opacity=".025"
+      transform="translate(500,675) scale(0.43,1)">9</text>
+<text class="sans caps ink" x="80" y="106" font-size="19" letter-spacing=".2em">Édition N°9</text>
+<text class="sans caps mut" x="920" y="106" font-size="19" letter-spacing=".2em" text-anchor="end">24 novembre 2025</text>
+<line class="hair" x1="80" y1="132" x2="920" y2="132" stroke-width="1"/>
+<text class="serif ink" x="80" y="238" font-size="92" font-weight="700" letter-spacing="-1.5">La Newsletter IA</text>
+<text class="sans caps mut" x="80" y="272" font-size="12" letter-spacing=".26em">L'actualité de l'intelligence artificielle, décryptée</text>
+<line class="rule" x1="80" y1="296" x2="920" y2="296" stroke-width="2"/>
+<text class="serif ink" x="80" y="386" font-size="56" font-weight="500" letter-spacing="-.5">IA, Google qui</text>
+<text class="serif ink" x="80" y="450" font-size="56" font-weight="500" letter-spacing="-.5">reprend son trône</text>
+<text class="sans caps acc" x="80" y="556" font-size="12" letter-spacing=".26em">Google Skills</text>
+<text class="serif acc" x="80" y="844" font-size="280" font-weight="700" letter-spacing="-6">1691</text>
+<text class="sans mut" x="80" y="922" font-size="16">Mille six cent quatre-vingt-onze formations et certifications ouvertes d'un coup.</text>
+<line class="hair" x1="80" y1="1006" x2="920" y2="1006" stroke-width="1"/>
+<text class="sans acc" x="80" y="1042" font-size="13" font-weight="700" letter-spacing=".14em">01</text>
+<text class="sans ink" x="140" y="1042" font-size="19" font-weight="400">La claque Gemini 3 Pro, sans appel</text>
+<line class="hair" x1="80" y1="1066" x2="920" y2="1066" stroke-width="1"/>
+<text class="sans acc" x="80" y="1102" font-size="13" font-weight="700" letter-spacing=".14em">02</text>
+<text class="sans ink" x="140" y="1102" font-size="19" font-weight="400">Google Antigravity ouvre l'ère des agents autonomes</text>
+<line class="hair" x1="80" y1="1126" x2="920" y2="1126" stroke-width="1"/>
+<text class="sans acc" x="80" y="1162" font-size="13" font-weight="700" letter-spacing=".14em">03</text>
+<text class="sans ink" x="140" y="1162" font-size="19" font-weight="400">Qwen bluffe tout le monde, encore une fois</text>
+<line class="hair" x1="80" y1="1186" x2="920" y2="1186" stroke-width="1"/>
+<text class="sans caps mut" x="80" y="1276" font-size="15" letter-spacing=".22em"><tspan class="acc" font-weight="700">4</tspan> vidéos · <tspan class="acc" font-weight="700">1</tspan> lecture</text>
+<text class="sans caps mut" x="920" y="1276" font-size="15" letter-spacing=".22em" text-anchor="end">Par Nicolas Peytavin</text>
+<text class="sans mut" x="920" y="1302" font-size="14" text-anchor="end">Bimensuel</text>
+</svg><span class="hit"></span></span>
+      <span class="leg"><span class="no">N°9</span><span class="d">24.11.2025</span></span>
+    </a></li>
+    <li><a class="card" href="editions/n8.html">
+      <span class="frame"><svg class="jaq" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1350" role="img" aria-label="Jaquette de La Newsletter IA, édition numéro 8, IA, les Chinois qui innovent sérieusement, 10 novembre 2025">
+<title>La Newsletter IA · N°8 · IA, les Chinois qui innovent sérieusement</title>
+<rect width="1000" height="1350" fill="#F3EFE6"/>
+<text class="sans ink" x="0" y="0" font-size="2550" font-weight="200"
+      text-anchor="middle" dominant-baseline="central" opacity=".025"
+      transform="translate(500,675) scale(0.43,1)">8</text>
+<text class="sans caps ink" x="80" y="106" font-size="19" letter-spacing=".2em">Édition N°8</text>
+<text class="sans caps mut" x="920" y="106" font-size="19" letter-spacing=".2em" text-anchor="end">10 novembre 2025</text>
+<line class="hair" x1="80" y1="132" x2="920" y2="132" stroke-width="1"/>
+<text class="serif ink" x="80" y="238" font-size="92" font-weight="700" letter-spacing="-1.5">La Newsletter IA</text>
+<text class="sans caps mut" x="80" y="272" font-size="12" letter-spacing=".26em">L'actualité de l'intelligence artificielle, décryptée</text>
+<line class="rule" x1="80" y1="296" x2="920" y2="296" stroke-width="2"/>
+<text class="serif ink" x="80" y="386" font-size="56" font-weight="500" letter-spacing="-.5">IA, les Chinois qui</text>
+<text class="serif ink" x="80" y="450" font-size="56" font-weight="500" letter-spacing="-.5">innovent sérieusement</text>
+<text class="sans caps acc" x="80" y="556" font-size="12" letter-spacing=".26em">DeepSeek</text>
+<text class="serif acc" x="80" y="858" font-size="300" font-weight="700" letter-spacing="-6">OCR</text>
+<text class="sans mut" x="80" y="936" font-size="16">DeepSeek compresse le texte en images pour tenir bien plus de contexte.</text>
+<line class="hair" x1="80" y1="1006" x2="920" y2="1006" stroke-width="1"/>
+<text class="sans acc" x="80" y="1042" font-size="13" font-weight="700" letter-spacing=".14em">01</text>
+<text class="sans ink" x="140" y="1042" font-size="19" font-weight="400">Google Flow anime vos photos en quelques secondes</text>
+<line class="hair" x1="80" y1="1066" x2="920" y2="1066" stroke-width="1"/>
+<text class="sans acc" x="80" y="1102" font-size="13" font-weight="700" letter-spacing=".14em">02</text>
+<text class="sans ink" x="140" y="1102" font-size="19" font-weight="400">Pomelli trouve l'ADN visuel de votre marque</text>
+<line class="hair" x1="80" y1="1126" x2="920" y2="1126" stroke-width="1"/>
+<text class="sans acc" x="80" y="1162" font-size="13" font-weight="700" letter-spacing=".14em">03</text>
+<text class="sans ink" x="140" y="1162" font-size="19" font-weight="400">Comet, le navigateur entièrement piloté par l'IA</text>
+<line class="hair" x1="80" y1="1186" x2="920" y2="1186" stroke-width="1"/>
+<text class="sans caps mut" x="80" y="1276" font-size="15" letter-spacing=".22em"><tspan class="acc" font-weight="700">2</tspan> vidéos · <tspan class="acc" font-weight="700">2</tspan> lectures</text>
+<text class="sans caps mut" x="920" y="1276" font-size="15" letter-spacing=".22em" text-anchor="end">Par Nicolas Peytavin</text>
+<text class="sans mut" x="920" y="1302" font-size="14" text-anchor="end">Bimensuel</text>
+</svg><span class="hit"></span></span>
+      <span class="leg"><span class="no">N°8</span><span class="d">10.11.2025</span></span>
+    </a></li>
+    <li><a class="card" href="editions/n7.html">
+      <span class="frame"><svg class="jaq" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1350" role="img" aria-label="Jaquette de La Newsletter IA, édition numéro 7, IA, une remontée technique d'OpenAI, 27 octobre 2025">
+<title>La Newsletter IA · N°7 · IA, une remontée technique d'OpenAI</title>
+<rect width="1000" height="1350" fill="#F3EFE6"/>
+<text class="sans ink" x="0" y="0" font-size="2550" font-weight="200"
+      text-anchor="middle" dominant-baseline="central" opacity=".025"
+      transform="translate(500,675) scale(0.43,1)">7</text>
+<text class="sans caps ink" x="80" y="106" font-size="19" letter-spacing=".2em">Édition N°7</text>
+<text class="sans caps mut" x="920" y="106" font-size="19" letter-spacing=".2em" text-anchor="end">27 octobre 2025</text>
+<line class="hair" x1="80" y1="132" x2="920" y2="132" stroke-width="1"/>
+<text class="serif ink" x="80" y="238" font-size="92" font-weight="700" letter-spacing="-1.5">La Newsletter IA</text>
+<text class="sans caps mut" x="80" y="272" font-size="12" letter-spacing=".26em">L'actualité de l'intelligence artificielle, décryptée</text>
+<line class="rule" x1="80" y1="296" x2="920" y2="296" stroke-width="2"/>
+<text class="serif ink" x="80" y="386" font-size="56" font-weight="500" letter-spacing="-.5">IA, une remontée</text>
+<text class="serif ink" x="80" y="450" font-size="56" font-weight="500" letter-spacing="-.5">technique d'OpenAI</text>
+<text class="sans caps acc" x="80" y="556" font-size="12" letter-spacing=".26em">ChatGPT Atlas</text>
+<text class="serif acc" x="80" y="858" font-size="300" font-weight="700" letter-spacing="-6">Atlas</text>
+<text class="sans mut" x="80" y="936" font-size="16">Le navigateur d'OpenAI vise frontalement Chrome.</text>
+<line class="hair" x1="80" y1="1006" x2="920" y2="1006" stroke-width="1"/>
+<text class="sans acc" x="80" y="1042" font-size="13" font-weight="700" letter-spacing=".14em">01</text>
+<text class="sans ink" x="140" y="1042" font-size="19" font-weight="400">Agent Builder, la menace directe pour n8n</text>
+<line class="hair" x1="80" y1="1066" x2="920" y2="1066" stroke-width="1"/>
+<text class="sans acc" x="80" y="1102" font-size="13" font-weight="700" letter-spacing=".14em">02</text>
+<text class="sans ink" x="140" y="1102" font-size="19" font-weight="400">Claude Haiku 4.5, la riposte d'Anthropic</text>
+<line class="hair" x1="80" y1="1126" x2="920" y2="1126" stroke-width="1"/>
+<text class="sans acc" x="80" y="1162" font-size="13" font-weight="700" letter-spacing=".14em">03</text>
+<text class="sans ink" x="140" y="1162" font-size="19" font-weight="400">Le Mode IA s'installe en premier dans Google Search</text>
+<line class="hair" x1="80" y1="1186" x2="920" y2="1186" stroke-width="1"/>
+<text class="sans caps mut" x="80" y="1276" font-size="15" letter-spacing=".22em"><tspan class="acc" font-weight="700">1</tspan> vidéo</text>
+<text class="sans caps mut" x="920" y="1276" font-size="15" letter-spacing=".22em" text-anchor="end">Par Nicolas Peytavin</text>
+<text class="sans mut" x="920" y="1302" font-size="14" text-anchor="end">Bimensuel</text>
+</svg><span class="hit"></span></span>
+      <span class="leg"><span class="no">N°7</span><span class="d">27.10.2025</span></span>
+    </a></li>
+    <li><a class="card" href="editions/n6.html">
+      <span class="frame"><svg class="jaq" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1350" role="img" aria-label="Jaquette de La Newsletter IA, édition numéro 6, IA, surtout des vidéos, 8 octobre 2025">
+<title>La Newsletter IA · N°6 · IA, surtout des vidéos</title>
+<rect width="1000" height="1350" fill="#F3EFE6"/>
+<text class="sans ink" x="0" y="0" font-size="2550" font-weight="200"
+      text-anchor="middle" dominant-baseline="central" opacity=".025"
+      transform="translate(500,675) scale(0.43,1)">6</text>
+<text class="sans caps ink" x="80" y="106" font-size="19" letter-spacing=".2em">Édition N°6</text>
+<text class="sans caps mut" x="920" y="106" font-size="19" letter-spacing=".2em" text-anchor="end">8 octobre 2025</text>
+<line class="hair" x1="80" y1="132" x2="920" y2="132" stroke-width="1"/>
+<text class="serif ink" x="80" y="238" font-size="92" font-weight="700" letter-spacing="-1.5">La Newsletter IA</text>
+<text class="sans caps mut" x="80" y="272" font-size="12" letter-spacing=".26em">L'actualité de l'intelligence artificielle, décryptée</text>
+<line class="rule" x1="80" y1="296" x2="920" y2="296" stroke-width="2"/>
+<text class="serif ink" x="80" y="418" font-size="56" font-weight="500" letter-spacing="-.5">IA, surtout des vidéos</text>
+<text class="sans caps acc" x="80" y="556" font-size="12" letter-spacing=".26em">Veo 3</text>
+<text class="serif acc" x="80" y="816" font-size="240" font-weight="700" letter-spacing="-6">1080p</text>
+<text class="sans mut" x="80" y="894" font-size="16">Le deepfake convaincant, désormais en pleine définition.</text>
+<line class="hair" x1="80" y1="1006" x2="920" y2="1006" stroke-width="1"/>
+<text class="sans acc" x="80" y="1042" font-size="13" font-weight="700" letter-spacing=".14em">01</text>
+<text class="sans ink" x="140" y="1042" font-size="19" font-weight="400">Sora, le TikTok de l'IA, ouvre ses portes</text>
+<line class="hair" x1="80" y1="1066" x2="920" y2="1066" stroke-width="1"/>
+<text class="sans acc" x="80" y="1102" font-size="13" font-weight="700" letter-spacing=".14em">02</text>
+<text class="sans ink" x="140" y="1102" font-size="19" font-weight="400">Gemini 3 arrive et Google prévient la concurrence</text>
+<line class="hair" x1="80" y1="1126" x2="920" y2="1126" stroke-width="1"/>
+<text class="sans acc" x="80" y="1162" font-size="13" font-weight="700" letter-spacing=".14em">03</text>
+<text class="sans ink" x="140" y="1162" font-size="19" font-weight="400">En Chine, DeepSeek et la vérité officielle</text>
+<line class="hair" x1="80" y1="1186" x2="920" y2="1186" stroke-width="1"/>
+<text class="sans caps mut" x="80" y="1276" font-size="15" letter-spacing=".22em"><tspan class="acc" font-weight="700">1</tspan> vidéo</text>
+<text class="sans caps mut" x="920" y="1276" font-size="15" letter-spacing=".22em" text-anchor="end">Par Nicolas Peytavin</text>
+<text class="sans mut" x="920" y="1302" font-size="14" text-anchor="end">Bimensuel</text>
+</svg><span class="hit"></span></span>
+      <span class="leg"><span class="no">N°6</span><span class="d">08.10.2025</span></span>
+    </a></li>
+    <li><a class="card" href="editions/n5.html">
+      <span class="frame"><svg class="jaq" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1350" role="img" aria-label="Jaquette de La Newsletter IA, édition numéro 5, IA, des images et de la concurrence chinoise, 23 septembre 2025">
+<title>La Newsletter IA · N°5 · IA, des images et de la concurrence chinoise</title>
+<rect width="1000" height="1350" fill="#F3EFE6"/>
+<text class="sans ink" x="0" y="0" font-size="2550" font-weight="200"
+      text-anchor="middle" dominant-baseline="central" opacity=".025"
+      transform="translate(500,675) scale(0.43,1)">5</text>
+<text class="sans caps ink" x="80" y="106" font-size="19" letter-spacing=".2em">Édition N°5</text>
+<text class="sans caps mut" x="920" y="106" font-size="19" letter-spacing=".2em" text-anchor="end">23 septembre 2025</text>
+<line class="hair" x1="80" y1="132" x2="920" y2="132" stroke-width="1"/>
+<text class="serif ink" x="80" y="238" font-size="92" font-weight="700" letter-spacing="-1.5">La Newsletter IA</text>
+<text class="sans caps mut" x="80" y="272" font-size="12" letter-spacing=".26em">L'actualité de l'intelligence artificielle, décryptée</text>
+<line class="rule" x1="80" y1="296" x2="920" y2="296" stroke-width="2"/>
+<text class="serif ink" x="80" y="386" font-size="56" font-weight="500" letter-spacing="-.5">IA, des images et de la</text>
+<text class="serif ink" x="80" y="450" font-size="56" font-weight="500" letter-spacing="-.5">concurrence chinoise</text>
+<text class="sans caps acc" x="80" y="556" font-size="12" letter-spacing=".26em">Concurrence chinoise</text>
+<text class="serif acc" x="80" y="764" font-size="165" font-weight="700" letter-spacing="-6">SeedDream</text>
+<text class="sans mut" x="80" y="842" font-size="16">SeedDream 4.0 devient la nouvelle référence mondiale de l'image générée.</text>
+<line class="hair" x1="80" y1="1006" x2="920" y2="1006" stroke-width="1"/>
+<text class="sans acc" x="80" y="1042" font-size="13" font-weight="700" letter-spacing=".14em">01</text>
+<text class="sans ink" x="140" y="1042" font-size="19" font-weight="400">Nano Banana impressionne toute la profession</text>
+<line class="hair" x1="80" y1="1066" x2="920" y2="1066" stroke-width="1"/>
+<text class="sans acc" x="80" y="1102" font-size="13" font-weight="700" letter-spacing=".14em">02</text>
+<text class="sans ink" x="140" y="1102" font-size="19" font-weight="400">Claude génère directement des fichiers Excel et PowerPoint</text>
+<line class="hair" x1="80" y1="1126" x2="920" y2="1126" stroke-width="1"/>
+<text class="sans acc" x="80" y="1162" font-size="13" font-weight="700" letter-spacing=".14em">03</text>
+<text class="sans ink" x="140" y="1162" font-size="19" font-weight="400">Apple, en retard, n'a même pas mentionné l'IA</text>
+<line class="hair" x1="80" y1="1186" x2="920" y2="1186" stroke-width="1"/>
+<text class="sans caps mut" x="920" y="1276" font-size="15" letter-spacing=".22em" text-anchor="end">Par Nicolas Peytavin</text>
+<text class="sans mut" x="920" y="1302" font-size="14" text-anchor="end">Bimensuel</text>
+</svg><span class="hit"></span></span>
+      <span class="leg"><span class="no">N°5</span><span class="d">23.09.2025</span></span>
+    </a></li>
+    <li><a class="card" href="editions/n4.html">
+      <span class="frame"><svg class="jaq" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1350" role="img" aria-label="Jaquette de La Newsletter IA, édition numéro 4, IA, du progrès !, 8 septembre 2025">
+<title>La Newsletter IA · N°4 · IA, du progrès !</title>
+<rect width="1000" height="1350" fill="#F3EFE6"/>
+<text class="sans ink" x="0" y="0" font-size="2550" font-weight="200"
+      text-anchor="middle" dominant-baseline="central" opacity=".025"
+      transform="translate(500,675) scale(0.43,1)">4</text>
+<text class="sans caps ink" x="80" y="106" font-size="19" letter-spacing=".2em">Édition N°4</text>
+<text class="sans caps mut" x="920" y="106" font-size="19" letter-spacing=".2em" text-anchor="end">8 septembre 2025</text>
+<line class="hair" x1="80" y1="132" x2="920" y2="132" stroke-width="1"/>
+<text class="serif ink" x="80" y="238" font-size="92" font-weight="700" letter-spacing="-1.5">La Newsletter IA</text>
+<text class="sans caps mut" x="80" y="272" font-size="12" letter-spacing=".26em">L'actualité de l'intelligence artificielle, décryptée</text>
+<line class="rule" x1="80" y1="296" x2="920" y2="296" stroke-width="2"/>
+<text class="serif ink" x="80" y="418" font-size="56" font-weight="500" letter-spacing="-.5">IA, du progrès !</text>
+<text class="sans caps acc" x="80" y="556" font-size="12" letter-spacing=".26em">Apertus</text>
+<text class="serif acc" x="80" y="830" font-size="260" font-weight="700" letter-spacing="-6">100 %</text>
+<text class="sans mut" x="80" y="908" font-size="16">Un modèle entièrement suisse, des données jusqu'à l'entraînement.</text>
+<line class="hair" x1="80" y1="1006" x2="920" y2="1006" stroke-width="1"/>
+<text class="sans acc" x="80" y="1042" font-size="13" font-weight="700" letter-spacing=".14em">01</text>
+<text class="sans ink" x="140" y="1042" font-size="19" font-weight="400">Codex connecte OpenAI directement à votre IDE</text>
+<line class="hair" x1="80" y1="1066" x2="920" y2="1066" stroke-width="1"/>
+<text class="sans acc" x="80" y="1102" font-size="13" font-weight="700" letter-spacing=".14em">02</text>
+<text class="sans ink" x="140" y="1102" font-size="19" font-weight="400">NotebookLM génère des podcasts à partir de vos notes</text>
+<line class="hair" x1="80" y1="1126" x2="920" y2="1126" stroke-width="1"/>
+<text class="sans acc" x="80" y="1162" font-size="13" font-weight="700" letter-spacing=".14em">03</text>
+<text class="sans ink" x="140" y="1162" font-size="19" font-weight="400">Lumo, l'assistant IA qui promet la confidentialité</text>
+<line class="hair" x1="80" y1="1186" x2="920" y2="1186" stroke-width="1"/>
+<text class="sans caps mut" x="80" y="1276" font-size="15" letter-spacing=".22em"><tspan class="acc" font-weight="700">1</tspan> vidéo</text>
+<text class="sans caps mut" x="920" y="1276" font-size="15" letter-spacing=".22em" text-anchor="end">Par Nicolas Peytavin</text>
+<text class="sans mut" x="920" y="1302" font-size="14" text-anchor="end">Bimensuel</text>
+</svg><span class="hit"></span></span>
+      <span class="leg"><span class="no">N°4</span><span class="d">08.09.2025</span></span>
+    </a></li>
+    <li><a class="card" href="editions/n3.html">
+      <span class="frame"><svg class="jaq" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1350" role="img" aria-label="Jaquette de La Newsletter IA, édition numéro 3, IA, plus simple grâce à GPT-5, 21 août 2025">
+<title>La Newsletter IA · N°3 · IA, plus simple grâce à GPT-5</title>
+<rect width="1000" height="1350" fill="#F3EFE6"/>
+<text class="sans ink" x="0" y="0" font-size="2550" font-weight="200"
+      text-anchor="middle" dominant-baseline="central" opacity=".025"
+      transform="translate(500,675) scale(0.43,1)">3</text>
+<text class="sans caps ink" x="80" y="106" font-size="19" letter-spacing=".2em">Édition N°3</text>
+<text class="sans caps mut" x="920" y="106" font-size="19" letter-spacing=".2em" text-anchor="end">21 août 2025</text>
+<line class="hair" x1="80" y1="132" x2="920" y2="132" stroke-width="1"/>
+<text class="serif ink" x="80" y="238" font-size="92" font-weight="700" letter-spacing="-1.5">La Newsletter IA</text>
+<text class="sans caps mut" x="80" y="272" font-size="12" letter-spacing=".26em">L'actualité de l'intelligence artificielle, décryptée</text>
+<line class="rule" x1="80" y1="296" x2="920" y2="296" stroke-width="2"/>
+<text class="serif ink" x="80" y="386" font-size="56" font-weight="500" letter-spacing="-.5">IA, plus simple</text>
+<text class="serif ink" x="80" y="450" font-size="56" font-weight="500" letter-spacing="-.5">grâce à GPT-5</text>
+<text class="sans caps acc" x="80" y="556" font-size="12" letter-spacing=".26em">Dans GPT-5</text>
+<text class="serif acc" x="80" y="886" font-size="340" font-weight="700" letter-spacing="-6">3</text>
+<text class="sans mut" x="80" y="964" font-size="16">Styles de réponses, connecteurs, sources systématiques : trois ajouts qui rebattent les cartes.</text>
+<line class="hair" x1="80" y1="1006" x2="920" y2="1006" stroke-width="1"/>
+<text class="sans acc" x="80" y="1042" font-size="13" font-weight="700" letter-spacing=".14em">01</text>
+<text class="sans ink" x="140" y="1042" font-size="19" font-weight="400">Des styles de réponses prédéfinis, prêts à l'emploi</text>
+<line class="hair" x1="80" y1="1066" x2="920" y2="1066" stroke-width="1"/>
+<text class="sans acc" x="80" y="1102" font-size="13" font-weight="700" letter-spacing=".14em">02</text>
+<text class="sans ink" x="140" y="1102" font-size="19" font-weight="400">Les connecteurs enfin disponibles pour tous</text>
+<line class="hair" x1="80" y1="1126" x2="920" y2="1126" stroke-width="1"/>
+<text class="sans acc" x="80" y="1162" font-size="13" font-weight="700" letter-spacing=".14em">03</text>
+<text class="sans ink" x="140" y="1162" font-size="19" font-weight="400">Claude et Perplexity perdent leur avantage concurrentiel</text>
+<line class="hair" x1="80" y1="1186" x2="920" y2="1186" stroke-width="1"/>
+<text class="sans caps mut" x="920" y="1276" font-size="15" letter-spacing=".22em" text-anchor="end">Par Nicolas Peytavin</text>
+<text class="sans mut" x="920" y="1302" font-size="14" text-anchor="end">Bimensuel</text>
+</svg><span class="hit"></span></span>
+      <span class="leg"><span class="no">N°3</span><span class="d">21.08.2025</span></span>
+    </a></li>
+    <li><a class="card" href="editions/n2.html">
+      <span class="frame"><svg class="jaq" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1350" role="img" aria-label="Jaquette de La Newsletter IA, édition numéro 2, IA, des mises à jour, 17 août 2025">
+<title>La Newsletter IA · N°2 · IA, des mises à jour</title>
+<rect width="1000" height="1350" fill="#F3EFE6"/>
+<text class="sans ink" x="0" y="0" font-size="2550" font-weight="200"
+      text-anchor="middle" dominant-baseline="central" opacity=".025"
+      transform="translate(500,675) scale(0.43,1)">2</text>
+<text class="sans caps ink" x="80" y="106" font-size="19" letter-spacing=".2em">Édition N°2</text>
+<text class="sans caps mut" x="920" y="106" font-size="19" letter-spacing=".2em" text-anchor="end">17 août 2025</text>
+<line class="hair" x1="80" y1="132" x2="920" y2="132" stroke-width="1"/>
+<text class="serif ink" x="80" y="238" font-size="92" font-weight="700" letter-spacing="-1.5">La Newsletter IA</text>
+<text class="sans caps mut" x="80" y="272" font-size="12" letter-spacing=".26em">L'actualité de l'intelligence artificielle, décryptée</text>
+<line class="rule" x1="80" y1="296" x2="920" y2="296" stroke-width="2"/>
+<text class="serif ink" x="80" y="418" font-size="56" font-weight="500" letter-spacing="-.5">IA, des mises à jour</text>
+<text class="sans caps acc" x="80" y="556" font-size="12" letter-spacing=".26em">Mon choix actuel</text>
+<text class="serif acc" x="80" y="830" font-size="260" font-weight="700" letter-spacing="-6">GPT-5</text>
+<text class="sans mut" x="80" y="908" font-size="16">Retour chez OpenAI pour tester la nouvelle génération, puis cap sur Gemini.</text>
+<line class="hair" x1="80" y1="1006" x2="920" y2="1006" stroke-width="1"/>
+<text class="sans acc" x="80" y="1042" font-size="13" font-weight="700" letter-spacing=".14em">01</text>
+<text class="sans ink" x="140" y="1042" font-size="19" font-weight="400">Claude reste limité en jetons et sans mémoire hors chat</text>
+<line class="hair" x1="80" y1="1066" x2="920" y2="1066" stroke-width="1"/>
+<text class="sans acc" x="80" y="1102" font-size="13" font-weight="700" letter-spacing=".14em">02</text>
+<text class="sans ink" x="140" y="1102" font-size="19" font-weight="400">NotebookLM génère podcasts audio et vidéo, gratuitement</text>
+<line class="hair" x1="80" y1="1126" x2="920" y2="1126" stroke-width="1"/>
+<text class="sans acc" x="80" y="1162" font-size="13" font-weight="700" letter-spacing=".14em">03</text>
+<text class="sans ink" x="140" y="1162" font-size="19" font-weight="400">OpenAI conserve les conversations, même supprimées</text>
+<line class="hair" x1="80" y1="1186" x2="920" y2="1186" stroke-width="1"/>
+<text class="sans caps mut" x="920" y="1276" font-size="15" letter-spacing=".22em" text-anchor="end">Par Nicolas Peytavin</text>
+<text class="sans mut" x="920" y="1302" font-size="14" text-anchor="end">Bimensuel</text>
+</svg><span class="hit"></span></span>
+      <span class="leg"><span class="no">N°2</span><span class="d">17.08.2025</span></span>
+    </a></li>
+    <li><a class="card" href="editions/n1.html">
+      <span class="frame"><svg class="jaq" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1350" role="img" aria-label="Jaquette de La Newsletter IA, édition numéro 1, IA, le choix !, 29 juillet 2025">
+<title>La Newsletter IA · N°1 · IA, le choix !</title>
+<rect width="1000" height="1350" fill="#F3EFE6"/>
+<text class="sans ink" x="0" y="0" font-size="2550" font-weight="200"
+      text-anchor="middle" dominant-baseline="central" opacity=".025"
+      transform="translate(500,675) scale(0.43,1)">1</text>
+<text class="sans caps ink" x="80" y="106" font-size="19" letter-spacing=".2em">Édition N°1</text>
+<text class="sans caps mut" x="920" y="106" font-size="19" letter-spacing=".2em" text-anchor="end">29 juillet 2025</text>
+<line class="hair" x1="80" y1="132" x2="920" y2="132" stroke-width="1"/>
+<text class="serif ink" x="80" y="238" font-size="92" font-weight="700" letter-spacing="-1.5">La Newsletter IA</text>
+<text class="sans caps mut" x="80" y="272" font-size="12" letter-spacing=".26em">L'actualité de l'intelligence artificielle, décryptée</text>
+<line class="rule" x1="80" y1="296" x2="920" y2="296" stroke-width="2"/>
+<text class="serif ink" x="80" y="418" font-size="56" font-weight="500" letter-spacing="-.5">IA, le choix !</text>
+<text class="sans caps acc" x="80" y="556" font-size="12" letter-spacing=".26em">Après des mois de tests</text>
+<text class="serif acc" x="80" y="886" font-size="340" font-weight="700" letter-spacing="-6">1</text>
+<text class="sans mut" x="80" y="964" font-size="16">Six assistants passés en revue, un seul retenu pour les deux mois à venir.</text>
+<line class="hair" x1="80" y1="1006" x2="920" y2="1006" stroke-width="1"/>
+<text class="sans acc" x="80" y="1042" font-size="13" font-weight="700" letter-spacing=".14em">01</text>
+<text class="sans ink" x="140" y="1042" font-size="19" font-weight="400">Claude garde le contexte mieux que GPT sur la durée</text>
+<line class="hair" x1="80" y1="1066" x2="920" y2="1066" stroke-width="1"/>
+<text class="sans acc" x="80" y="1102" font-size="13" font-weight="700" letter-spacing=".14em">02</text>
+<text class="sans ink" x="140" y="1102" font-size="19" font-weight="400">Perplexity source ses réponses et hallucine très peu</text>
+<line class="hair" x1="80" y1="1126" x2="920" y2="1126" stroke-width="1"/>
+<text class="sans acc" x="80" y="1162" font-size="13" font-weight="700" letter-spacing=".14em">03</text>
+<text class="sans ink" x="140" y="1162" font-size="19" font-weight="400">Bolt, Lovable et Windsurf, les références du vibecoding</text>
+<line class="hair" x1="80" y1="1186" x2="920" y2="1186" stroke-width="1"/>
+<text class="sans caps mut" x="920" y="1276" font-size="15" letter-spacing=".22em" text-anchor="end">Par Nicolas Peytavin</text>
+<text class="sans mut" x="920" y="1302" font-size="14" text-anchor="end">Bimensuel</text>
+</svg><span class="hit"></span></span>
+      <span class="leg"><span class="no">N°1</span><span class="d">29.07.2025</span></span>
+    </a></li>
+  </ul>
+
+  <footer><div class="foot-row"><span>La Newsletter IA · Nicolas Peytavin</span><span>29 éditions</span></div></footer>
+</div>
+</body>
+</html>

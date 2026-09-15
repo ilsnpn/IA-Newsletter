@@ -1,0 +1,124 @@
+/* ========= La Newsletter IA : feuille de style commune ========= */
+:root{
+  --bg:#F3EFE6; --ink:#191613; --accent:#A9502F; --muted:#8a8378; --line:#1916131f;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:'Inter','Helvetica Neue',Arial,sans-serif;-webkit-font-smoothing:antialiased}
+.serif{font-family:'Playfair Display',Georgia,serif}
+.sheet{max-width:1100px;margin:0 auto;padding:48px 40px 80px;position:relative}
+
+/* ---- masthead ---- */
+h1{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:clamp(2.4rem,6vw,4.2rem);line-height:1.08;letter-spacing:-.015em;max-width:18ch;padding:24px 0 28px}
+.bar{display:flex;justify-content:space-between;align-items:center;border-top:2px solid var(--ink);border-bottom:1px solid var(--ink);padding:10px 0;font-size:.72rem;letter-spacing:.25em;text-transform:uppercase}
+.bar .ed{font-weight:700}
+/* bascule entre le sommaire en liste et la vitrine des couvertures */
+.bar a.alt{color:var(--accent);text-decoration:none}
+.bar a.alt:hover{opacity:.7}
+a.back{color:var(--muted);text-decoration:none;font-size:.68rem;letter-spacing:.3em;text-transform:uppercase}
+a.back:hover{color:var(--accent)}
+
+/* ---- rubriques ---- */
+.sect{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px}
+.sect h2{font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;font-weight:700}
+.sect svg{width:26px;height:26px;stroke:var(--accent);fill:none;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round}
+
+/* ---- grilles flexibles ---- */
+.cols{display:grid;gap:0;margin-top:36px}
+.cols.c3{grid-template-columns:1.35fr 1fr 1fr}
+.cols.c2{grid-template-columns:1fr 1fr}
+.cols.c1{grid-template-columns:1fr}
+.col{padding:0 28px}
+.col:first-child{padding-left:0}
+.col:last-child{padding-right:0}
+.col + .col{border-left:1px solid var(--line)}
+@media(max-width:800px){
+  .cols{grid-template-columns:1fr!important}
+  .col{padding:0;border-left:none!important;border-top:1px solid var(--line);padding-top:28px;margin-top:8px}
+  .col:first-child{border-top:none}
+}
+
+/* séparation entre blocs de rubriques */
+.cols + .cols{border-top:1px solid var(--ink);margin-top:44px;padding-top:36px}
+
+/* ---- items ---- */
+a.item,.item{display:block;text-decoration:none;color:inherit;margin-bottom:26px;transition:.15s}
+a.item:hover{color:var(--accent)}
+.item.lead{font-family:'Playfair Display',Georgia,serif;font-size:1.45rem;line-height:1.3;font-weight:500}
+.item.hero,.item .hero{font-family:'Playfair Display',Georgia,serif;font-size:clamp(1.6rem,3.4vw,2.2rem);line-height:1.25;font-weight:500;max-width:30ch}
+.item .h{font-weight:700;font-size:.95rem;line-height:1.45}
+.item p{font-size:.92rem;line-height:1.62;opacity:.88;margin-top:6px}
+.col .spacer{height:48px}
+.item .m{display:inline-flex;align-items:center;margin-top:8px;color:var(--accent)}
+.item .m svg{width:18px;height:18px;stroke:var(--accent);fill:none;stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round;transition:.15s}
+a.item:hover .m svg{transform:scale(1.12)}
+
+/* ---- bloc texte long (éditions rédigées) ---- */
+.prose{max-width:66ch;margin-top:36px;font-size:.98rem;line-height:1.75}
+.prose p{margin-bottom:1.1em}
+.prose b{font-weight:700}
+.prose .lede{font-family:'Playfair Display',Georgia,serif;font-size:1.3rem;line-height:1.45}
+.prose a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent)}
+.prose a:hover{opacity:.7}
+
+/* ---- lecteur audio (version écoutée de l'édition) ---- */
+.audio{display:flex;align-items:center;gap:20px;border-bottom:1px solid var(--line);padding:18px 0 20px}
+.audio .play{flex:none;width:44px;height:44px;border-radius:50%;border:1px solid var(--ink);background:none;color:var(--ink);cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0;transition:.15s}
+.audio .play:hover{background:var(--ink);color:var(--bg)}
+.audio .play svg{width:15px;height:15px;fill:currentColor;stroke:none;display:block}
+.audio .play .ico-pause{display:none}
+.audio.on .play .ico-play{display:none}
+.audio.on .play .ico-pause{display:block}
+.audio .body{flex:1;min-width:0}
+.audio .lab{display:flex;justify-content:space-between;align-items:baseline;gap:16px;font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin-bottom:11px}
+.audio .lab b{color:var(--ink);font-weight:700}
+.audio .time{font-variant-numeric:tabular-nums;letter-spacing:.12em;white-space:nowrap}
+.audio .track{position:relative;height:16px;display:flex;align-items:center;cursor:pointer}
+.audio .rail{position:absolute;left:0;right:0;height:2px;background:var(--line)}
+.audio .fill{position:absolute;left:0;height:2px;width:0;background:var(--accent)}
+.audio .knob{position:absolute;left:0;width:11px;height:11px;border-radius:50%;background:var(--accent);transform:translateX(-50%);transition:transform .12s}
+.audio .track:hover .knob{transform:translateX(-50%) scale(1.25)}
+.audio input[type=range]{position:absolute;left:0;width:100%;height:16px;margin:0;opacity:0;cursor:pointer}
+.audio .na{font-size:.72rem;color:var(--muted);font-style:italic}
+.audio .rate{position:relative;flex:none}
+.audio .rate-btn{font-family:inherit;font-size:.68rem;letter-spacing:.12em;font-weight:700;font-variant-numeric:tabular-nums;color:var(--ink);background:none;border:1px solid var(--line);border-radius:999px;padding:8px 13px;min-width:54px;cursor:pointer;transition:.15s}
+.audio .rate-btn:hover,.audio .rate.open .rate-btn{border-color:var(--ink);color:var(--accent)}
+.audio .rate-menu{display:none;position:absolute;right:0;top:calc(100% + 8px);z-index:5;margin:0;padding:5px 0;list-style:none;min-width:82px;background:var(--bg);border:1px solid var(--ink)}
+.audio .rate.open .rate-menu{display:block}
+.audio .rate-menu li{font-size:.72rem;letter-spacing:.1em;font-variant-numeric:tabular-nums;white-space:nowrap;padding:7px 15px;cursor:pointer;transition:.15s}
+.audio .rate-menu li:hover{color:var(--accent)}
+.audio .rate-menu li[aria-selected="true"]{color:var(--accent);font-weight:700}
+@media(max-width:800px){
+  .audio{gap:14px}
+  .audio .lab{letter-spacing:.16em;font-size:.62rem}
+  .audio .rate-btn{padding:7px 10px;min-width:48px}
+}
+
+/* ---- bascule entre le mode journal et le mode vidéo ---- */
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:20px}
+/* variante de l'accueil : pas de lien retour à gauche, la pastille seule */
+.topbar.end{justify-content:flex-end}
+a.mode{display:inline-flex;align-items:center;gap:9px;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--ink);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:7px 16px;white-space:nowrap;transition:.15s}
+a.mode:hover{border-color:var(--ink);color:var(--accent)}
+a.mode svg{width:17px;height:17px;stroke:var(--accent);fill:none;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+@media print{a.mode{display:none}}
+
+/* ---- accueil : sommaire ---- */
+ol.toc{list-style:none;padding:40px 0 0}
+ol.toc li{border-bottom:1px solid var(--line)}
+ol.toc a.row,ol.toc .row{display:flex;align-items:baseline;gap:26px;padding:22px 4px;text-decoration:none;color:inherit;transition:.15s}
+ol.toc a.row:hover{color:var(--accent)}
+ol.toc .no{font-family:'Playfair Display',Georgia,serif;font-size:.95rem;min-width:56px;color:var(--accent)}
+ol.toc .t{font-family:'Playfair Display',Georgia,serif;font-size:1.3rem;flex:1;line-height:1.3;font-weight:500}
+ol.toc .d{font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+ol.toc .soon{opacity:.38}
+ol.toc .tag{font-size:.62rem;letter-spacing:.25em;text-transform:uppercase;white-space:nowrap;color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:3px 12px}
+
+/* ---- pied de page + navigation ---- */
+footer{margin-top:48px;border-top:2px solid var(--ink);padding-top:14px;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.foot-row{display:flex;justify-content:space-between;align-items:center;gap:16px}
+footer a{color:var(--accent);text-decoration:none}
+footer a:hover{opacity:.7}
+.pn{display:flex;justify-content:space-between;margin-top:14px}
+.pn a{color:var(--ink)}
+.pn a:hover{color:var(--accent)}
+.pn .off{opacity:.3;pointer-events:none}

@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>N°00 · Gabarit du mode vidéo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<style>
+  /* ================= mise en page : une seule page, sans ascenseur =================
+     .sheet occupe toute la hauteur utile ; en-tête, menu, navigation et pied sont
+     figés, seule la scène centrale s'étire. Le lecteur se dimensionne en vh, sa
+     largeur découlant de son ratio 9:16. ============================================ */
+  html,body{height:100%}
+  body{overflow:hidden}
+  .sheet{max-width:1320px;padding:14px 46px 10px;height:100dvh;display:flex;flex-direction:column;overflow:hidden}
+  .sheet > *{flex:none}
+  .topbar{padding-bottom:2px}
+  a.mode{padding:6px 14px;font-size:.6rem}
+  h1{font-size:clamp(1.6rem,2.5vw,2.15rem);line-height:1.12;max-width:none;padding:8px 0 11px}
+  /* le lecteur audio est logé dans la barre d'édition : une ligne au lieu de deux blocs */
+  .bar{padding:6px 0;font-size:.68rem;gap:26px}
+  .bar .audio{flex:1;max-width:540px;justify-content:flex-end;gap:13px;border-bottom:0;padding:0}
+  .audio .play{width:30px;height:30px}
+  .audio .play svg{width:11px;height:11px}
+  .audio .body{display:flex;align-items:center;gap:14px;flex:1;min-width:0}
+  .audio .lib{font-size:.62rem;letter-spacing:.22em;color:var(--muted);font-weight:700;white-space:nowrap}
+  .audio .track{flex:1;min-width:80px}
+  .audio .time{font-size:.62rem;letter-spacing:.08em}
+  .audio .na{text-transform:none;letter-spacing:0}
+  .audio .rate-btn{padding:5px 9px;min-width:46px;font-size:.62rem;letter-spacing:.08em}
+  .audio .rate-menu{top:calc(100% + 7px)}
+
+  /* ---- menu horizontal des rubriques ---- */
+  .menu{display:flex;justify-content:center;margin-top:14px;border-bottom:1px solid var(--line)}
+  .menu button{display:flex;align-items:center;gap:10px;font-family:inherit;font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;font-weight:700;color:var(--muted);background:none;border:0;border-bottom:2px solid transparent;padding:11px 28px 9px;margin-bottom:-1px;cursor:pointer;transition:.15s}
+  .menu button svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round;opacity:.55;transition:.15s}
+  .menu button:hover{color:var(--ink)}
+  .menu button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--accent)}
+  .menu button[aria-selected="true"] svg{stroke:var(--accent);opacity:1}
+
+  /* ---- scène : tout l'espace restant ---- */
+  .scene{flex:1;min-height:0;position:relative}
+  .rub{position:absolute;inset:0;display:none;flex-direction:column}
+  .rub.on{display:flex}
+
+  /* ---- fiche : texte à gauche, média à droite ---- */
+  /* média à gauche, texte à droite : le lecteur cale sur la marge de la page */
+  /* le bloc est centré horizontalement ET verticalement entre le menu et les flèches ;
+     align-content agit sur la ligne entière, sans toucher au calage interne du contenu */
+  .fiche{display:none;grid-template-columns:auto 450px;justify-content:center;align-content:center;flex:1;min-height:0;padding:10px 0}
+  .fiche.on{display:grid}
+  .fiche .med{padding-right:48px;display:flex;align-items:flex-start;justify-content:center}
+  .fiche .txt{min-height:0;overflow:auto;align-self:start}
+  .kick{display:block;font-size:.91rem;line-height:1;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:19px}
+  .fiche h3{font-family:'Playfair Display',Georgia,serif;font-weight:500;font-size:clamp(1.7rem,2.9vw,2.4rem);line-height:1.18;letter-spacing:-.012em}
+  .fiche p{font-size:1.02rem;line-height:1.66;opacity:.9;margin-top:19px}
+  .fiche .go{display:inline-flex;align-items:center;gap:10px;margin-top:25px;font-size:.69rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent);padding-bottom:3px;transition:.15s}
+  .fiche .go:hover{opacity:.65}
+  .fiche .go svg{width:17px;height:17px;stroke:var(--accent);fill:none;stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round}
+
+  /* ---- lecteur recadré au plus près de l'image ----
+     Le cadre d'Instagram est en 4:5 alors que les reels sont en 9:16 : on élargit
+     l'iframe de 1,4222 et on la recentre pour que la vidéo occupe toute la largeur.
+     Le décalage de 54 px supprime le bandeau du compte. .tvz agrandit ensuite le
+     tout de 10 % depuis son centre, ce qui absorbe les arrondis du navigateur. */
+  .tv{position:relative;height:min(58vh,620px);width:auto;aspect-ratio:9/16;overflow:hidden;border:1px solid var(--line);background:#0d0d0d}
+  .tvz{position:absolute;inset:0;transform:scale(1.10);transform-origin:50% 50%}
+  .tv iframe{position:absolute;top:-54px;left:50%;transform:translateX(-50%);width:142.22%;height:calc(100% + 260px);border:0}
+  .tv.image{aspect-ratio:4/5}
+  .tv.image iframe{left:0;transform:none;width:100%}
+
+  /* ---- média indisponible : on dit pourquoi ---- */
+  .hors{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center;height:min(58vh,620px);width:auto;aspect-ratio:9/16;border:1px solid var(--line);background:rgba(25,22,19,.03);padding:26px 22px;text-decoration:none;color:inherit;transition:.15s}
+  .hors:hover{border-color:var(--ink)}
+  .hors svg{width:30px;height:30px;stroke:var(--accent);fill:none;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+  .hors b{font-size:.92rem;font-weight:700;line-height:1.35}
+  .hors span{font-size:.82rem;line-height:1.58;color:var(--muted);max-width:30ch}
+  .hors em{font-style:normal;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--accent);margin-top:2px}
+  .hors:hover em{text-decoration:underline}
+  /* variante paysage : miniature réelle au-dessus du motif du refus */
+  .hors.paysage{aspect-ratio:auto;height:auto;max-height:100%;width:min(430px,34vw);padding:0;gap:0;justify-content:flex-start;overflow:hidden}
+  .hors.paysage img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border-bottom:1px solid var(--line)}
+  .hors.paysage .dit{display:flex;flex-direction:column;align-items:center;gap:9px;padding:20px 22px 22px}
+
+  /* ---- navigation entre fiches ---- */
+  .nav{display:flex;align-items:center;justify-content:center;gap:22px;padding:14px 0 2px;flex:none}
+  .nav button{width:36px;height:36px;border-radius:50%;border:1px solid var(--ink);background:none;color:var(--ink);cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0;transition:.15s}
+  .nav button:hover:not(:disabled){background:var(--ink);color:var(--bg)}
+  .nav button:disabled{opacity:.22;cursor:default}
+  .nav button svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+  .nav .pts{display:flex;gap:8px}
+  .nav .pts i{width:6px;height:6px;border-radius:50%;background:var(--line);cursor:pointer;transition:.15s}
+  .nav .pts i:hover{background:var(--muted)}
+  .nav .pts i.on{background:var(--accent);transform:scale(1.3)}
+  .nav .cpt{font-size:.66rem;letter-spacing:.2em;color:var(--muted);font-variant-numeric:tabular-nums;min-width:54px;text-align:center}
+
+  footer{margin-top:9px;padding-top:9px;font-size:.64rem}
+  footer .pn{margin-top:7px}
+
+  /* ---- petits écrans : on redonne l'ascenseur ---- */
+  @media(max-width:900px),(max-height:620px){
+    html,body{height:auto}
+    body{overflow:auto}
+    .sheet{height:auto;overflow:visible;padding:22px 20px 40px}
+    .scene{position:static}
+    .rub{position:static}
+    .fiche{grid-template-columns:1fr;justify-content:stretch;align-content:start;gap:26px}
+    .fiche .txt{order:1;padding-left:0;overflow:visible;align-self:auto}
+    .fiche h3{font-size:clamp(1.45rem,5vw,1.9rem)}
+    .fiche p{font-size:.96rem}
+    .fiche .med{order:2;padding-right:0;border-top:1px solid var(--line);padding-top:26px}
+    .tv,.hors{height:auto;width:100%;max-width:320px}
+    .hors.paysage{width:100%;max-width:430px}
+    .bar{flex-wrap:wrap;gap:10px}
+    .bar .audio{flex:1 0 100%;max-width:none;justify-content:flex-start;border-top:1px solid var(--line);padding-top:10px}
+    .menu{overflow-x:auto}
+    .menu button{padding:12px 16px 10px;letter-spacing:.14em}
+  }
+  @media print{
+    html,body{height:auto}body{overflow:visible}
+    .sheet{height:auto;overflow:visible}
+    .menu,.nav,.tv,.hors,.audio{display:none!important}
+    .scene,.rub{position:static}
+    .rub,.fiche{display:block!important}
+  }
+</style>
+</head>
+<body>
+<!-- ================================================================
+     GABARIT DU MODE VIDÉO · à copier pour créer une nouvelle édition.
+     Voir PATTERN-EDITION.md à la racine pour toutes les règles.
+     Ne modifier que : le titre, la barre d'édition, le data-src audio,
+     le lien du bouton « Mode journal », et le contenu des fiches.
+     ================================================================ -->
+<div class="sheet">
+  <div class="topbar">
+    <a class="back" href="../index.html">← Toutes les éditions</a>
+    <a class="mode" href="n00.html" title="Basculer en lecture texte, sans lecteurs vidéo"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"/><line x1="6" y1="7.6" x2="18" y2="7.6"/><line x1="6" y1="11.2" x2="11" y2="11.2"/><line x1="6" y1="13.8" x2="11" y2="13.8"/><line x1="6" y1="16.4" x2="11" y2="16.4"/><line x1="13" y1="11.2" x2="18" y2="11.2"/><line x1="13" y1="13.8" x2="18" y2="13.8"/><line x1="13" y1="16.4" x2="18" y2="16.4"/></svg>Mode journal</a>
+  </div>
+  <h1>Titre de l'édition en un seul niveau</h1>
+  <div class="bar"><span class="ed">Édition N°00 · Gabarit</span>
+    <div class="audio" id="audio" data-src="../audio/n00.mp3">
+    <button class="play" type="button" aria-label="Lire la version audio">
+      <svg class="ico-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5 L20 12 L7 19.5 Z"/></svg>
+      <svg class="ico-pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="4.5" width="4.2" height="15"/><rect x="13.8" y="4.5" width="4.2" height="15"/></svg>
+    </button>
+    <div class="body">
+      <span class="lib">Écouter</span>
+      <div class="track" id="a-track">
+        <div class="rail"></div>
+        <div class="fill" id="a-fill"></div>
+        <div class="knob" id="a-knob"></div>
+        <input type="range" id="a-range" min="0" max="1000" value="0" step="1" aria-label="Position dans la lecture">
+      </div>
+      <span class="time" id="a-time">00:00 / 00:00</span>
+    </div>
+    <div class="rate" id="a-rate">
+      <button class="rate-btn" type="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Vitesse de lecture">1,2&times;</button>
+      <ul class="rate-menu" role="listbox" aria-label="Vitesse de lecture">
+        <li role="option" data-rate="1" aria-selected="false">1&times;</li>
+        <li role="option" data-rate="1.2" aria-selected="true">1,2&times;</li>
+        <li role="option" data-rate="1.5" aria-selected="false">1,5&times;</li>
+        <li role="option" data-rate="2" aria-selected="false">2&times;</li>
+      </ul>
+    </div>
+  </div>
+  </div>
+
+  <div class="menu" role="tablist">
+    <button role="tab" data-rub="une" aria-selected="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2 L14.5 9.1 L20.8 9.6 L16 13.8 L17.5 20 L12 16.7 L6.5 20 L8 13.8 L3.2 9.6 L9.5 9.1 Z"/></svg>À la une</button>
+    <button role="tab" data-rub="news" aria-selected="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5 H17 V19 H4 Z"/><path d="M17 8 H20 V17.5 A1.5 1.5 0 0 1 18.5 19 H4"/><line x1="6.5" y1="8" x2="14.5" y2="8"/><rect x="6.5" y="10.8" width="3.4" height="3.4"/><line x1="12" y1="11.2" x2="14.5" y2="11.2"/><line x1="12" y1="13.6" x2="14.5" y2="13.6"/><line x1="6.5" y1="16.2" x2="14.5" y2="16.2"/></svg>Les News</button>
+    <button role="tab" data-rub="bonus" aria-selected="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5 C12.6 8 14.5 10.4 20.5 12 C14.5 13.6 12.6 16 12 20.5 C11.4 16 9.5 13.6 3.5 12 C9.5 10.4 11.4 8 12 3.5 Z"/><path d="M18.8 3.6 C19 5.1 19.7 5.9 21.4 6.4 C19.7 6.9 19 7.7 18.8 9.2 C18.6 7.7 17.9 6.9 16.2 6.4 C17.9 5.9 18.6 5.1 18.8 3.6 Z"/></svg>Bonus Insolite</button>
+  </div>
+
+  <div class="scene">
+    <div class="rub on" data-rub="une">
+      <!-- CAS 1 : reel jouable. Le cas le plus fréquent. -->
+      <article class="fiche on">
+        <div class="med"><div class="tv"><div class="tvz"><iframe data-src="https://www.instagram.com/reel/Dc8KekKtULT/embed/" loading="lazy" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" title="Reel Instagram"></iframe></div></div></div>
+        <div class="txt">
+          <span class="kick">Surtitre court</span>
+          <h3>Titre de la brève à la une sur deux lignes</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <a class="go" href="https://www.instagram.com/reel/Dc8KekKtULT/" target="_blank"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.6"/></svg>Voir sur Instagram</a>
+        </div>
+      </article>
+      <!-- CAS 2 : Instagram bloque la lecture car la bande-son est sous licence. Indiquer le morceau. -->
+      <article class="fiche">
+        <div class="med"><a class="hors" href="https://www.instagram.com/reel/Dc3lhMlo2lp/" target="_blank"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.6"/></svg><b>Lecture bloquée hors d'Instagram</b><span>La bande-son de ce reel utilise un morceau sous licence, <b>JMSN · 'Bout It</b>. Meta interdit alors la lecture sur les sites tiers.</span><em>Ouvrir sur Instagram</em></a></div>
+        <div class="txt">
+          <span class="kick">Surtitre court</span>
+          <h3>Brève dont le reel refuse la lecture intégrée</h3>
+          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <a class="go" href="https://www.instagram.com/reel/Dc3lhMlo2lp/" target="_blank"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.6"/></svg>Voir sur Instagram</a>
+        </div>
+      </article>
+      <!-- CAS 3 : lien vers un article. Aucune vidéo à jouer. -->
+      <article class="fiche">
+        <div class="med"><a class="hors paysage" href="https://example.org/article" target="_blank"><div class="dit"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5.5 C10 3.8 6 3.6 3.5 5 V19 C6 17.6 10 17.8 12 19.4 C14 17.8 18 17.6 20.5 19 V5 C18 3.6 14 3.8 12 5.5 Z"/><line x1="12" y1="5.5" x2="12" y2="19.4"/></svg><b>Article, pas de vidéo</b><span>Cette brève renvoie vers un article de <b>Nom du média</b>. Rien à jouer, tout à lire.</span><em>Ouvrir l'article</em></div></a></div>
+        <div class="txt">
+          <span class="kick">Surtitre court</span>
+          <h3>Brève qui renvoie vers un article, sans vidéo</h3>
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+          <a class="go" href="https://example.org/article" target="_blank"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5.5 C10 3.8 6 3.6 3.5 5 V19 C6 17.6 10 17.8 12 19.4 C14 17.8 18 17.6 20.5 19 V5 C18 3.6 14 3.8 12 5.5 Z"/><line x1="12" y1="5.5" x2="12" y2="19.4"/></svg>Voir sur Lecture</a>
+        </div>
+      </article>
+      <div class="nav">
+        <button class="prec" aria-label="Fiche précédente"><svg viewBox="0 0 24 24"><path d="M15 5 L8 12 L15 19"/></svg></button>
+        <span class="pts"><i class="on"></i><i></i><i></i></span>
+        <span class="cpt">1 / 3</span>
+        <button class="suiv" aria-label="Fiche suivante"><svg viewBox="0 0 24 24"><path d="M9 5 L16 12 L9 19"/></svg></button>
+      </div>
+    </div>
+
+    <div class="rub" data-rub="news">
+      <!-- CAS 1 : reel jouable. -->
+      <article class="fiche on">
+        <div class="med"><div class="tv"><div class="tvz"><iframe data-src="https://www.instagram.com/reel/DcvrkBXJ2TY/embed/" loading="lazy" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" title="Reel Instagram"></iframe></div></div></div>
+        <div class="txt">
+          <span class="kick">Surtitre court</span>
+          <h3>Brève de la rubrique News avec son reel</h3>
+          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <a class="go" href="https://www.instagram.com/reel/DcvrkBXJ2TY/" target="_blank"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.6"/></svg>Voir sur Instagram</a>
+        </div>
+      </article>
+      <!-- CAS 4 : publication photo ou carrousel. Cadre 4:5, pas d'élargissement. -->
+      <article class="fiche">
+        <div class="med"><div class="tv image"><div class="tvz"><iframe data-src="https://www.instagram.com/p/Dc1pjbFDdwQ/embed/" loading="lazy" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" title="Publication Instagram"></iframe></div></div></div>
+        <div class="txt">
+          <span class="kick">Surtitre court</span>
+          <h3>Brève illustrée par une publication photo</h3>
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+          <a class="go" href="https://www.instagram.com/p/Dc1pjbFDdwQ/" target="_blank"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.6"/></svg>Voir sur Instagram</a>
+        </div>
+      </article>
+      <!-- CAS 5 : YouTube renvoie erreur 153. On affiche la vraie miniature. -->
+      <article class="fiche">
+        <div class="med"><a class="hors paysage" href="https://www.youtube.com/watch?v=Mv0jDyr6Wco" target="_blank"><img src="https://i.ytimg.com/vi/Mv0jDyr6Wco/maxresdefault.jpg" alt="Miniature de la vidéo" loading="lazy" onerror="this.src='https://i.ytimg.com/vi/Mv0jDyr6Wco/mqdefault.jpg'"><div class="dit"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10.3 9.2 L15 12 L10.3 14.9 Z"/></svg><b>Intégration désactivée par la chaîne</b><span>La chaîne <b>Aivoxy</b> a interdit la lecture de cette vidéo hors de YouTube · le lecteur renvoie l'erreur 153.</span><em>Ouvrir sur YouTube</em></div></a></div>
+        <div class="txt">
+          <span class="kick">Surtitre court</span>
+          <h3>Brève dont la chaîne YouTube interdit l'intégration</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <a class="go" href="https://www.youtube.com/watch?v=Mv0jDyr6Wco" target="_blank"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10.3 9.2 L15 12 L10.3 14.9 Z"/></svg>Voir sur YouTube</a>
+        </div>
+      </article>
+      <div class="nav">
+        <button class="prec" aria-label="Fiche précédente"><svg viewBox="0 0 24 24"><path d="M15 5 L8 12 L15 19"/></svg></button>
+        <span class="pts"><i class="on"></i><i></i><i></i></span>
+        <span class="cpt">1 / 3</span>
+        <button class="suiv" aria-label="Fiche suivante"><svg viewBox="0 0 24 24"><path d="M9 5 L16 12 L9 19"/></svg></button>
+      </div>
+    </div>
+
+    <div class="rub" data-rub="bonus">
+      <!-- CAS 1 : reel jouable. -->
+      <article class="fiche on">
+        <div class="med"><div class="tv"><div class="tvz"><iframe data-src="https://www.instagram.com/reel/DcRbpRTO-Z9/embed/" loading="lazy" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" title="Reel Instagram"></iframe></div></div></div>
+        <div class="txt">
+          <span class="kick">Surtitre court</span>
+          <h3>Bonus insolite avec un reel jouable</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <a class="go" href="https://www.instagram.com/reel/DcRbpRTO-Z9/" target="_blank"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.6"/></svg>Voir sur Instagram</a>
+        </div>
+      </article>
+      <!-- CAS 3 : lien vers un article. -->
+      <article class="fiche">
+        <div class="med"><a class="hors paysage" href="https://example.org/article" target="_blank"><div class="dit"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5.5 C10 3.8 6 3.6 3.5 5 V19 C6 17.6 10 17.8 12 19.4 C14 17.8 18 17.6 20.5 19 V5 C18 3.6 14 3.8 12 5.5 Z"/><line x1="12" y1="5.5" x2="12" y2="19.4"/></svg><b>Article, pas de vidéo</b><span>Cette brève renvoie vers un article de <b>Nom du média</b>. Rien à jouer, tout à lire.</span><em>Ouvrir l'article</em></div></a></div>
+        <div class="txt">
+          <span class="kick">Surtitre court</span>
+          <h3>Bonus renvoyant vers une lecture</h3>
+          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <a class="go" href="https://example.org/article" target="_blank"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5.5 C10 3.8 6 3.6 3.5 5 V19 C6 17.6 10 17.8 12 19.4 C14 17.8 18 17.6 20.5 19 V5 C18 3.6 14 3.8 12 5.5 Z"/><line x1="12" y1="5.5" x2="12" y2="19.4"/></svg>Voir sur Lecture</a>
+        </div>
+      </article>
+      <div class="nav">
+        <button class="prec" aria-label="Fiche précédente"><svg viewBox="0 0 24 24"><path d="M15 5 L8 12 L15 19"/></svg></button>
+        <span class="pts"><i class="on"></i><i></i></span>
+        <span class="cpt">1 / 2</span>
+        <button class="suiv" aria-label="Fiche suivante"><svg viewBox="0 0 24 24"><path d="M9 5 L16 12 L9 19"/></svg></button>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="foot-row"><span>La Newsletter IA · Nicolas Peytavin</span><a href="../index.html">Toutes les éditions</a></div>
+    <div class="pn"><a href="#" class="off">← Édition précédente</a><span></span></div>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var box = document.getElementById('audio');
+  if(!box) return;
+  var btn   = box.querySelector('.play');
+  var range = document.getElementById('a-range');
+  var fill  = document.getElementById('a-fill');
+  var knob  = document.getElementById('a-knob');
+  var out   = document.getElementById('a-time');
+  var audio = new Audio();
+  var ready = false, seeking = false;
+  var VITESSE_DEFAUT = 1.2, vitesseChoisie = false;
+  audio.playbackRate = VITESSE_DEFAUT;
+
+  function mmss(s){
+    if(!isFinite(s) || s < 0) s = 0;
+    var m = Math.floor(s / 60), r = Math.floor(s % 60);
+    return (m < 10 ? '0' : '') + m + ':' + (r < 10 ? '0' : '') + r;
+  }
+  function paint(pct){
+    fill.style.width = pct + '%';
+    knob.style.left  = pct + '%';
+  }
+  function refresh(){
+    if(seeking || !ready) return;
+    var d = audio.duration, pct = d ? (audio.currentTime / d) * 100 : 0;
+    paint(pct);
+    range.value = Math.round(pct * 10);
+    out.textContent = mmss(audio.currentTime) + ' / ' + mmss(d);
+  }
+  function offline(){
+    box.classList.remove('on');
+    box.querySelector('.body').innerHTML =
+      '<div class="lab"><span><b>Version audio</b></span></div><div class="na">Bientôt disponible pour cette édition.</div>';
+    btn.disabled = true;
+    btn.style.opacity = '.35';
+    btn.style.cursor = 'default';
+    rbtn.disabled = true;
+    rbtn.style.opacity = '.35';
+    rbtn.style.cursor = 'default';
+    closeRate();
+  }
+
+  audio.preload = 'metadata';
+  audio.addEventListener('loadedmetadata', function(){
+    ready = true;
+    if(!vitesseChoisie) audio.playbackRate = VITESSE_DEFAUT;
+    refresh();
+  });
+  audio.addEventListener('timeupdate', refresh);
+  audio.addEventListener('error', offline);
+  audio.addEventListener('ended', function(){
+    box.classList.remove('on');
+    btn.setAttribute('aria-label', 'Lire la version audio');
+    audio.currentTime = 0;
+    refresh();
+  });
+
+  btn.addEventListener('click', function(){
+    if(audio.paused){
+      audio.play().then(function(){
+        box.classList.add('on');
+        btn.setAttribute('aria-label', 'Mettre en pause');
+      }).catch(offline);
+    } else {
+      audio.pause();
+      box.classList.remove('on');
+      btn.setAttribute('aria-label', 'Lire la version audio');
+    }
+  });
+
+  range.addEventListener('pointerdown', function(){ seeking = true; });
+  range.addEventListener('input', function(){
+    var pct = range.value / 10;
+    paint(pct);
+    if(ready) out.textContent = mmss(audio.duration * pct / 100) + ' / ' + mmss(audio.duration);
+  });
+  range.addEventListener('change', function(){
+    if(ready) audio.currentTime = audio.duration * (range.value / 1000);
+    seeking = false;
+    refresh();
+  });
+
+  var rate = document.getElementById('a-rate');
+  var rbtn = rate.querySelector('.rate-btn');
+  var opts = rate.querySelectorAll('.rate-menu li');
+
+  function closeRate(){
+    rate.classList.remove('open');
+    rbtn.setAttribute('aria-expanded', 'false');
+  }
+  rbtn.addEventListener('click', function(e){
+    e.stopPropagation();
+    var open = rate.classList.toggle('open');
+    rbtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  Array.prototype.forEach.call(opts, function(li){
+    li.addEventListener('click', function(){
+      var v = parseFloat(li.dataset.rate);
+      audio.playbackRate = v;
+      vitesseChoisie = true;
+      rbtn.innerHTML = li.innerHTML;
+      Array.prototype.forEach.call(opts, function(o){
+        o.setAttribute('aria-selected', o === li ? 'true' : 'false');
+      });
+      closeRate();
+    });
+  });
+  document.addEventListener('click', closeRate);
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeRate(); });
+
+  audio.src = box.dataset.src;
+})();
+</script>
+<script>
+(function(){
+  var rubs = [].slice.call(document.querySelectorAll('.rub'));
+
+  function montre(rub, i){
+    var fiches = [].slice.call(rub.querySelectorAll('.fiche'));
+    fiches.forEach(function(f, k){
+      var actif = k === i;
+      f.classList.toggle('on', actif);
+      var c = f.querySelector('iframe');
+      if(!c) return;
+      // on ne charge que la fiche visible, et on décharge les autres pour couper le son
+      if(actif){ if(c.src !== c.dataset.src) c.src = c.dataset.src; }
+      else if(c.src){ c.removeAttribute('src'); }
+    });
+    rub.querySelectorAll('.pts i').forEach(function(p, k){ p.classList.toggle('on', k === i); });
+    rub.querySelector('.cpt').textContent = (i + 1) + ' / ' + fiches.length;
+    rub.querySelector('.prec').disabled = i === 0;
+    rub.querySelector('.suiv').disabled = i === fiches.length - 1;
+    rub.dataset.i = i;
+  }
+
+  function decharge(rub){
+    rub.querySelectorAll('iframe[data-src]').forEach(function(c){
+      if(c.src) c.removeAttribute('src');
+    });
+  }
+
+  rubs.forEach(function(rub){
+    rub.dataset.i = 0;
+    var n = rub.querySelectorAll('.fiche').length;
+    rub.querySelector('.prec').addEventListener('click', function(){
+      var i = +rub.dataset.i; if(i > 0) montre(rub, i - 1);
+    });
+    rub.querySelector('.suiv').addEventListener('click', function(){
+      var i = +rub.dataset.i; if(i < n - 1) montre(rub, i + 1);
+    });
+    rub.querySelectorAll('.pts i').forEach(function(p, k){
+      p.addEventListener('click', function(){ montre(rub, k); });
+    });
+    montre(rub, 0);
+  });
+
+  var onglets = [].slice.call(document.querySelectorAll('.menu button'));
+  onglets.forEach(function(o){
+    o.addEventListener('click', function(){
+      onglets.forEach(function(x){ x.setAttribute('aria-selected', String(x === o)); });
+      rubs.forEach(function(rub){
+        var actif = rub.dataset.rub === o.dataset.rub;
+        rub.classList.toggle('on', actif);
+        if(!actif) decharge(rub);   // coupe le son de l'onglet que l'on quitte
+      });
+      var vu = rubs.filter(function(r){ return r.classList.contains('on'); })[0];
+      if(vu) montre(vu, +vu.dataset.i);
+    });
+  });
+
+  document.addEventListener('keydown', function(e){
+    if(e.target.tagName === 'INPUT' || e.target.tagName === 'BUTTON') return;
+    var vu = rubs.filter(function(r){ return r.classList.contains('on'); })[0];
+    if(!vu) return;
+    var i = +vu.dataset.i, n = vu.querySelectorAll('.fiche').length;
+    if(e.key === 'ArrowRight' && i < n - 1){ e.preventDefault(); montre(vu, i + 1); }
+    if(e.key === 'ArrowLeft'  && i > 0)    { e.preventDefault(); montre(vu, i - 1); }
+  });
+})();
+</script>
+</body>
+</html>

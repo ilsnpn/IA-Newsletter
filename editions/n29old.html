@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>N°29 · IA des mises à jour mineures, sauf une</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<style>
+  .kick{display:block;font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:6px}
+  /* une : le texte à gauche, les démonstrations empilées à droite */
+  .cols.cune{grid-template-columns:1.85fr 1fr}
+  .demos{border-top:1px solid var(--line)}
+  .demos a{display:flex;align-items:flex-start;gap:10px;padding:13px 0;border-bottom:1px solid var(--line);text-decoration:none;color:inherit;font-size:.82rem;line-height:1.4;transition:.15s}
+  .demos a:hover{color:var(--accent)}
+  .demos svg{flex:none;width:16px;height:16px;margin-top:2px;stroke:var(--accent);fill:none;stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round}
+  .lab{display:block;font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;font-weight:700;color:var(--muted);margin-bottom:22px}
+</style>
+</head>
+<body>
+<div class="sheet">
+  <div class="topbar">
+    <a class="back" href="../index.html">← Toutes les éditions</a>
+    <a class="mode" href="n29.html" title="Basculer en navigation par fiches, avec les vidéos jouables"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.6" y="5" width="18.8" height="14" rx="3"/><path d="M10.2 9.1 L15.2 12 L10.2 14.9 Z"/></svg>Mode vidéo</a>
+  </div>
+  <h1>IA des mises à jour mineures, sauf une</h1>
+  <div class="bar"><span class="ed">Édition N°29 · 8 septembre 2026</span><span>Par Nicolas Peytavin</span></div>
+
+  <div class="audio" id="audio" data-src="../audio/n29.mp3">
+    <button class="play" type="button" aria-label="Lire la version audio">
+      <svg class="ico-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5 L20 12 L7 19.5 Z"/></svg>
+      <svg class="ico-pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="4.5" width="4.2" height="15"/><rect x="13.8" y="4.5" width="4.2" height="15"/></svg>
+    </button>
+    <div class="body">
+      <div class="lab"><span><b>Écouter cette édition</b> · Version audio</span><span class="time" id="a-time">00:00 / 00:00</span></div>
+      <div class="track" id="a-track">
+        <div class="rail"></div>
+        <div class="fill" id="a-fill"></div>
+        <div class="knob" id="a-knob"></div>
+        <input type="range" id="a-range" min="0" max="1000" value="0" step="1" aria-label="Position dans la lecture">
+      </div>
+    </div>
+    <div class="rate" id="a-rate">
+      <button class="rate-btn" type="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Vitesse de lecture">1,2&times;</button>
+      <ul class="rate-menu" role="listbox" aria-label="Vitesse de lecture">
+        <li role="option" data-rate="1" aria-selected="false">1&times;</li>
+        <li role="option" data-rate="1.2" aria-selected="true">1,2&times;</li>
+        <li role="option" data-rate="1.5" aria-selected="false">1,5&times;</li>
+        <li role="option" data-rate="2" aria-selected="false">2&times;</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="cols cune">
+    <div class="col">
+      <div class="sect"><h2>À la une</h2><svg viewBox="0 0 24 24"><path d="M12 3.2 L14.5 9.1 L20.8 9.6 L16 13.8 L17.5 20 L12 16.7 L6.5 20 L8 13.8 L3.2 9.6 L9.5 9.1 Z"/></svg></div>
+      <a class="item" href="https://www.instagram.com/reel/Dc1qY4Rtcqt/?igsi=MTZ6Njlvam44czM0NQ==" target="_blank" title="Instagram">
+        <span class="kick">OpenAI</span>
+        <div class="hero" style="padding-bottom:10px">Mise à jour ASTRA 6 : de la voix à l'objet imprimé</div>
+        <p>On décrit une pièce à voix haute, le modèle la modélise, elle part à l'imprimante 3D. Dit comme ça, c'est une démonstration de plus · sauf que la conception assistée par ordinateur était jusqu'ici un métier, avec ses logiciels, ses semaines d'apprentissage et ses professionnels. Elle devient une conversation. Reste la question que les vidéos n'abordent jamais : ce qui sort est-il fabricable et mécaniquement sain, ou seulement joli à l'écran.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.6"/></svg></span></a>
+    </div>
+    <div class="col">
+      <span class="lab">Quatre démonstrations</span>
+      <div class="demos">
+        <a href="https://www.instagram.com/reel/Dc8KekKtULT/?stkn=NzlhMXZlNXgxdWNy" target="_blank" title="Instagram"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.6"/></svg>Créations d'utilisateurs</a>
+        <a href="https://www.instagram.com/reel/Dc3lhMlo2lp/?igsi=MTkxNHk4bWVxN2lidQ==" target="_blank" title="Instagram"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.6"/></svg>Un objet 3D depuis une photo</a>
+        <a href="https://www.instagram.com/reel/Dc4TEDUyd6B/?igsi=MXhqNjB0cndtMTJ0" target="_blank" title="Instagram"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.6"/></svg>Génération d'un bâtiment entier depuis une photo</a>
+        <a href="https://www.instagram.com/reel/Dc3XZuPtORF/?igsi=cmw1ZjIzaGd4eTc=" target="_blank" title="Instagram"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.6"/></svg>Génération d'un circuit imprimé</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="cols c2">
+    <div class="col">
+      <a class="item" href="https://www.instagram.com/reel/DcvrkBXJ2TY/?stkn=aHRubGdrYW56ejk1" target="_blank" title="Instagram">
+        <span class="kick">Alibaba</span>
+        <div class="h">Mise à jour Qwen 3.8 Flash Next : 180 milliards de paramètres, 6 activés</div>
+        <p>Le mixture of experts poussé loin. Le modèle est énorme au repos, minuscule à l'exécution, puisqu'il ne réveille que les spécialistes utiles à chaque requête. C'est la suite directe du numéro précédent : après avoir compressé les modèles, on apprend à n'en allumer qu'un trentième.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.6"/></svg></span></a>
+      <a class="item" href="https://venturebeat.com/technology/anthropics-claude-fable-5-1-and-mythos-5-1-arrive-with-a-75-cost-reduction-for-fable-cache-reads" target="_blank" title="Lecture">
+        <span class="kick">Anthropic · 1er septembre</span>
+        <div class="h">Mise à jour Fable 5.1 : le vrai changement est caché dans le cache</div>
+        <p>Le prix affiché ne bouge pas, mais la lecture de cache chute de 75 %, à 0,25 dollar le million de jetons. Invisible sur l'étiquette, décisif pour tout ce qui relit sans cesse le même contexte, c'est-à-dire les agents.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><path d="M12 5.5 C10 3.8 6 3.6 3.5 5 V19 C6 17.6 10 17.8 12 19.4 C14 17.8 18 17.6 20.5 19 V5 C18 3.6 14 3.8 12 5.5 Z"/><line x1="12" y1="5.5" x2="12" y2="19.4"/></svg></span></a>
+    </div>
+    <div class="col">
+      <a class="item" href="https://www.theregister.com/ai-and-ml/2026/09/02/with-gemini-38-flash-google-reminds-everyone-its-still-in-the-race/5294049" target="_blank" title="Lecture">
+        <span class="kick">Google · 2 septembre</span>
+        <div class="h">Mise à jour Gemini 3.8 Flash, troisième Flash en six semaines</div>
+        <p>La fiche technique de Google le dit sans détour : le modèle est bâti sur la 3.7, pas sur une nouvelle base. Le tarif ne bouge pas jusqu'au 31 décembre, puis double au 1er janvier. La cadence tient lieu d'argument.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><path d="M12 5.5 C10 3.8 6 3.6 3.5 5 V19 C6 17.6 10 17.8 12 19.4 C14 17.8 18 17.6 20.5 19 V5 C18 3.6 14 3.8 12 5.5 Z"/><line x1="12" y1="5.5" x2="12" y2="19.4"/></svg></span></a>
+      <a class="item" href="https://www.instagram.com/reel/Dc1G4GOoo7k/?igsi=ZXlueXlib3NmeDJt" target="_blank" title="Instagram">
+        <span class="kick">OpenClaw</span>
+        <div class="h">Mise à jour OpenClaw 2.0 : un agent que l'on partage à plusieurs</div>
+        <p>Jusqu'ici l'agent était une affaire personnelle, installé sur son poste, nourri de son contexte. La 2.0 en fait une ressource collective. Le glissement est plus grand qu'il n'y paraît : il faut alors décider qui voit quoi, qui peut lui faire faire quoi, et à qui appartient ce qu'il produit.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.6"/></svg></span></a>
+    </div>
+  </div>
+
+  <div class="cols c3">
+    <div class="col">
+      <div class="sect"><h2>Les News</h2><svg viewBox="0 0 24 24"><path d="M4 5 H17 V19 H4 Z"/><path d="M17 8 H20 V17.5 A1.5 1.5 0 0 1 18.5 19 H4"/><line x1="6.5" y1="8" x2="14.5" y2="8"/><rect x="6.5" y="10.8" width="3.4" height="3.4"/><line x1="12" y1="11.2" x2="14.5" y2="11.2"/><line x1="12" y1="13.6" x2="14.5" y2="13.6"/><line x1="6.5" y1="16.2" x2="14.5" y2="16.2"/></svg></div>
+      <a class="item" href="https://www.instagram.com/reel/DcrLFcPoBPG/?igsi=MWEybXN1czVmMDg4NA==" target="_blank" title="Instagram">
+        <div class="h">LinkedIn demande à ses membres de signaler l'AI slop</div>
+        <p>Le réseau perd des utilisateurs à force de contenu généré et se tourne vers eux pour faire le tri. Aveu intéressant : la plateforme qui a le plus poussé l'écriture assistée demande maintenant qu'on la dénonce.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.6"/></svg></span></a>
+      <a class="item" href="https://www.instagram.com/reel/Dc3H8S_MYDH/?igsi=MTZzNXhvaHpsZnpkNg==" target="_blank" title="Instagram">
+        <div class="h">Open source ou open weight, ce n'est pas la même chose</div>
+        <p>Une explication utile alors que le mot « ouvert » sert à tout le monde. Publier les poids d'un modèle n'est pas publier de quoi le reconstruire : les données et la recette restent souvent au chaud.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.6"/></svg></span></a>
+    </div>
+    <div class="col">
+      <div class="spacer"></div>
+      <a class="item" href="https://www.instagram.com/reel/DcwEXfXk0pU/?stkn=NjV5bnlsZWppYXFt" target="_blank" title="Instagram">
+        <div class="h">Anthropic mis en cause sur les limites de ses forfaits</div>
+        <p>La vidéo accuse l'entreprise d'avoir communiqué des limites d'usage éloignées de la réalité sur les abonnements à 100 et 200 dollars. Rien d'officiel à ce stade, mais le grief revient assez souvent chez les gros utilisateurs pour être noté.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.6"/></svg></span></a>
+    </div>
+    <div class="col">
+      <div class="spacer"></div>
+      <a class="item" href="https://www.phonandroid.com/gemini-peut-modifier-les-parametres-de-votre-pixel-a-votre-place-il-suffit-de-lui-demander.html" target="_blank" title="Lecture">
+        <div class="h">Gemini règle votre Pixel à votre place</div>
+        <p>Sous Android 17, l'assistant va chercher les réglages lui-même. Pratique pour tout ce qui est enterré à quatre menus de profondeur, et première fois qu'un assistant touche vraiment au système.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><path d="M12 5.5 C10 3.8 6 3.6 3.5 5 V19 C6 17.6 10 17.8 12 19.4 C14 17.8 18 17.6 20.5 19 V5 C18 3.6 14 3.8 12 5.5 Z"/><line x1="12" y1="5.5" x2="12" y2="19.4"/></svg></span></a>
+      <a class="item" href="https://www.instagram.com/reel/DcrX0pQOiC9/?igsi=ZTNxa2x0aHVndXJw" target="_blank" title="Instagram">
+        <div class="h">De la vidéo générée plus vite qu'on ne la regarde</div>
+        <p>Le modèle produit l'image en direct, plus rapidement que sa propre lecture. La génération cesse d'être une attente pour devenir un flux.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.6"/></svg></span></a>
+    </div>
+  </div>
+
+  <div class="cols c3">
+    <div class="col">
+      <div class="sect"><h2>Bonus Insolite</h2><svg viewBox="0 0 24 24"><path d="M12 3.5 C12.6 8 14.5 10.4 20.5 12 C14.5 13.6 12.6 16 12 20.5 C11.4 16 9.5 13.6 3.5 12 C9.5 10.4 11.4 8 12 3.5 Z"/><path d="M18.8 3.6 C19 5.1 19.7 5.9 21.4 6.4 C19.7 6.9 19 7.7 18.8 9.2 C18.6 7.7 17.9 6.9 16.2 6.4 C17.9 5.9 18.6 5.1 18.8 3.6 Z"/></svg></div>
+      <a class="item" href="https://www.youtube.com/watch?v=Mv0jDyr6Wco" target="_blank" title="YouTube">
+        <div class="h">Seedance 2.5 contre Gemini Omni Flash 1.1, plan par plan</div>
+        <p>Une minute quarante de confrontation directe, montée par la chaîne Aivoxy. Ce genre d'exercice dit plus long que n'importe quel tableau de scores : on voit tout de suite où chacun décroche.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10.3 9.2 L15 12 L10.3 14.8 Z"/></svg></span></a>
+    </div>
+    <div class="col">
+      <div class="spacer"></div>
+      <a class="item" href="https://www.instagram.com/reel/DcRbpRTO-Z9/?igsi=ejZxNG8zcnBnYWpo" target="_blank" title="Instagram">
+        <div class="h">Recevoir une lettre comme dans Harry Potter</div>
+        <p>Le courrier qui arrive tout seul, façon Poudlard. Un bricolage sans autre ambition que le plaisir de la mise en scène, et c'est très bien ainsi.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.6"/></svg></span></a>
+    </div>
+    <div class="col">
+      <div class="spacer"></div>
+      <a class="item" href="https://www.instagram.com/p/Dc1pjbFDdwQ/?img_index=1&amp;igsi=MTgweHdqbW5jeHh1YQ==" target="_blank" title="Instagram">
+        <div class="h">Les chiffres de GPT-6 qui circulent</div>
+        <p>Une série de scores qui tourne sur les réseaux. À manier avec précaution : sur ARC-AGI-3, le même modèle affiche 62,7 % ou 99,9 % selon le protocole de test autorisé. Le chiffre seul ne veut plus dire grand-chose.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.6"/></svg></span></a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="foot-row"><span>La Newsletter IA · Nicolas Peytavin</span><a href="../index.html">Toutes les éditions</a></div>
+    <div class="pn"><a href="n28.html">← N°28 · IA de l'innovation dans la compression</a><span></span></div>
+  </footer>
+</div>
+<script>
+(function(){
+  var box = document.getElementById('audio');
+  if(!box) return;
+  var btn   = box.querySelector('.play');
+  var range = document.getElementById('a-range');
+  var fill  = document.getElementById('a-fill');
+  var knob  = document.getElementById('a-knob');
+  var out   = document.getElementById('a-time');
+  var audio = new Audio();
+  var ready = false, seeking = false;
+  var VITESSE_DEFAUT = 1.2, vitesseChoisie = false;
+  audio.playbackRate = VITESSE_DEFAUT;
+
+  function mmss(s){
+    if(!isFinite(s) || s < 0) s = 0;
+    var m = Math.floor(s / 60), r = Math.floor(s % 60);
+    return (m < 10 ? '0' : '') + m + ':' + (r < 10 ? '0' : '') + r;
+  }
+  function paint(pct){
+    fill.style.width = pct + '%';
+    knob.style.left  = pct + '%';
+  }
+  function refresh(){
+    if(seeking || !ready) return;
+    var d = audio.duration, pct = d ? (audio.currentTime / d) * 100 : 0;
+    paint(pct);
+    range.value = Math.round(pct * 10);
+    out.textContent = mmss(audio.currentTime) + ' / ' + mmss(d);
+  }
+  function offline(){
+    box.classList.remove('on');
+    box.querySelector('.body').innerHTML =
+      '<div class="lab"><span><b>Version audio</b></span></div><div class="na">Bientôt disponible pour cette édition.</div>';
+    btn.disabled = true;
+    btn.style.opacity = '.35';
+    btn.style.cursor = 'default';
+    rbtn.disabled = true;
+    rbtn.style.opacity = '.35';
+    rbtn.style.cursor = 'default';
+    closeRate();
+  }
+
+  audio.preload = 'metadata';
+  audio.addEventListener('loadedmetadata', function(){
+    ready = true;
+    if(!vitesseChoisie) audio.playbackRate = VITESSE_DEFAUT;
+    refresh();
+  });
+  audio.addEventListener('timeupdate', refresh);
+  audio.addEventListener('error', offline);
+  audio.addEventListener('ended', function(){
+    box.classList.remove('on');
+    btn.setAttribute('aria-label', 'Lire la version audio');
+    audio.currentTime = 0;
+    refresh();
+  });
+
+  btn.addEventListener('click', function(){
+    if(audio.paused){
+      audio.play().then(function(){
+        box.classList.add('on');
+        btn.setAttribute('aria-label', 'Mettre en pause');
+      }).catch(offline);
+    } else {
+      audio.pause();
+      box.classList.remove('on');
+      btn.setAttribute('aria-label', 'Lire la version audio');
+    }
+  });
+
+  range.addEventListener('pointerdown', function(){ seeking = true; });
+  range.addEventListener('input', function(){
+    var pct = range.value / 10;
+    paint(pct);
+    if(ready) out.textContent = mmss(audio.duration * pct / 100) + ' / ' + mmss(audio.duration);
+  });
+  range.addEventListener('change', function(){
+    if(ready) audio.currentTime = audio.duration * (range.value / 1000);
+    seeking = false;
+    refresh();
+  });
+
+  var rate = document.getElementById('a-rate');
+  var rbtn = rate.querySelector('.rate-btn');
+  var opts = rate.querySelectorAll('.rate-menu li');
+
+  function closeRate(){
+    rate.classList.remove('open');
+    rbtn.setAttribute('aria-expanded', 'false');
+  }
+  rbtn.addEventListener('click', function(e){
+    e.stopPropagation();
+    var open = rate.classList.toggle('open');
+    rbtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  Array.prototype.forEach.call(opts, function(li){
+    li.addEventListener('click', function(){
+      var v = parseFloat(li.dataset.rate);
+      audio.playbackRate = v;
+      vitesseChoisie = true;
+      rbtn.innerHTML = li.innerHTML;
+      Array.prototype.forEach.call(opts, function(o){
+        o.setAttribute('aria-selected', o === li ? 'true' : 'false');
+      });
+      closeRate();
+    });
+  });
+  document.addEventListener('click', closeRate);
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeRate(); });
+
+  audio.src = box.dataset.src;
+})();
+</script>
+</body>
+</html>
