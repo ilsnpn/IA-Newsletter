@@ -1,6 +1,6 @@
 # La Newsletter IA
 
-Mini-site statique qui archive 29 éditions d'une newsletter consacrée à
+Mini-site statique qui archive 30 éditions d'une newsletter consacrée à
 l'actualité de l'intelligence artificielle. Il est servi directement depuis
 la racine, sans build ni dépendance.
 

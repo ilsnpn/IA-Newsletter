@@ -28,7 +28,7 @@ SORTIE   = os.path.join(RACINE, "index.html")
 
 # Numéro, date affichée sous la vignette, de la plus récente à la plus ancienne.
 EDS = [
- (29,"08.09.2026"),(28,"31.08.2026"),(27,"17.08.2026"),(26,"03.08.2026"),
+ (30,"22.09.2026"),(29,"08.09.2026"),(28,"31.08.2026"),(27,"17.08.2026"),(26,"03.08.2026"),
  (25,"20.07.2026"),(24,"04.07.2026"),(23,"23.06.2026"),(22,"08.06.2026"),
  (21,"26.05.2026"),(20,"11.05.2026"),(19,"27.04.2026"),(18,"13.04.2026"),
  (17,"09.04.2026"),(16,"13.03.2026"),(15,"02.03.2026"),(14,"16.02.2026"),
@@ -103,7 +103,7 @@ body{{background:#FCFAF5}}
 .card .leg .d{{color:var(--muted);letter-spacing:.12em}}
 .card:hover .leg .no{{color:var(--accent)}}
 
-/* Styles des jaquettes intégrées, déclarés une seule fois pour les 29.
+/* Styles des jaquettes intégrées, déclarés une seule fois pour les 30.
    Ce sont exactement ceux du bloc <style> des fichiers SVG. */
 .jaq .serif{{font-family:'Playfair Display',Georgia,'Times New Roman',serif}}
 .jaq .sans {{font-family:'Inter','Helvetica Neue',Arial,sans-serif}}

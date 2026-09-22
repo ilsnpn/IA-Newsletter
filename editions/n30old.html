@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>N°30 · IA les 3 Géants qui sont d'accord</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<style>
+  .kick{display:block;font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:6px}
+  /* une : le texte à gauche, les démonstrations empilées à droite */
+  .cols.cune{grid-template-columns:1.85fr 1fr}
+  .demos{border-top:1px solid var(--line)}
+  .demos a{display:flex;align-items:flex-start;gap:10px;padding:13px 0;border-bottom:1px solid var(--line);text-decoration:none;color:inherit;font-size:.82rem;line-height:1.4;transition:.15s}
+  .demos a:hover{color:var(--accent)}
+  .demos svg{flex:none;width:16px;height:16px;margin-top:2px;stroke:var(--accent);fill:none;stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round}
+  .lab{display:block;font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;font-weight:700;color:var(--muted);margin-bottom:22px}
+</style>
+</head>
+<body>
+<div class="sheet">
+  <div class="topbar">
+    <a class="back" href="../index.html">← Toutes les éditions</a>
+    <a class="mode" href="n30.html" title="Basculer en navigation par fiches, avec les vidéos jouables"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.6" y="5" width="18.8" height="14" rx="3"/><path d="M10.2 9.1 L15.2 12 L10.2 14.9 Z"/></svg>Mode vidéo</a>
+  </div>
+  <h1>IA les 3 Géants qui sont d'accord</h1>
+  <div class="bar"><span class="ed">Édition N°30 · 22 septembre 2026</span><span>Par Nicolas Peytavin</span></div>
+
+  <div class="audio" id="audio" data-src="../audio/n30.mp3">
+    <button class="play" type="button" aria-label="Lire la version audio">
+      <svg class="ico-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5 L20 12 L7 19.5 Z"/></svg>
+      <svg class="ico-pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="4.5" width="4.2" height="15"/><rect x="13.8" y="4.5" width="4.2" height="15"/></svg>
+    </button>
+    <div class="body">
+      <div class="lab"><span><b>Écouter cette édition</b> · Version audio</span><span class="time" id="a-time">00:00 / 00:00</span></div>
+      <div class="track" id="a-track">
+        <div class="rail"></div>
+        <div class="fill" id="a-fill"></div>
+        <div class="knob" id="a-knob"></div>
+        <input type="range" id="a-range" min="0" max="1000" value="0" step="1" aria-label="Position dans la lecture">
+      </div>
+    </div>
+    <div class="rate" id="a-rate">
+      <button class="rate-btn" type="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Vitesse de lecture">1,2&times;</button>
+      <ul class="rate-menu" role="listbox" aria-label="Vitesse de lecture">
+        <li role="option" data-rate="1" aria-selected="false">1&times;</li>
+        <li role="option" data-rate="1.2" aria-selected="true">1,2&times;</li>
+        <li role="option" data-rate="1.5" aria-selected="false">1,5&times;</li>
+        <li role="option" data-rate="2" aria-selected="false">2&times;</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="cols cune">
+    <div class="col">
+      <div class="sect"><h2>À la une</h2><svg viewBox="0 0 24 24"><path d="M12 3.2 L14.5 9.1 L20.8 9.6 L16 13.8 L17.5 20 L12 16.7 L6.5 20 L8 13.8 L3.2 9.6 L9.5 9.1 Z"/></svg></div>
+      <a class="item" href="https://www.instagram.com/reel/DdhayiYtxe0/?stkn=MW5wenByYzVqYzkwdQ==" target="_blank" title="Instagram">
+        <span class="kick">Agents</span>
+        <div class="hero" style="padding-bottom:10px">Deux cents fois plus rapide, parce qu'elle n'en parle pas</div>
+        <p>La démonstration ne montre pas un modèle qui répond mieux, mais un agent qui exécute. Là où le chatbot déroule sa réponse mot à mot, celui-ci enchaîne les actions et rend le travail fini. Le facteur deux cents est celui de la vidéo, pas d'une mesure indépendante · il dit surtout où était le goulot d'étranglement : pas dans le raisonnement, dans le texte.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.6"/></svg></span></a>
+    </div>
+    <div class="col">
+      <span class="lab">Une démonstration de plus</span>
+      <div class="demos">
+        <a href="https://www.instagram.com/reel/DdhSe3uxGql/?stkn=MXRnZGU2aTU4M25xeQ==" target="_blank" title="Instagram"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.6"/></svg>Du texte à l'action, une seconde fois</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="cols c2">
+    <div class="col">
+      <a class="item" href="https://www.instagram.com/reel/DdN1fSXttGY/?stkn=MXRiNDNqaHl4YWdpbA==" target="_blank" title="Instagram">
+        <span class="kick">Régulation</span>
+        <div class="h">Les trois patrons du secteur demandent de ralentir</div>
+        <p>Les dirigeants des trois grands laboratoires s'accordent, pour une fois, sur un point : il faudrait freiner. Le propos est présenté comme une inquiétude de sécurité, il se lit aussi comme du lobbying de base. Quand ceux qui sont devant réclament une limite, la limite protège d'abord leur avance. À noter comme un discours, pas comme une mesure.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.6"/></svg></span></a>
+      <a class="item" href="https://www.instagram.com/reel/DdO70AXuaeS/?stkn=MW51c3A2YWt1bW5iZQ==" target="_blank" title="Instagram">
+        <span class="kick">Contrepoint</span>
+        <div class="h">Ralentir l'IA, ou verrouiller le marché</div>
+        <p>La réponse ne s'est pas fait attendre : demander un coup de frein quand on tient la tête revient à fermer la porte derrière soi. L'objection est solide, sans qu'il faille céder au réflexe inverse · le risque évoqué ne devient pas nul parce que celui qui l'énonce y a intérêt. Les deux choses tiennent ensemble.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.6"/></svg></span></a>
+    </div>
+    <div class="col">
+      <a class="item" href="https://www.instagram.com/reel/DdT4O8BJ0EH/?stkn=MWRycWUxemt1NXRlcw==" target="_blank" title="Instagram">
+        <span class="kick">Même séquence</span>
+        <div class="h">Ce que ce débat dit du secteur</div>
+        <p>Une troisième vidéo reprend le dossier et s'arrête sur la contradiction : les mêmes entreprises financent la course et en dénoncent le rythme. Ce n'est pas nouveau, c'est devenu public. Reste à voir si quelque chose suit, parce qu'à ce jour aucune des trois n'a ralenti quoi que ce soit.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.6"/></svg></span></a>
+      <a class="item" href="https://www.frandroid.com/culture-tech/intelligence-artificielle/3239997_aucune-autre-activite-humaine-ne-represente-un-tel-danger-une-nouvelle-demission-chez-anthropic-reactive-le-recit-dune-ia-terminator" target="_blank" title="Lecture">
+        <span class="kick">Sécurité de l'IA</span>
+        <div class="h">« La capacité de tous nous tuer d'ici la fin de la décennie »</div>
+        <p>Comme lettre de démission, on a vu plus mesuré. Jacob Coxon quitte son poste à la sécurité chez Anthropic en affirmant que les responsables du développement croient sincèrement à ce scénario. La phrase relance le récit du Terminator, et c'est là sa limite : elle rapporte une conviction interne, pas une démonstration.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><path d="M12 5.5 C10 3.8 6 3.6 3.5 5 V19 C6 17.6 10 17.8 12 19.4 C14 17.8 18 17.6 20.5 19 V5 C18 3.6 14 3.8 12 5.5 Z"/><line x1="12" y1="5.5" x2="12" y2="19.4"/></svg></span></a>
+    </div>
+  </div>
+
+  <div class="cols c3">
+    <div class="col">
+      <div class="sect"><h2>Les News</h2><svg viewBox="0 0 24 24"><path d="M4 5 H17 V19 H4 Z"/><path d="M17 8 H20 V17.5 A1.5 1.5 0 0 1 18.5 19 H4"/><line x1="6.5" y1="8" x2="14.5" y2="8"/><rect x="6.5" y="10.8" width="3.4" height="3.4"/><line x1="12" y1="11.2" x2="14.5" y2="11.2"/><line x1="12" y1="13.6" x2="14.5" y2="13.6"/><line x1="6.5" y1="16.2" x2="14.5" y2="16.2"/></svg></div>
+      <a class="item" href="https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/" target="_blank" title="Lecture">
+        <span class="kick">Mistral AI</span>
+        <div class="h">Trois milliards d'euros, un record européen</div>
+        <p>La levée valorise Mistral autour de vingt-quatre milliards de dollars, et l'argent ne va pas au modèle : il va au calcul, avec un objectif affiché d'un gigawatt en Europe. C'est la vraie bataille du moment, et elle se joue en mégawatts, en terrains et en contrats d'électricité, pas en jetons par seconde.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><path d="M12 5.5 C10 3.8 6 3.6 3.5 5 V19 C6 17.6 10 17.8 12 19.4 C14 17.8 18 17.6 20.5 19 V5 C18 3.6 14 3.8 12 5.5 Z"/><line x1="12" y1="5.5" x2="12" y2="19.4"/></svg></span></a>
+      <a class="item" href="https://www.instagram.com/p/DdB6jMdTFRs/?stkn=OThqZ2tkb2dndW1u" target="_blank" title="Instagram">
+        <span class="kick">Google</span>
+        <div class="h">Gemini 4 n'est pas sorti que ses scores circulent</div>
+        <p>Des chiffres attribués au modèle à venir tournent sur les réseaux et donneraient OpenAI dépassé. Prudence : scores non officiels, modèle non publié, relayés par des comptes qui vivent de l'annonce. La course se joue désormais avant les lancements, ce qui en dit plus long sur la communication que sur les modèles.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.6"/></svg></span></a>
+      <a class="item" href="https://www.clubic.com/actualite-629005-meta-devoile-muse-un-agent-ia-personnel-a-votre-service.html" target="_blank" title="Lecture">
+        <span class="kick">Meta</span>
+        <div class="h">Muse, l'agent personnel de Meta</div>
+        <p>Meta présente son agent IA personnel, censé agir pour vous au quotidien. L'entreprise arrive tard sur un terrain déjà occupé, avec un atout qu'aucun concurrent n'a : les messageries où se passe déjà la vie numérique de plusieurs milliards de personnes. Toute la question est de savoir ce que l'agent aura le droit d'y lire.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><path d="M12 5.5 C10 3.8 6 3.6 3.5 5 V19 C6 17.6 10 17.8 12 19.4 C14 17.8 18 17.6 20.5 19 V5 C18 3.6 14 3.8 12 5.5 Z"/><line x1="12" y1="5.5" x2="12" y2="19.4"/></svg></span></a>
+    </div>
+    <div class="col">
+      <div class="spacer"></div>
+      <a class="item" href="https://www.instagram.com/reel/DdPVQXCISYI/?stkn=MTJmdHMxdGpsbXRxYw==" target="_blank" title="Instagram">
+        <span class="kick">DeepSeek</span>
+        <div class="h">DeepSeek 4.1 Flash complète la série</div>
+        <p>Encore une version rapide, bâtie sur une base existante plutôt que sur une nouvelle. C'est devenu le rythme normal du secteur : les sorties majeures se comptent en mois, les mises à jour en jours. Le mot Flash désigne partout la même promesse, moins cher et plus vite, et nulle part la même architecture.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.6"/></svg></span></a>
+      <a class="item" href="https://www.instagram.com/reel/DdE50RiOxGf/?stkn=MW51OTdkdmg3Y3Vkdw==" target="_blank" title="Instagram">
+        <span class="kick">Formats</span>
+        <div class="h">JSON c'est bien, Toon c'est mieux</div>
+        <p>Un format pensé pour ce que lisent les modèles plutôt que pour ce que déchiffrent les programmes : moins de ponctuation, moins de jetons, autant d'information. Sur un agent qui relit son contexte à chaque tour, l'économie n'a rien de cosmétique. Reste qu'un format ne s'impose que si les outils le suivent.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.6"/></svg></span></a>
+    </div>
+    <div class="col">
+      <div class="spacer"></div>
+      <a class="item" href="https://www.instagram.com/reel/DdEP2WMqrbI/?stkn=MWFhYTlqbTM2cWl4eg==" target="_blank" title="Instagram">
+        <span class="kick">Autoamélioration</span>
+        <div class="h">Une IA qui conçoit une IA</div>
+        <p>La boucle que tout le monde attendait ou redoutait : un modèle qui produit le modèle suivant. La vidéo force le trait, la réalité tient plutôt de l'optimisation automatique d'architectures, un sujet de recherche ancien. La direction, elle, est bien celle-là · et c'est exactement ce qui inquiète ceux qui demandent de ralentir.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.6"/></svg></span></a>
+      <a class="item" href="https://www.instagram.com/p/DdZSpdKMWd9/?stkn=MWN0YWczemp3bHV5bw==" target="_blank" title="Instagram">
+        <span class="kick">ASTRA 6</span>
+        <div class="h">Un message Enigma de 1941 résolu après quatre-vingts ans</div>
+        <p>Un message radio allemand resté illisible depuis la guerre aurait cédé en une dizaine d'heures. L'exploit est moins cryptographique qu'organisationnel : la machine a essayé, trié et recoupé plus vite qu'une équipe entière. À confirmer par les historiens, comme chaque fois qu'une IA annonce avoir refermé un dossier ancien.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.6"/></svg></span></a>
+    </div>
+  </div>
+
+  <div class="cols c3">
+    <div class="col">
+      <div class="sect"><h2>Bonus Insolite</h2><svg viewBox="0 0 24 24"><path d="M12 3.5 C12.6 8 14.5 10.4 20.5 12 C14.5 13.6 12.6 16 12 20.5 C11.4 16 9.5 13.6 3.5 12 C9.5 10.4 11.4 8 12 3.5 Z"/><path d="M18.8 3.6 C19 5.1 19.7 5.9 21.4 6.4 C19.7 6.9 19 7.7 18.8 9.2 C18.6 7.7 17.9 6.9 16.2 6.4 C17.9 5.9 18.6 5.1 18.8 3.6 Z"/></svg></div>
+      <a class="item" href="https://www.instagram.com/reel/Dc3jWZuihe_/?igsi=MXh6bW9zeW1jNjBkdw==" target="_blank" title="Instagram">
+        <div class="h">L'IA branchée au PC, qui tape et qui clique</div>
+        <p>Pas d'interface de programmation, pas d'intégration : un boîtier se fait passer pour un clavier et une souris, et l'IA pilote la machine comme le ferait une main. C'est rustique, universel, et un peu inquiétant · tout ce qui est à l'écran devient à sa portée, y compris ce qu'on n'avait pas prévu de lui confier.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.6"/></svg></span></a>
+    </div>
+    <div class="col">
+      <div class="spacer"></div>
+      <a class="item" href="https://www.instagram.com/reel/Dc2-qxvDN6f/?igsi=aWs4dzlvaXZzdHRm" target="_blank" title="Instagram">
+        <div class="h">Porter une IA en collier pour devenir meilleur</div>
+        <p>Le compagnon permanent qui écoute la journée et la commente le soir, quelque part entre le coaching et la présence artificielle. L'objet est soigné, la promesse est immense, et la question du micro toujours ouvert reste entière. On notera que personne ne demande jamais à ces colliers de se taire.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.6"/></svg></span></a>
+    </div>
+    <div class="col">
+      <div class="spacer"></div>
+      <a class="item" href="https://www.instagram.com/reel/Dcz1yfJHRXq/?igsi=MTR0bWhicGMyeTBycA==" target="_blank" title="Instagram">
+        <div class="h">Un personnage qui montre ce que l'agent est en train de faire</div>
+        <p>Il lit, il réfléchit, il écrit, il a fini : quatre états, un mini-automate posé sur le bureau. Ça ne sert à rien et c'est très bien ainsi · c'est aussi la première fois qu'on voit quelqu'un traiter l'attente d'un agent comme un problème de mise en scène plutôt que de vitesse.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.6"/></svg></span></a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="foot-row"><span>La Newsletter IA · Nicolas Peytavin</span><a href="../index.html">Toutes les éditions</a></div>
+    <div class="pn"><a href="n29.html">← N°29 · IA des mises à jour mineures, sauf une</a><span></span></div>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var box = document.getElementById('audio');
+  if(!box) return;
+  var btn   = box.querySelector('.play');
+  var range = document.getElementById('a-range');
+  var fill  = document.getElementById('a-fill');
+  var knob  = document.getElementById('a-knob');
+  var out   = document.getElementById('a-time');
+  var audio = new Audio();
+  var ready = false, seeking = false;
+  var VITESSE_DEFAUT = 1.2, vitesseChoisie = false;
+  audio.playbackRate = VITESSE_DEFAUT;
+
+  function mmss(s){
+    if(!isFinite(s) || s < 0) s = 0;
+    var m = Math.floor(s / 60), r = Math.floor(s % 60);
+    return (m < 10 ? '0' : '') + m + ':' + (r < 10 ? '0' : '') + r;
+  }
+  function paint(pct){
+    fill.style.width = pct + '%';
+    knob.style.left  = pct + '%';
+  }
+  function refresh(){
+    if(seeking || !ready) return;
+    var d = audio.duration, pct = d ? (audio.currentTime / d) * 100 : 0;
+    paint(pct);
+    range.value = Math.round(pct * 10);
+    out.textContent = mmss(audio.currentTime) + ' / ' + mmss(d);
+  }
+  function offline(){
+    box.classList.remove('on');
+    box.querySelector('.body').innerHTML =
+      '<div class="lab"><span><b>Version audio</b></span></div><div class="na">Bientôt disponible pour cette édition.</div>';
+    btn.disabled = true;
+    btn.style.opacity = '.35';
+    btn.style.cursor = 'default';
+    rbtn.disabled = true;
+    rbtn.style.opacity = '.35';
+    rbtn.style.cursor = 'default';
+    closeRate();
+  }
+
+  audio.preload = 'metadata';
+  audio.addEventListener('loadedmetadata', function(){
+    ready = true;
+    if(!vitesseChoisie) audio.playbackRate = VITESSE_DEFAUT;
+    refresh();
+  });
+  audio.addEventListener('timeupdate', refresh);
+  audio.addEventListener('error', offline);
+  audio.addEventListener('ended', function(){
+    box.classList.remove('on');
+    btn.setAttribute('aria-label', 'Lire la version audio');
+    audio.currentTime = 0;
+    refresh();
+  });
+
+  btn.addEventListener('click', function(){
+    if(audio.paused){
+      audio.play().then(function(){
+        box.classList.add('on');
+        btn.setAttribute('aria-label', 'Mettre en pause');
+      }).catch(offline);
+    } else {
+      audio.pause();
+      box.classList.remove('on');
+      btn.setAttribute('aria-label', 'Lire la version audio');
+    }
+  });
+
+  range.addEventListener('pointerdown', function(){ seeking = true; });
+  range.addEventListener('input', function(){
+    var pct = range.value / 10;
+    paint(pct);
+    if(ready) out.textContent = mmss(audio.duration * pct / 100) + ' / ' + mmss(audio.duration);
+  });
+  range.addEventListener('change', function(){
+    if(ready) audio.currentTime = audio.duration * (range.value / 1000);
+    seeking = false;
+    refresh();
+  });
+
+  var rate = document.getElementById('a-rate');
+  var rbtn = rate.querySelector('.rate-btn');
+  var opts = rate.querySelectorAll('.rate-menu li');
+
+  function closeRate(){
+    rate.classList.remove('open');
+    rbtn.setAttribute('aria-expanded', 'false');
+  }
+  rbtn.addEventListener('click', function(e){
+    e.stopPropagation();
+    var open = rate.classList.toggle('open');
+    rbtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  Array.prototype.forEach.call(opts, function(li){
+    li.addEventListener('click', function(){
+      var v = parseFloat(li.dataset.rate);
+      audio.playbackRate = v;
+      vitesseChoisie = true;
+      rbtn.innerHTML = li.innerHTML;
+      Array.prototype.forEach.call(opts, function(o){
+        o.setAttribute('aria-selected', o === li ? 'true' : 'false');
+      });
+      closeRate();
+    });
+  });
+  document.addEventListener('click', closeRate);
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeRate(); });
+
+  audio.src = box.dataset.src;
+})();
+</script>
+</body>
+</html>
