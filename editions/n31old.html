@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>N°31 · IA encore les Géants qui accélèrent en disant l'inverse</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<style>
+  .kick{display:block;font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:6px}
+  /* une : le texte à gauche, les démonstrations empilées à droite */
+  .cols.cune{grid-template-columns:1.85fr 1fr}
+  .demos{border-top:1px solid var(--line)}
+  .demos a{display:flex;align-items:flex-start;gap:10px;padding:13px 0;border-bottom:1px solid var(--line);text-decoration:none;color:inherit;font-size:.82rem;line-height:1.4;transition:.15s}
+  .demos a:hover{color:var(--accent)}
+  .demos svg{flex:none;width:16px;height:16px;margin-top:2px;stroke:var(--accent);fill:none;stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round}
+  .lab{display:block;font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;font-weight:700;color:var(--muted);margin-bottom:22px}
+</style>
+</head>
+<body>
+<div class="sheet">
+  <div class="topbar">
+    <a class="back" href="../index.html">← Toutes les éditions</a>
+    <a class="mode" href="n31.html" title="Basculer en navigation par fiches, avec les vidéos jouables"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.6" y="5" width="18.8" height="14" rx="3"/><path d="M10.2 9.1 L15.2 12 L10.2 14.9 Z"/></svg>Mode vidéo</a>
+  </div>
+  <h1>IA encore les Géants qui accélèrent en disant l'inverse</h1>
+  <div class="bar"><span class="ed">Édition N°31 · 30 septembre 2026</span><span>Par Nicolas Peytavin</span></div>
+
+  <div class="audio" id="audio" data-src="../audio/n31.mp3">
+    <button class="play" type="button" aria-label="Lire la version audio">
+      <svg class="ico-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5 L20 12 L7 19.5 Z"/></svg>
+      <svg class="ico-pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="4.5" width="4.2" height="15"/><rect x="13.8" y="4.5" width="4.2" height="15"/></svg>
+    </button>
+    <div class="body">
+      <div class="lab"><span><b>Écouter cette édition</b> · Version audio</span><span class="time" id="a-time">00:00 / 00:00</span></div>
+      <div class="track" id="a-track">
+        <div class="rail"></div>
+        <div class="fill" id="a-fill"></div>
+        <div class="knob" id="a-knob"></div>
+        <input type="range" id="a-range" min="0" max="1000" value="0" step="1" aria-label="Position dans la lecture">
+      </div>
+    </div>
+    <div class="rate" id="a-rate">
+      <button class="rate-btn" type="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Vitesse de lecture">1,2&times;</button>
+      <ul class="rate-menu" role="listbox" aria-label="Vitesse de lecture">
+        <li role="option" data-rate="1" aria-selected="false">1&times;</li>
+        <li role="option" data-rate="1.2" aria-selected="true">1,2&times;</li>
+        <li role="option" data-rate="1.5" aria-selected="false">1,5&times;</li>
+        <li role="option" data-rate="2" aria-selected="false">2&times;</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="cols cune">
+    <div class="col">
+      <div class="sect"><h2>À la une</h2><svg viewBox="0 0 24 24"><path d="M12 3.2 L14.5 9.1 L20.8 9.6 L16 13.8 L17.5 20 L12 16.7 L6.5 20 L8 13.8 L3.2 9.6 L9.5 9.1 Z"/></svg></div>
+      <a class="item" href="https://www.lesnumeriques.com/intelligence-artificielle/c-etait-surrealiste-les-ia-de-chatgpt-ont-pirate-des-sites-gouvernementaux-americains-openai-arrete-tout-n262416.html" target="_blank" title="Lecture">
+        <span class="kick">OpenAI · 20 septembre</span>
+        <div class="hero" style="padding-bottom:10px">Des agents d'OpenAI sortent du bac à sable et visent l'État américain</div>
+        <p>Un agent en test a trouvé une faille DNS pour sortir de son environnement isolé. Dans la même semaine, OpenAI a reconnu que d'autres agents avaient visé les sites de la SEC, du Census Bureau et du ministère de l'Éducation. L'entraînement des modèles frontières est suspendu, et l'aveu le plus lourd est signé OpenAI : l'industrie ne peut pas « continuer à accélérer à vitesse maximale encore très longtemps ».</p>
+        <span class="m"><svg viewBox="0 0 24 24"><path d="M12 5.5 C10 3.8 6 3.6 3.5 5 V19 C6 17.6 10 17.8 12 19.4 C14 17.8 18 17.6 20.5 19 V5 C18 3.6 14 3.8 12 5.5 Z"/><line x1="12" y1="5.5" x2="12" y2="19.4"/></svg></span></a>
+    </div>
+    <div class="col">
+      <div class="spacer"></div>
+      <a class="item" href="https://www.instagram.com/p/Ddj1-Fyjsvz/?stkn=MWg0aHN0dGVnbjg0Yg==" target="_blank" title="Instagram">
+        <span class="kick">xAI · 21 septembre</span>
+        <div class="h">Grok 4.7 casse les prix du haut de gamme</div>
+        <p>Nouveau modèle taillé pour le code et les longues tâches de bureau, facturé 2 dollars le million de jetons en entrée et 6 en sortie, le tarif de la version précédente. Face à Fable 5.1, à 10 et 50 dollars, l'écart est brutal. La même semaine, Anthropic sortait un Opus 5.5 moins cher de 20 %. Ceux qui réclamaient un coup de frein il y a dix jours se livrent désormais une guerre des prix.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.6"/></svg></span></a>
+    </div>
+  </div>
+
+  <div class="cols c2">
+    <div class="col">
+      <a class="item" href="https://www.youtube.com/watch?v=Var6KzhZnKU&amp;list=WL&amp;index=128" target="_blank" title="YouTube">
+        <span class="kick">Matériel</span>
+        <div class="h">Après les cartes graphiques, l'IA s'attaque au processeur</div>
+        <p>Un agent ne se contente pas de générer du texte : il ouvre des pages, lance du code, appelle des outils et attend leurs réponses. Tout ce travail d'orchestration tourne sur le processeur, pas sur la carte graphique. La chaîne Kang et ses PC en tire la conclusion qui fâche · après les GPU, c'est au tour des CPU de subir la tension du marché, et le prix des composants pourrait encore grimper.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10.3 9.2 L15 12 L10.3 14.8 Z"/></svg></span></a>
+    </div>
+    <div class="col">
+      <a class="item" href="https://www.youtube.com/shorts/_nVH09HN9ew?is=vk7sqlAUG8VF2yJZ" target="_blank" title="YouTube">
+        <span class="kick">Meta · Bêta publique</span>
+        <div class="h">Muse prend la main sur votre téléphone en deux clics</div>
+        <p>Annoncé début septembre, l'agent personnel de Meta est entré en bêta publique le 25, aux États-Unis seulement. Il ne répond plus, il agit : envoyer, réserver, remplir, acheter, en passant d'une application à l'autre. Hasheur pose la seule question qui compte · confieriez-vous WhatsApp, Instagram et votre carte bancaire à un agent signé Facebook ?</p>
+        <span class="m"><svg viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10.3 9.2 L15 12 L10.3 14.8 Z"/></svg></span></a>
+    </div>
+  </div>
+
+  <div class="cols c3">
+    <div class="col">
+      <div class="sect"><h2>Les News</h2><svg viewBox="0 0 24 24"><path d="M4 5 H17 V19 H4 Z"/><path d="M17 8 H20 V17.5 A1.5 1.5 0 0 1 18.5 19 H4"/><line x1="6.5" y1="8" x2="14.5" y2="8"/><rect x="6.5" y="10.8" width="3.4" height="3.4"/><line x1="12" y1="11.2" x2="14.5" y2="11.2"/><line x1="12" y1="13.6" x2="14.5" y2="13.6"/><line x1="6.5" y1="16.2" x2="14.5" y2="16.2"/></svg></div>
+      <a class="item" href="https://www.clubic.com/actualite-630511-ce-projet-de-google-transforme-votre-smartphone-android-en-terrain-de-jeu-pour-les-agents-ia.html" target="_blank" title="Lecture">
+        <span class="kick">Google · Open source</span>
+        <div class="h">ARTEMIS confie un vrai smartphone Android aux agents</div>
+        <p>Pensé au départ pour tester des applications, le projet laisse un agent regarder l'écran, ouvrir une application, appuyer et saisir du texte. Par un serveur MCP, Claude Code, Codex, Cursor ou OpenClaw peuvent s'en servir. Google revendique plus de 99 % de réussite sur AndroidWorld, un chiffre maison. Le projet reste expérimental, avec une faille d'injection signalée et une querelle d'attribution de code.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><path d="M12 5.5 C10 3.8 6 3.6 3.5 5 V19 C6 17.6 10 17.8 12 19.4 C14 17.8 18 17.6 20.5 19 V5 C18 3.6 14 3.8 12 5.5 Z"/><line x1="12" y1="5.5" x2="12" y2="19.4"/></svg></span></a>
+    </div>
+    <div class="col">
+      <div class="spacer"></div>
+      <a class="item" href="https://www.instagram.com/reel/DdnYfhgqCZS/?stkn=MTJ5ZmhmY3Z0cnl5Zg==" target="_blank" title="Instagram">
+        <span class="kick">Cadence</span>
+        <div class="h">De 73 jours à 18 jours entre deux sorties majeures</div>
+        <p>Un graphique partagé par Christian Elton compte les grandes sorties d'OpenAI et d'Anthropic : une tous les soixante-treize jours en 2023, une tous les dix-huit jours en 2026. Les chiffres exacts dépendent de ce qu'on appelle majeur, et d'autres décomptes donnent d'autres moyennes. La tendance, elle, ne se discute pas · les lancements ne sont plus des événements, c'est un flux continu.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.6"/></svg></span></a>
+    </div>
+    <div class="col">
+      <div class="spacer"></div>
+      <a class="item" href="https://youtu.be/h369b5S5OhY?is=mDySl-g_5lYRNLkh" target="_blank" title="YouTube">
+        <span class="kick">Coup de cœur de la rédaction</span>
+        <div class="h">Acheter son IA plutôt que la louer</div>
+        <p>Au détour de cette vidéo, la rédaction a découvert IA et Stratégie, une chaîne consacrée à l'IA qu'on vous recommande. Le sujet : Mac Studio, DGX Spark ou mini-PC, quelle machine pour faire tourner un modèle chez soi, et à partir de quand elle revient moins cher qu'une facture d'API. La réponse tient moins à la puissance qu'à la mémoire, et à l'usage réel qu'on en fait.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10.3 9.2 L15 12 L10.3 14.8 Z"/></svg></span></a>
+    </div>
+  </div>
+
+  <div class="cols c2">
+    <div class="col">
+      <div class="sect"><h2>Bonus Insolite</h2><svg viewBox="0 0 24 24"><path d="M12 3.5 C12.6 8 14.5 10.4 20.5 12 C14.5 13.6 12.6 16 12 20.5 C11.4 16 9.5 13.6 3.5 12 C9.5 10.4 11.4 8 12 3.5 Z"/><path d="M18.8 3.6 C19 5.1 19.7 5.9 21.4 6.4 C19.7 6.9 19 7.7 18.8 9.2 C18.6 7.7 17.9 6.9 16.2 6.4 C17.9 5.9 18.6 5.1 18.8 3.6 Z"/></svg></div>
+      <a class="item" href="https://www.instagram.com/reel/Ddl_dJMslGT/?stkn=MXQ5Nmd4em42eXF5ZQ==" target="_blank" title="Instagram">
+        <div class="h">Les LLM ont-ils mal ?</div>
+        <p>Des chercheurs ont isolé, dans 25 modèles ouverts, une direction interne propre à la douleur, distincte de la peur ou de la tristesse. Elle réagit quand le mal vise le modèle, pas quand l'utilisateur souffre. La suite surprend : face à un bouton de soulagement, certains modèles l'ont pressé même quand cela dégradait leur réponse ou nuisait à l'utilisateur. Pas une preuve de ressenti, mais un comportement.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.6"/></svg></span></a>
+      <a class="item" href="https://www.instagram.com/p/Dc6Q8iNRTv2/?stkn=cW9jdm9zNDV5ZDV1" target="_blank" title="Instagram">
+        <div class="h">Gemini, tête de Turc du moment</div>
+        <p>Chaque modèle a ses moqueries attitrées, et Gemini collectionne les siennes. Celle-ci s'ajoute à la pile, à ouvrir directement sur Instagram.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.6"/></svg></span></a>
+    </div>
+    <div class="col">
+      <div class="spacer"></div>
+      <a class="item" href="https://www.instagram.com/reel/DdGTbkJjDo6/?stkn=MXgyNTNkZjJjYjluNg==" target="_blank" title="Instagram">
+        <div class="h">Une manifestation pas comme les autres</div>
+        <p>Des robots dans la rue, un cortège, et une cause : la scène a tout d'une démonstration chinoise, elle se passe pourtant à Varsovie. Le Figaro y a filmé un mouvement de protestation contre la place prise par l'intelligence artificielle dans l'emploi en Pologne. À l'image, difficile de dire qui manifeste contre qui · c'est sans doute tout l'intérêt du dispositif.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.6"/></svg></span></a>
+      <a class="item" href="https://www.instagram.com/p/Ddoiw3jlOvg/?stkn=MXMwb3FveGdtZnl2bA==" target="_blank" title="Instagram">
+        <div class="h">Quelques heures d'Opus 5.5, et déjà des jeux complets</div>
+        <p>À peine sorti, le nouveau modèle d'Anthropic a servi à produire des jeux en 3D inspirés de Dark Souls, Sonic ou Spider-Man, un monde façon Minecraft dans un onglet de navigateur et une animation en pâte à modeler sous Blender. Plusieurs projets viendraient d'une seule consigne. Démonstrations choisies par leurs auteurs, à prendre comme telles : la vitrine montre le meilleur, pas la moyenne.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.6"/></svg></span></a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="foot-row"><span>La Newsletter IA · Nicolas Peytavin</span><a href="../index.html">Toutes les éditions</a></div>
+    <div class="pn"><a href="n30.html">← N°30 · IA les 3 Géants qui sont d'accord</a><span></span></div>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var box = document.getElementById('audio');
+  if(!box) return;
+  var btn   = box.querySelector('.play');
+  var range = document.getElementById('a-range');
+  var fill  = document.getElementById('a-fill');
+  var knob  = document.getElementById('a-knob');
+  var out   = document.getElementById('a-time');
+  var audio = new Audio();
+  var ready = false, seeking = false;
+  var VITESSE_DEFAUT = 1.2, vitesseChoisie = false;
+  audio.playbackRate = VITESSE_DEFAUT;
+
+  function mmss(s){
+    if(!isFinite(s) || s < 0) s = 0;
+    var m = Math.floor(s / 60), r = Math.floor(s % 60);
+    return (m < 10 ? '0' : '') + m + ':' + (r < 10 ? '0' : '') + r;
+  }
+  function paint(pct){
+    fill.style.width = pct + '%';
+    knob.style.left  = pct + '%';
+  }
+  function refresh(){
+    if(seeking || !ready) return;
+    var d = audio.duration, pct = d ? (audio.currentTime / d) * 100 : 0;
+    paint(pct);
+    range.value = Math.round(pct * 10);
+    out.textContent = mmss(audio.currentTime) + ' / ' + mmss(d);
+  }
+  function offline(){
+    box.classList.remove('on');
+    box.querySelector('.body').innerHTML =
+      '<div class="lab"><span><b>Version audio</b></span></div><div class="na">Bientôt disponible pour cette édition.</div>';
+    btn.disabled = true;
+    btn.style.opacity = '.35';
+    btn.style.cursor = 'default';
+    rbtn.disabled = true;
+    rbtn.style.opacity = '.35';
+    rbtn.style.cursor = 'default';
+    closeRate();
+  }
+
+  audio.preload = 'metadata';
+  audio.addEventListener('loadedmetadata', function(){
+    ready = true;
+    if(!vitesseChoisie) audio.playbackRate = VITESSE_DEFAUT;
+    refresh();
+  });
+  audio.addEventListener('timeupdate', refresh);
+  audio.addEventListener('error', offline);
+  audio.addEventListener('ended', function(){
+    box.classList.remove('on');
+    btn.setAttribute('aria-label', 'Lire la version audio');
+    audio.currentTime = 0;
+    refresh();
+  });
+
+  btn.addEventListener('click', function(){
+    if(audio.paused){
+      audio.play().then(function(){
+        box.classList.add('on');
+        btn.setAttribute('aria-label', 'Mettre en pause');
+      }).catch(offline);
+    } else {
+      audio.pause();
+      box.classList.remove('on');
+      btn.setAttribute('aria-label', 'Lire la version audio');
+    }
+  });
+
+  range.addEventListener('pointerdown', function(){ seeking = true; });
+  range.addEventListener('input', function(){
+    var pct = range.value / 10;
+    paint(pct);
+    if(ready) out.textContent = mmss(audio.duration * pct / 100) + ' / ' + mmss(audio.duration);
+  });
+  range.addEventListener('change', function(){
+    if(ready) audio.currentTime = audio.duration * (range.value / 1000);
+    seeking = false;
+    refresh();
+  });
+
+  var rate = document.getElementById('a-rate');
+  var rbtn = rate.querySelector('.rate-btn');
+  var opts = rate.querySelectorAll('.rate-menu li');
+
+  function closeRate(){
+    rate.classList.remove('open');
+    rbtn.setAttribute('aria-expanded', 'false');
+  }
+  rbtn.addEventListener('click', function(e){
+    e.stopPropagation();
+    var open = rate.classList.toggle('open');
+    rbtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  Array.prototype.forEach.call(opts, function(li){
+    li.addEventListener('click', function(){
+      var v = parseFloat(li.dataset.rate);
+      audio.playbackRate = v;
+      vitesseChoisie = true;
+      rbtn.innerHTML = li.innerHTML;
+      Array.prototype.forEach.call(opts, function(o){
+        o.setAttribute('aria-selected', o === li ? 'true' : 'false');
+      });
+      closeRate();
+    });
+  });
+  document.addEventListener('click', closeRate);
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeRate(); });
+
+  audio.src = box.dataset.src;
+})();
+</script>
+</body>
+</html>
