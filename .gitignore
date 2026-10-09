@@ -14,3 +14,6 @@ desktop.ini
 # Archives PDF conservées uniquement dans le dossier de travail
 /Exports PDF/
 /exports-pdf/
+
+# Fichiers de travail de Claude
+/.claude-tmp/
