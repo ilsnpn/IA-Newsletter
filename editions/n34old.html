@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>N°34 · IA la Chine au premier plan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<style>
+  .kick{display:block;font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:6px}
+  /* une : le texte à gauche, les démonstrations empilées à droite */
+  .cols.cune{grid-template-columns:1.85fr 1fr}
+  .demos{border-top:1px solid var(--line)}
+  .demos a{display:flex;align-items:flex-start;gap:10px;padding:13px 0;border-bottom:1px solid var(--line);text-decoration:none;color:inherit;font-size:.82rem;line-height:1.4;transition:.15s}
+  .demos a:hover{color:var(--accent)}
+  .demos svg{flex:none;width:16px;height:16px;margin-top:2px;stroke:var(--accent);fill:none;stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round}
+  .cols.cexp{grid-template-columns:1fr 1.25fr}
+  video.film{display:block;width:100%;aspect-ratio:16/9;background:#0d0d0d;border:1px solid var(--line)}
+  img.pic{display:block;max-width:460px;width:100%;border:1px solid var(--line)}
+  @media print{video.film{display:none}}
+  .lab{display:block;font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;font-weight:700;color:var(--muted);margin-bottom:22px}
+  .graphe{margin:18px 0 0;max-width:450px}
+  .graphe svg{display:block;width:100%;height:auto;font-family:'Inter','Helvetica Neue',Arial,sans-serif}
+  .graphe figcaption{font-size:.66rem;color:var(--muted);margin-top:6px;letter-spacing:.02em}
+  /* écrans peu hauts : on resserre le texte pour que la fiche du graphe tienne sans ascenseur */
+  @media(min-width:901px) and (min-height:621px) and (max-height:860px){
+    .kick{margin-bottom:12px}
+    .fiche h3{font-size:clamp(1.5rem,2.3vw,1.9rem)}
+    .fiche p{font-size:.95rem;line-height:1.55;margin-top:12px}
+    .fiche .go{margin-top:16px}
+    .graphe{margin-top:12px}
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+  <div class="topbar">
+    <a class="back" href="../index.html">← Toutes les éditions</a>
+    <a class="mode" href="n34.html" title="Basculer en navigation par fiches, avec les vidéos jouables"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.6" y="5" width="18.8" height="14" rx="3"/><path d="M10.2 9.1 L15.2 12 L10.2 14.9 Z"/></svg>Mode vidéo</a>
+  </div>
+  <h1>IA la Chine au premier plan</h1>
+  <div class="bar"><span class="ed">Édition N°34 · 30 octobre 2026</span><span>Par Nicolas Peytavin</span></div>
+
+  <div class="audio" id="audio" data-src="../audio/n34.mp3">
+    <button class="play" type="button" aria-label="Lire la version audio">
+      <svg class="ico-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5 L20 12 L7 19.5 Z"/></svg>
+      <svg class="ico-pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="4.5" width="4.2" height="15"/><rect x="13.8" y="4.5" width="4.2" height="15"/></svg>
+    </button>
+    <div class="body">
+      <div class="lab"><span><b>Écouter cette édition</b> · Version audio</span><span class="time" id="a-time">00:00 / 00:00</span></div>
+      <div class="track" id="a-track">
+        <div class="rail"></div>
+        <div class="fill" id="a-fill"></div>
+        <div class="knob" id="a-knob"></div>
+        <input type="range" id="a-range" min="0" max="1000" value="0" step="1" aria-label="Position dans la lecture">
+      </div>
+    </div>
+    <div class="rate" id="a-rate">
+      <button class="rate-btn" type="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Vitesse de lecture">1,2&times;</button>
+      <ul class="rate-menu" role="listbox" aria-label="Vitesse de lecture">
+        <li role="option" data-rate="1" aria-selected="false">1&times;</li>
+        <li role="option" data-rate="1.2" aria-selected="true">1,2&times;</li>
+        <li role="option" data-rate="1.5" aria-selected="false">1,5&times;</li>
+        <li role="option" data-rate="2" aria-selected="false">2&times;</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="cols cune">
+    <div class="col">
+      <div class="sect"><h2>À la une</h2><svg viewBox="0 0 24 24"><path d="M12 3.2 L14.5 9.1 L20.8 9.6 L16 13.8 L17.5 20 L12 16.7 L6.5 20 L8 13.8 L3.2 9.6 L9.5 9.1 Z"/></svg></div>
+      <a class="item" href="https://www.instagram.com/reel/DdtKXftojxc/?psln=MWJkZWV6Y2o1czFjeQ==" target="_blank" title="Instagram">
+        <span class="kick">Xiaomi · Open source</span>
+        <div class="hero" style="padding-bottom:10px">MiMo 2.6, Xiaomi frappe fort et en licence MIT</div>
+        <p>Xiaomi, oui le fabricant de smartphones, publie MiMo 2.6 en deux versions, Pro et Flash, pensées pour agir, coder, créer et piloter des outils. Tout est ouvert · les poids, le code d'entraînement et 7 000 environnements, sous licence MIT, la plus permissive qui soit. Les scores restent à confirmer par des tests indépendants, mais un atelier aussi ouvert a de quoi faire transpirer les laboratoires américains.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.6"/></svg></span></a>
+      <a class="item" href="https://www.instagram.com/reel/Dd01pU5uRDE/?psln=c3dlZHg1MGJ5MDk0" target="_blank" title="Instagram">
+        <span class="kick">Cinéma · Mini-séries</span>
+        <div class="h">De 80 équipes à 3, le cinéma passe à l'IA</div>
+        <p>Selon ce témoignage, certains géants du cinéma seraient passés de 80 équipes de tournage à 3. La raison est comptable · une équipe humaine coûte trop cher face à une petite cellule qui enchaîne les mini-séries avec l'IA. Le chiffre reste à confirmer, mais le format, ces séries verticales en épisodes d'une minute, connaît déjà un succès considérable en Chine.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.6"/></svg></span></a>
+    </div>
+    <div class="col">
+      <div class="spacer"></div>
+      <a class="item" href="https://www.instagram.com/reel/Ddy54WBAiG9/?mdxt=MWg1dzRmbDY2YTlnZg==" target="_blank" title="Instagram">
+        <span class="kick">DeepSeek · Harness</span>
+        <div class="h">DeepSeek contre-attaque avec son Claude Code gratuit</div>
+        <p>DeepSeek sort Harness, une alternative open source à Claude Code, qui a déjà récolté 230 000 étoiles sur GitHub. Presque tout y est un plugin · modèles, outils, sessions, boucles d'agents, jusqu'à l'interface. On peut même y brancher Claude ou Codex comme sous-agents, ou des modèles locaux via Ollama. On apporte ses propres clés et on ne paie que les modèles utilisés, à moitié prix en heures creuses chez DeepSeek.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.6"/></svg></span></a>
+      <a class="item" href="https://www.instagram.com/reel/DejRYbHAtd4/?dlrf=MTEzcGU0ZmF2dWk3dg==" target="_blank" title="Instagram">
+        <span class="kick">Éducation · France et Chine</span>
+        <div class="h">La France interdit l'IA à l'école, la Chine la rend obligatoire</div>
+        <p>Deux approches opposées. En France, se servir de l'IA quand la consigne l'interdit relève de la fraude. En Chine, les élèves apprennent à l'utiliser très tôt, et son usage devient obligatoire. Seule exception, les grands examens · les géants de la tech s'engagent alors à couper leurs chatbots. L'idée est simple, apprendre avec l'IA, puis vérifier ce qu'on sait faire sans elle.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.6"/></svg></span></a>
+      <a class="item" href="https://www.instagram.com/reel/DdnwMz1DLU3/?cplk=bG82emJ0YXpuaHdx" target="_blank" title="Instagram">
+        <span class="kick">Chine · Riposte express</span>
+        <div class="h">Le Jev chinois est déjà là</div>
+        <p>Souvenez-vous du N°30 · Jev, lancé par un ancien d'OpenAI, l'IA qui ne parle pas mais décide, deux cents fois plus rapide que ChatGPT. À peine sorti, il a déjà son équivalent chinois, et selon le compte robinnat, il est même déjà battu. C'est devenu la règle · un outil fait le buzz, une équipe chinoise publie sa version quelques semaines plus tard, souvent ouverte et moins chère.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.6"/></svg></span></a>
+    </div>
+  </div>
+  <div class="cols c3">
+    <div class="col">
+      <div class="sect"><h2>Les News</h2><svg viewBox="0 0 24 24"><path d="M4 5 H17 V19 H4 Z"/><path d="M17 8 H20 V17.5 A1.5 1.5 0 0 1 18.5 19 H4"/><line x1="6.5" y1="8" x2="14.5" y2="8"/><rect x="6.5" y="10.8" width="3.4" height="3.4"/><line x1="12" y1="11.2" x2="14.5" y2="11.2"/><line x1="12" y1="13.6" x2="14.5" y2="13.6"/><line x1="6.5" y1="16.2" x2="14.5" y2="16.2"/></svg></div>
+      <a class="item" href="https://www.instagram.com/reels/DewJZPOAZKs/" target="_blank" title="Instagram">
+        <span class="kick">Claude Code · Mods</span>
+        <div class="h">Ce n'est plus nous qui nous adaptons à l'outil</div>
+        <p>Avant, on apprenait l'outil. Désormais, c'est l'outil qui s'adapte à nous. Avec les mods de Claude Code, on décrit ce qu'on veut et Claude le construit puis l'active · des sessions qui se parlent entre elles, des tâches simples confiées au petit modèle Haiku, une interface taillée sur mesure. Peu de gens savent encore s'en servir. Démonstration dans la rubrique Expérimentation de cette édition.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.6"/></svg></span></a>
+      <a class="item" href="https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities" target="_blank" title="Lecture">
+        <span class="kick">OpenAI · 21 octobre</span>
+        <div class="h">Patch the Planet, OpenAI sonne l'alerte sur PHP</div>
+        <p>Son modèle GPT-5.6 Sol a mis au jour deux failles critiques de PHP, baptisées PHP2Shell, qui permettent de prendre le contrôle de serveurs web. OpenAI lance Patch the Planet, un cadre de divulgation coordonnée entre chercheurs, organisations touchées et agences publiques, avec un outil Codex pour vérifier si un site est compromis et 1 milliard de dollars pour sa plateforme d'audit Daybreak. Les IA trouvent les failles plus vite qu'on ne les corrige.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><path d="M12 5.5 C10 3.8 6 3.6 3.5 5 V19 C6 17.6 10 17.8 12 19.4 C14 17.8 18 17.6 20.5 19 V5 C18 3.6 14 3.8 12 5.5 Z"/><line x1="12" y1="5.5" x2="12" y2="19.4"/></svg></span></a>
+    </div>
+    <div class="col">
+      <div class="spacer"></div>
+      <a class="item" href="https://www.instagram.com/reel/DeRtaxttfXO/?srtk=MWExaGtoN25kMHBodg==" target="_blank" title="Instagram">
+        <span class="kick">OpenAI · Mathématiques</span>
+        <div class="h">OpenAI résout 400 problèmes qui résistaient aux mathématiciens</div>
+        <p>OpenAI annonce que ses modèles ont résolu 400 problèmes mathématiques sur lesquels l'humanité planchait, parfois depuis des années. Les mathématiciens accusent le coup. Reste à faire la part des vraies percées et des problèmes moins célèbres, mais à ce rythme, la machine mériterait une bonne douzaine de médailles Fields. Le commentaire du compte __daddy_raph__ résume l'ambiance · « On n'est pas prêts ».</p>
+        <span class="m"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.6"/></svg></span></a>
+      <a class="item" href="https://www.instagram.com/reel/De-DudasALM/?vrfl=MTJ4dWhuczFkNHRlMQ==" target="_blank" title="Instagram">
+        <span class="kick">Nvidia · Cartes graphiques</span>
+        <div class="h">Nvidia, le vendeur de pioches pris à son propre jeu</div>
+        <p>Nvidia vend les pioches de la ruée vers l'IA, et bride certaines de ses cartes graphiques grand public. Le compte leotechmaker montre comment l'IA aide justement à lever ces limites et à récupérer la puissance que le constructeur garde sous le pied. L'arroseur arrosé · la technologie qui fait la fortune de Nvidia sert maintenant à contourner ses propres verrous. À manier avec prudence, la garantie n'apprécie pas forcément.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.6"/></svg></span></a>
+    </div>
+    <div class="col">
+      <div class="spacer"></div>
+      <a class="item" href="https://www.instagram.com/reel/DeR9sScD7-I/?exln=MWxwZXZxcHBhb3Z4MQ==" target="_blank" title="Instagram">
+        <span class="kick">xAI · Grok</span>
+        <div class="h">Aveu de faiblesse, Grok fera appel à Claude</div>
+        <p>Elon Musk l'a annoncé lui-même sur X · son agent Grok Bot choisira « le meilleur modèle pour chaque tâche ». Et le premier cité n'est pas Grok, mais Claude Opus 5.5, le modèle de son concurrent Anthropic. En juin, Musk assurait encore que Grok jouait dans la même catégorie. Le moment tombe bien pour Anthropic, dont l'entrée en Bourse serait visée mi-novembre selon Bloomberg.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.6"/></svg></span></a>
+    </div>
+  </div>
+  <div class="cols c3">
+    <div class="col">
+      <div class="sect"><h2>Bonus Insolite</h2><svg viewBox="0 0 24 24"><path d="M12 3.5 C12.6 8 14.5 10.4 20.5 12 C14.5 13.6 12.6 16 12 20.5 C11.4 16 9.5 13.6 3.5 12 C9.5 10.4 11.4 8 12 3.5 Z"/><path d="M18.8 3.6 C19 5.1 19.7 5.9 21.4 6.4 C19.7 6.9 19 7.7 18.8 9.2 C18.6 7.7 17.9 6.9 16.2 6.4 C17.9 5.9 18.6 5.1 18.8 3.6 Z"/></svg></div>
+      <a class="item" href="https://www.instagram.com/reel/Defj4vuPvbC/?exln=Ym5hb3JheWxrb2g1" target="_blank" title="Instagram">
+        <span class="kick">Vu sur les réseaux</span>
+        <div class="h">Plus de temps libre, ou plus de travail ?</div>
+        <p>L'IA vous a-t-elle offert du temps libre, ou simplement plus de travail ? La créatrice thechristyyao pose la question avec humour, et prend au passage une jolie défense de celles et ceux qui travaillent avec l'IA plutôt que de s'en cacher. Une manière de rappeler que gagner du temps n'oblige pas à le remplir aussitôt.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.6"/></svg></span></a>
+    </div>
+    <div class="col">
+      <div class="spacer"></div>
+      <a class="item" href="https://www.frandroid.com/os/ios/3294125_un-developpeur-reussit-limpossible-faire-tourner-le-vrai-ios-sur-un-android-grace-a-lia" target="_blank" title="Lecture">
+        <span class="kick">Frandroid · iOS sur Android</span>
+        <div class="h">Le vrai iOS tourne sur un smartphone Android</div>
+        <p>Pas un thème qui imite l'iPhone, le vrai système d'Apple. Le développeur Makr fait démarrer iOS 16 sur un Redmi Note 12 4G à 200 euros, sans émulateur · le noyau d'Apple tourne directement sur la puce Snapdragon. Il faut trois minutes pour démarrer et le Wi-Fi vient tout juste d'arriver. Les journaux du dépôt GitHub révèlent des modifications cosignées par Claude, sans dire quelle part du travail lui revient.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><path d="M12 5.5 C10 3.8 6 3.6 3.5 5 V19 C6 17.6 10 17.8 12 19.4 C14 17.8 18 17.6 20.5 19 V5 C18 3.6 14 3.8 12 5.5 Z"/><line x1="12" y1="5.5" x2="12" y2="19.4"/></svg></span></a>
+    </div>
+    <div class="col">
+      <div class="spacer"></div>
+      <a class="item" href="https://www.instagram.com/reel/DesNmC4NhqX/?dlrf=aWoyampiNGxsbXRy" target="_blank" title="Instagram">
+        <span class="kick">Anthropic · Ambition</span>
+        <div class="h">Vous n'êtes pas assez ambitieux avec l'IA</div>
+        <p>Félix Rieseberg, responsable technique chez Anthropic, l'affirme · on n'est pas assez ambitieux quand on utilise l'IA. Dans un article, il explique comment viser plus grand dans ce qu'on construit, plutôt que de se contenter de gagner quelques minutes sur des tâches qu'on savait déjà faire. Le compte laforet.dev en fait le résumé. Une invitation à changer d'échelle.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.6"/></svg></span></a>
+    </div>
+  </div>
+  <div class="cols cexp">
+    <div class="col">
+      <div class="sect"><h2>Expérimentation</h2><svg viewBox="0 0 24 24"><path d="M9.5 3.5 H14.5"/><path d="M10.5 3.5 V9.5 L4.8 18.6 A1.3 1.3 0 0 0 5.9 20.5 H18.1 A1.3 1.3 0 0 0 19.2 18.6 L13.5 9.5 V3.5"/><line x1="7.4" y1="14.6" x2="16.6" y2="14.6"/></svg></div>
+      <div class="item">
+        <span class="kick">Expérimentation · Mods Claude Code</span>
+        <div class="h">Mon tableau de bord, en une seule commande</div>
+        <p>Travaux pratiques sur les mods de Claude Code. J'ai décrit ce que je voulais, Claude l'a construit · je tape /mon-dashboard et un panneau s'ouvre à côté de la conversation, avec ma consommation Claude sur 5 heures et sur 7 jours, mes derniers envois sur GitHub et les crédits restants de ma voix de synthèse. Si vous l'essayez à votre tour, venez me le dire, mais gardez l'info pour vous · c'est ma façon de savoir qui lit jusqu'au bout.</p>
+      </div>
+      <a class="item" href="https://devian-lime.vercel.app/RandomMiniTools/comparatif-cercle-boussole.html" target="_blank" title="Lecture">
+        <span class="kick">Cas pratique · Humain, Copilot, Claude</span>
+        <div class="h">Un humain, Copilot et Claude, qui présente le mieux ?</div>
+        <p>Cas pratique tiré du travail, anonymisé · présenter un groupe de dix personnes de l'entreprise dans un document Word, avec photo, poste et quelques lignes sur chacun. Trois candidats, moi à la main, Microsoft Copilot et Claude avec Claude Code, avec exactement les mêmes textes et photos. Verdict sur la mise en forme · 3 sur 10 pour l'humain, 6 pour Copilot, 9 pour Claude. Précision honnête, c'est Claude qui a établi la grille.</p>
+        <span class="m"><svg viewBox="0 0 24 24"><path d="M12 5.5 C10 3.8 6 3.6 3.5 5 V19 C6 17.6 10 17.8 12 19.4 C14 17.8 18 17.6 20.5 19 V5 C18 3.6 14 3.8 12 5.5 Z"/><line x1="12" y1="5.5" x2="12" y2="19.4"/></svg></span></a>
+    </div>
+    <div class="col">
+      <div class="spacer"></div>
+      <img class="pic" src="../img/n34_mods.png" alt="Mon tableau de bord, en une seule commande">
+    </div>
+  </div>
+  <footer>
+    <div class="foot-row"><span>La Newsletter IA · Nicolas Peytavin</span><a href="../index.html">Toutes les éditions</a></div>
+    <div class="pn"><a href="n33.html">← N°33 · IA du rétro dans l'ingénierie</a><span></span></div>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var box = document.getElementById('audio');
+  if(!box) return;
+  var btn   = box.querySelector('.play');
+  var range = document.getElementById('a-range');
+  var fill  = document.getElementById('a-fill');
+  var knob  = document.getElementById('a-knob');
+  var out   = document.getElementById('a-time');
+  var audio = new Audio();
+  var ready = false, seeking = false;
+  var VITESSE_DEFAUT = 1.2, vitesseChoisie = false;
+  audio.playbackRate = VITESSE_DEFAUT;
+
+  function mmss(s){
+    if(!isFinite(s) || s < 0) s = 0;
+    var m = Math.floor(s / 60), r = Math.floor(s % 60);
+    return (m < 10 ? '0' : '') + m + ':' + (r < 10 ? '0' : '') + r;
+  }
+  function paint(pct){
+    fill.style.width = pct + '%';
+    knob.style.left  = pct + '%';
+  }
+  function refresh(){
+    if(seeking || !ready) return;
+    var d = audio.duration, pct = d ? (audio.currentTime / d) * 100 : 0;
+    paint(pct);
+    range.value = Math.round(pct * 10);
+    out.textContent = mmss(audio.currentTime) + ' / ' + mmss(d);
+  }
+  function offline(){
+    box.classList.remove('on');
+    box.querySelector('.body').innerHTML =
+      '<div class="lab"><span><b>Version audio</b></span></div><div class="na">Bientôt disponible pour cette édition.</div>';
+    btn.disabled = true;
+    btn.style.opacity = '.35';
+    btn.style.cursor = 'default';
+    rbtn.disabled = true;
+    rbtn.style.opacity = '.35';
+    rbtn.style.cursor = 'default';
+    closeRate();
+  }
+
+  audio.preload = 'metadata';
+  audio.addEventListener('loadedmetadata', function(){
+    ready = true;
+    if(!vitesseChoisie) audio.playbackRate = VITESSE_DEFAUT;
+    refresh();
+  });
+  audio.addEventListener('timeupdate', refresh);
+  audio.addEventListener('error', offline);
+  audio.addEventListener('ended', function(){
+    box.classList.remove('on');
+    btn.setAttribute('aria-label', 'Lire la version audio');
+    audio.currentTime = 0;
+    refresh();
+  });
+
+  btn.addEventListener('click', function(){
+    if(audio.paused){
+      audio.play().then(function(){
+        box.classList.add('on');
+        btn.setAttribute('aria-label', 'Mettre en pause');
+      }).catch(offline);
+    } else {
+      audio.pause();
+      box.classList.remove('on');
+      btn.setAttribute('aria-label', 'Lire la version audio');
+    }
+  });
+
+  range.addEventListener('pointerdown', function(){ seeking = true; });
+  range.addEventListener('input', function(){
+    var pct = range.value / 10;
+    paint(pct);
+    if(ready) out.textContent = mmss(audio.duration * pct / 100) + ' / ' + mmss(audio.duration);
+  });
+  range.addEventListener('change', function(){
+    if(ready) audio.currentTime = audio.duration * (range.value / 1000);
+    seeking = false;
+    refresh();
+  });
+
+  var rate = document.getElementById('a-rate');
+  var rbtn = rate.querySelector('.rate-btn');
+  var opts = rate.querySelectorAll('.rate-menu li');
+
+  function closeRate(){
+    rate.classList.remove('open');
+    rbtn.setAttribute('aria-expanded', 'false');
+  }
+  rbtn.addEventListener('click', function(e){
+    e.stopPropagation();
+    var open = rate.classList.toggle('open');
+    rbtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  Array.prototype.forEach.call(opts, function(li){
+    li.addEventListener('click', function(){
+      var v = parseFloat(li.dataset.rate);
+      audio.playbackRate = v;
+      vitesseChoisie = true;
+      rbtn.innerHTML = li.innerHTML;
+      Array.prototype.forEach.call(opts, function(o){
+        o.setAttribute('aria-selected', o === li ? 'true' : 'false');
+      });
+      closeRate();
+    });
+  });
+  document.addEventListener('click', closeRate);
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeRate(); });
+
+  audio.src = box.dataset.src;
+})();
+</script>
+</body>
+</html>
