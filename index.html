@@ -19,6 +19,8 @@ body{background:#FCFAF5}
 .sheet.wide{max-width:1440px}
 
 .gal{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:44px 32px;margin-top:44px}
+.gal li.year{grid-column:1/-1;display:flex;align-items:center;gap:18px;font-family:"Playfair Display",Georgia,serif;font-size:4.6rem;line-height:1;color:var(--accent);margin-bottom:-14px}
+.gal li.year::after{content:"";flex:1;border-top:1px solid var(--ink)}
 @media(max-width:1180px){ .gal{grid-template-columns:repeat(3,1fr)} }
 @media(max-width:860px) { .gal{grid-template-columns:repeat(2,1fr);gap:34px 24px} }
 @media(max-width:520px) { .gal{grid-template-columns:1fr} }
@@ -63,7 +65,8 @@ body{background:#FCFAF5}
 </head>
 <body>
 <div class="sheet wide">
-  <div class="topbar end">
+  <div class="topbar end" style="gap:10px">
+    <a class="mode" href="ressources.html" title="Benchmarks indépendants pour suivre les modèles"><svg viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="20" x2="5" y2="12"/><line x1="12" y1="20" x2="12" y2="5"/><line x1="19" y1="20" x2="19" y2="9"/></svg>Ressources</a>
     <a class="mode" href="index-old.html" title="Basculer en sommaire texte, une ligne par édition"><svg viewBox="0 0 24 24" aria-hidden="true"><line x1="4" y1="6.5" x2="20" y2="6.5"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17.5" x2="20" y2="17.5"/></svg>Mode liste</a>
   </div>
 
@@ -71,6 +74,7 @@ body{background:#FCFAF5}
   <div class="bar"><span class="ed">Les couvertures · 34 éditions</span><span>Par Nicolas Peytavin</span></div>
 
   <ul class="gal">
+    <li class="year" aria-hidden="true">2026</li>
     <li><a class="card" href="editions/n34.html">
       <span class="frame"><svg class="jaq" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1350" role="img" aria-label="Jaquette de La Newsletter IA, édition numéro 34, IA la Chine au premier plan, 30 octobre 2026">
 <title>La Newsletter IA · N°34 · IA la Chine au premier plan</title>
@@ -884,6 +888,7 @@ body{background:#FCFAF5}
 </svg><span class="hit"></span></span>
       <span class="leg"><span class="no">N°11</span><span class="d">05.01.2026</span></span>
     </a></li>
+    <li class="year" aria-hidden="true">2025</li>
     <li><a class="card" href="editions/n10.html">
       <span class="frame"><svg class="jaq" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1350" role="img" aria-label="Jaquette de La Newsletter IA, édition numéro 10, IA, de la vie dans l'air, 11 décembre 2025">
 <title>La Newsletter IA · N°10 · IA, de la vie dans l'air</title>

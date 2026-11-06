@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ressources · La Newsletter IA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.intro{font-family:'Inter',Arial,sans-serif;font-size:1.05rem;font-weight:400;line-height:1.65;max-width:60ch;margin:36px 0 8px;color:var(--ink)}
+.res{list-style:none;margin-top:28px}
+.res li{display:grid;grid-template-columns:120px 1fr auto;gap:28px;align-items:baseline;padding:30px 4px;border-bottom:1px solid var(--line)}
+.res li:first-child{border-top:1px solid var(--ink)}
+.res .k{font-size:.62rem;letter-spacing:.25em;text-transform:uppercase;font-weight:700;color:var(--accent)}
+.res h2{font-family:'Playfair Display',Georgia,serif;font-size:1.6rem;font-weight:500;margin-bottom:8px}
+.res p{font-size:.95rem;line-height:1.6;max-width:58ch}
+.res p.when{color:var(--muted);font-size:.85rem;margin-top:6px}
+.res a.go{font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--ink);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:8px 16px;white-space:nowrap;transition:.15s}
+.res a.go:hover{border-color:var(--ink);color:var(--accent)}
+@media(max-width:700px){.res li{grid-template-columns:1fr;gap:10px}.res a.go{justify-self:start;margin-top:8px}}
+
+.chart{grid-column:2/-1;margin-top:18px;border-top:1px solid var(--line);padding-top:16px}
+.chart .cap{display:flex;justify-content:space-between;gap:12px;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.bars{display:grid;grid-template-columns:minmax(120px,190px) 1fr 44px;gap:9px 14px;align-items:center;font-size:.85rem}
+.bars .tr{height:12px;background:var(--line)}
+.bars .fill{height:100%;background:var(--ink)}
+.bars .top .fill{background:var(--accent)}
+.bars .v{font-variant-numeric:tabular-nums;font-weight:600;text-align:right}
+.big{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap}
+.big b{font-family:'Playfair Display',Georgia,serif;font-size:4rem;font-weight:500;color:var(--accent);line-height:1}
+.big span{font-size:.95rem}
+.chart .cap.below{margin:10px 0 0}
+figure.chart{border-top:none;padding-top:0}
+.chart img.graph{display:block;width:100%;height:auto}
+@media(max-width:700px){.chart{grid-column:1}}
+</style>
+</head>
+<body>
+<div class="sheet">
+  <div class="topbar">
+    <a class="back" href="index.html">← Les couvertures</a>
+  </div>
+
+  <h1>Pour suivre la course</h1>
+  <div class="bar"><span class="ed">Ressources · Benchmarks indépendants</span><span>Par Nicolas Peytavin</span></div>
+
+  <p class="intro">Les éditeurs annoncent, ces sites vérifient. Trois observatoires indépendants pour savoir, entre deux éditions, qui mène vraiment.</p>
+
+  <ul class="res">
+    <li>
+      <span class="k">Le classement</span>
+      <div>
+        <h2>Artificial Analysis</h2>
+        <p>Compare les modèles de langage, d'image, de vidéo et de voix sur trois axes : intelligence, vitesse et prix.</p>
+        <p class="when">À consulter pour choisir un modèle, ou vérifier qu'un « nouveau champion » l'est vraiment.</p>
+      </div>
+      <a class="go" href="https://artificialanalysis.ai/" target="_blank" rel="noopener">Ouvrir ↗</a>
+      <div class="chart" id="aa"></div>
+    </li>
+    <li>
+      <span class="k">La tendance</span>
+      <div>
+        <h2>Epoch AI · indice ECI</h2>
+        <p>Fusionne des dizaines de benchmarks en un seul indice de capacité, suivi dans le temps.</p>
+        <p class="when">À consulter pour voir la vitesse du progrès, et qui accélère ou décroche.</p>
+      </div>
+      <a class="go" href="https://epoch.ai/benchmarks?view=graph&amp;tab=eci" target="_blank" rel="noopener">Ouvrir ↗</a>
+      <figure class="chart"><img class="graph" src="ressources/epoch-eci.svg" alt="Graphique Epoch AI : évolution de l’indice ECI des modèles, OpenAI, Anthropic et Google en couleur" loading="lazy"><div class="cap below"><span>Indice ECI dans le temps · export Epoch AI</span><span id="eci-date"></span></div></figure>
+    </li>
+    <li>
+      <span class="k">Chez soi</span>
+      <div>
+        <h2>CanIRun.ai</h2>
+        <p>Détecte votre carte graphique ou votre Mac et liste les modèles ouverts qui tournent en local sur votre machine.</p>
+        <p class="when">À consulter avant d'installer une IA sur son propre ordinateur.</p>
+      </div>
+      <a class="go" href="https://www.canirun.ai/" target="_blank" rel="noopener">Ouvrir ↗</a>
+    </li>
+  </ul>
+
+  <footer><div class="foot-row"><span>La Newsletter IA · Nicolas Peytavin</span><a href="index.html">Retour aux éditions</a></div></footer>
+</div>
+
+<script>
+/* ===== À METTRE À JOUR À CHAQUE ÉDITION (tous les 10 jours environ) ===== */
+const RELEVE = {
+  date: "6 novembre 2026",
+  edition: "N°34",
+  // Artificial Analysis Intelligence Index v5 : meilleure variante de chaque modèle
+  aa: [
+    ["Gemini 4 Carbon", 60],
+    ["Claude Opus 5.5", 59],
+    ["GPT-6 Astra", 57],
+    ["GPT-6.1 Sol", 55],
+    ["Claude Sonnet 5.5", 55]
+  ]
+};
+/* ======================================================================= */
+(function(){
+  const aa=document.getElementById('aa'), max=Math.max(...RELEVE.aa.map(r=>r[1]));
+  aa.innerHTML='<div class="cap"><span>Intelligence Index · top 5</span><span>Relevé du '+RELEVE.date+'</span></div><div class="bars">'+
+    RELEVE.aa.map((r,i)=>'<span>'+r[0]+'</span><div class="tr'+(i?'':' top')+'"><div class="fill" style="width:'+(r[1]/max*100)+'%"></div></div><span class="v">'+r[1]+'</span>').join('')+'</div>';
+  document.getElementById('eci-date').textContent='Relevé du '+RELEVE.date;
+})();
+</script>
+</body>
+</html>

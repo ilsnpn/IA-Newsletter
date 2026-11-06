@@ -105,6 +105,8 @@ a.mode svg{width:17px;height:17px;stroke:var(--accent);fill:none;stroke-width:1.
 /* ---- accueil : sommaire ---- */
 ol.toc{list-style:none;padding:40px 0 0}
 ol.toc li{border-bottom:1px solid var(--line)}
+ol.toc li.year{font-family:"Playfair Display",Georgia,serif;font-size:4.6rem;line-height:1;color:var(--accent);border-bottom:1px solid var(--ink);padding:36px 4px 10px}
+ol.toc li.year:first-child{padding-top:0}
 ol.toc a.row,ol.toc .row{display:flex;align-items:baseline;gap:26px;padding:22px 4px;text-decoration:none;color:inherit;transition:.15s}
 ol.toc a.row:hover{color:var(--accent)}
 ol.toc .no{font-family:'Playfair Display',Georgia,serif;font-size:.95rem;min-width:56px;color:var(--accent)}
