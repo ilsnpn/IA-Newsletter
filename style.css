@@ -124,3 +124,18 @@ footer a:hover{opacity:.7}
 .pn a{color:var(--ink)}
 .pn a:hover{color:var(--accent)}
 .pn .off{opacity:.3;pointer-events:none}
+
+/* Recherche IA (accueil) */
+form.rech{display:flex;align-items:center;gap:9px;border:1px solid var(--line);border-radius:999px;padding:5px 8px 5px 14px;flex:1 1 260px;max-width:420px;margin-right:auto;transition:.15s}
+form.rech:focus-within{border-color:var(--ink)}
+form.rech svg{width:17px;height:17px;stroke:var(--accent);fill:none;stroke-width:1.4;stroke-linecap:round;flex:none}
+form.rech input{flex:1;min-width:0;border:0;background:transparent;font:inherit;font-size:.8rem;color:var(--ink);outline:none}
+form.rech input::placeholder{color:var(--muted)}
+form.rech .ia{font-size:.55rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--accent);white-space:nowrap}
+.rech-res{margin:14px 0 6px;border-left:2px solid var(--accent);padding:4px 0 4px 16px;font-size:.85rem}
+.rech-res ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.rech-res a{color:var(--ink);text-decoration:none}
+.rech-res a:hover{color:var(--accent)}
+.rech-res span{display:block;color:var(--muted);font-size:.78rem;margin-top:2px}
+.rech-info{margin:0;color:var(--muted)}
+@media print{form.rech,.rech-res{display:none}}

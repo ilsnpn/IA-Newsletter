@@ -119,8 +119,10 @@ body{{background:#FCFAF5}}
 <body>
 <div class="sheet wide">
   <div class="topbar end">
+    <form class="rech" id="rech" role="search" title="Décrivez avec vos mots ce que vous cherchez : l'IA retrouve l'édition qui en parlait"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><line x1="15.5" y1="15.5" x2="21" y2="21"/></svg><input type="search" name="q" maxlength="300" placeholder="Retrouvez un ancien sujet par IA" aria-label="Retrouvez un ancien sujet par IA, décrivez-le avec vos mots"><span class="ia">IA</span></form>
     <a class="mode" href="index-old.html" title="Basculer en sommaire texte, une ligne par édition"><svg viewBox="0 0 24 24" aria-hidden="true"><line x1="4" y1="6.5" x2="20" y2="6.5"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17.5" x2="20" y2="17.5"/></svg>Mode liste</a>
   </div>
+  <div class="rech-res" id="rech-res" hidden aria-live="polite"></div>
 
   <h1>La Newsletter IA</h1>
   <div class="bar"><span class="ed">Les couvertures · {total} éditions</span><span>Par Nicolas Peytavin</span></div>
@@ -131,6 +133,7 @@ body{{background:#FCFAF5}}
 
   <footer><div class="foot-row"><span>La Newsletter IA · Nicolas Peytavin</span><span>{total} éditions</span></div></footer>
 </div>
+<script src="recherche.js"></script>
 </body>
 </html>
 '''
